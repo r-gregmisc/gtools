@@ -24,12 +24,12 @@ mixedorder <- function(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
 
     numeric <- function(x)
       {
-        suppressWarnings( as.numeric(x) )
+        as.numeric(x)
       }
 
     nonnumeric <- function(x)
       {
-        suppressWarnings( ifelse(is.na(as.numeric(x)), toupper(x), NA) )
+        ifelse(is.na(as.numeric(x)), toupper(x), NA)
       }
 
     x <- as.character(x)
@@ -53,10 +53,10 @@ mixedorder <- function(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
     step1 <- lapply( step1, function(x) x[x>""] )
 
     # create numeric version of data
-    step1.numeric <- lapply( step1, numeric )
+    suppressWarnings( step1.numeric <-  lapply( step1, numeric ) )
 
     # create non-numeric version of data
-    step1.character <- lapply( step1, nonnumeric )
+    suppressWarnings( step1.character <- lapply( step1, nonnumeric ) )
 
     # now transpose so that 1st vector contains 1st element from each
     # original string
