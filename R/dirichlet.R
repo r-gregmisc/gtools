@@ -29,9 +29,9 @@ ddirichlet<-function(x,alpha)
   dirichlet1 <- function(x, alpha)
     {
       logD <- sum(lgamma(alpha)) - lgamma(sum(alpha))
-      s<-sum((alpha-1)*log(x))
+      s <-(alpha-1)*log(x)
+      s <- ifelse(alpha==1 & x==0, -Inf, s)
       exp(sum(s)-logD)
-
     }
 
   # make sure x is a matrix
