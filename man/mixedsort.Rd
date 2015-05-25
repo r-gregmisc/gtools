@@ -11,8 +11,8 @@
   that "a", will come before "B" and "C".
 }
 \usage{
-mixedsort(x,  decreasing=FALSE, na.last=TRUE, blank.last=FALSE, ...)
-mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE, ...)
+mixedsort(x,  decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
+mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
 }
 \arguments{
   \item{x}{Vector to be sorted.}
@@ -20,8 +20,8 @@ mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE, ...)
     decreasing? Note that \code{descending=TRUE} reverses the meanings of
     \code{na.lst} and \code{blanks.last}.}
   \item{na.last}{for controlling the treatment of \code{NA}s.  If \code{TRUE}, missing
-          values in the data are put last; if \code{FALSE}, they are put
-          first; if \code{NA}, they are removed.}
+    values in the data are put last; if \code{FALSE}, they are put
+    first; if \code{NA}, they are removed.}
 }
 \details{
   I often have character vectors (e.g. factor labels), such as compound
