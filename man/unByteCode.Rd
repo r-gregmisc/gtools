@@ -1,7 +1,7 @@
 \name{unByteCode}
 \alias{unByteCode}
 \alias{unByteCodeAssign}
-\alias{assignEdgeWise}
+\alias{assignEdgewise}
 \title{
   Convert a Byte-Code Function to an Interpreted-Code Function
 }
@@ -15,6 +15,7 @@ unByteCodeAssign(fun)
 }
 \arguments{
   \item{fun}{function to be modified}
+  \item{name}{object name}
   \item{env}{namespace}
   \item{value}{new function body}
 }
