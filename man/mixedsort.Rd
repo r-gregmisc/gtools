@@ -18,8 +18,11 @@ mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
   \item{x}{Vector to be sorted.}
   \item{decreasing}{logical.  Should the sort be increasing or
     decreasing? Note that \code{descending=TRUE} reverses the meanings of
-    \code{na.lst} and \code{blanks.last}.}
-  \item{na.last}{for controlling the treatment of \code{NA}s.  If \code{TRUE}, missing
+    \code{na.last} and \code{blanks.last}.}
+  \item{na.last}{for controlling the treatment of \code{NA} values.  If \code{TRUE}, missing
+    values in the data are put last; if \code{FALSE}, they are put
+    first; if \code{NA}, they are removed.}
+  \item{blanklast}{for controlling the treatment of blank values.  If \code{TRUE}, blank
     values in the data are put last; if \code{FALSE}, they are put
     first; if \code{NA}, they are removed.}
 }
