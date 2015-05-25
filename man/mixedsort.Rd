@@ -22,7 +22,7 @@ mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
   \item{na.last}{for controlling the treatment of \code{NA} values.  If \code{TRUE}, missing
     values in the data are put last; if \code{FALSE}, they are put
     first; if \code{NA}, they are removed.}
-  \item{blanklast}{for controlling the treatment of blank values.  If \code{TRUE}, blank
+  \item{blank.last}{for controlling the treatment of blank values.  If \code{TRUE}, blank
     values in the data are put last; if \code{FALSE}, they are put
     first; if \code{NA}, they are removed.}
 }
