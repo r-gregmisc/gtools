@@ -8,7 +8,7 @@
   Create a factor variable using the quantiles of a continous variable.
 }
 \usage{
-quantcut(x, q=seq(0,1,by=0.25), na.rm=TRUE, ...)
+quantcut(x, q=4, na.rm=TRUE, ...)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
@@ -55,8 +55,8 @@ quantcut(x, q=seq(0,1,by=0.25), na.rm=TRUE, ...)
   ## cut into deciles
   deciles.1 <- quantcut( x, 10 )
   table(deciles.1)
-  # or equivalently 
-  deciles.2 <- quantcut( x, seq(0,1,by=0.1) ) 
+  # or equivalently
+  deciles.2 <- quantcut( x, seq(0,1,by=0.1) )
 
   \testonly{
     stopifnot(identical(deciles.1, deciles.2))
@@ -67,7 +67,7 @@ quantcut(x, q=seq(0,1,by=0.25), na.rm=TRUE, ...)
   stem(x)        # display the ties
   deciles <- quantcut( x, 10 )
 
-  table(deciles) # note that there are only 5 groups (not 10) 
+  table(deciles) # note that there are only 5 groups (not 10)
                  # due to duplicates
 
 }
