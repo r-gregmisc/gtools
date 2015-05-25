@@ -19,9 +19,9 @@ mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE, ...)
   \item{decreasing}{logical.  Should the sort be increasing or
     decreasing? Note that \code{descending=TRUE} reverses the meanings of
     \code{na.lst} and \code{blanks.last}.}
-  \item{na.last}{for controlling the treatment of ‘NA’s.  If ‘TRUE’, missing
-          values in the data are put last; if ‘FALSE’, they are put
-          first; if ‘NA’, they are removed.}
+  \item{na.last}{for controlling the treatment of \code{NA}s.  If \code{TRUE}, missing
+          values in the data are put last; if \code{FALSE}, they are put
+          first; if \code{NA}, they are removed.}
 }
 \details{
   I often have character vectors (e.g. factor labels), such as compound
