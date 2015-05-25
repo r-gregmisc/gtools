@@ -32,7 +32,8 @@ mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
   character and numeric sections, and then sorting along these sections,
   with numbers being sorted by numeric value (e.g. "50" comes before
   "100"), followed by characters strings sorted by character
-  value (e.g. "A" comes before "B").
+  value (e.g. "A" comes before "B") \emph{ignoring case} (e.g. 'A' has
+  the same sort order as 'a').
 
   By default, sort order is ascending, empty strings are sorted to the front,
   and \code{NA} values to the end.   Setting \code{descending=TRUE}
