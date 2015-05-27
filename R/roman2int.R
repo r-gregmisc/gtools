@@ -31,7 +31,18 @@ roman2int.inner <- function(roman)
 roman2int <- function(roman)
     {
         roman <- trim(toupper(as.character(roman)))
-        retval <- sapply(roman, roman2int.inner)
+
+        tryIt <- function(x)
+            {
+                retval <- try(roman2int.inner(x), silent=TRUE)
+                if(is.numeric(retval))
+                    retval
+                else
+                    NA
+            }
+
+        retval <- sapply(roman, tryIt)
+
         retval
     }
 
