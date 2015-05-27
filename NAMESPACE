@@ -33,6 +33,7 @@ export(
        permute,
        quantcut,
        rdirichlet,
+       roman2int,
        running,
        scat,
        setTCPNoDelay,
