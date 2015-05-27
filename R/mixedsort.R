@@ -1,16 +1,36 @@
-mixedsort <- function(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
+mixedsort <- function(x,
+                      decreasing=FALSE,
+                      na.last=TRUE,
+                      blank.last=FALSE,
+                      numeric.type=c("decimal", "roman"),
+                      roman.case=c("upper","lower","both")
+                      )
     {
-        ord <- mixedorder(x, decreasing=decreasing, na.last=na.last,
-                             blank.last=blank.last)
+        ord <- mixedorder(x,
+                          decreasing=decreasing,
+                          na.last=na.last,
+                          blank.last=blank.last,
+                          numeric.type=numeric.type,
+                          roman.case=roman.case
+                          )
         x[ord]
     }
 
-mixedorder <- function(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
+mixedorder <- function(x,
+                       decreasing=FALSE,
+                       na.last=TRUE,
+                       blank.last=FALSE,
+                       numeric.type=c("decimal", "roman"),
+                       roman.case=c("upper","lower","both")
+                       )
   {
     # - Split each each character string into an vector of strings and
     #   numbers
     # - Separately rank numbers and strings
     # - Combine orders so that strings follow numbers
+
+    numeric.type <- match.arg(numeric.type)
+    roman.case   <- match.arg(roman.case)
 
     if(length(x)<1)
         return(NULL)
@@ -22,14 +42,26 @@ mixedorder <- function(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
 
     delim="\\$\\@\\$"
 
-    numeric <- function(x)
+    if(numeric.type=="decimal")
       {
-        as.numeric(x)
+        regex <- "((?:(?i)(?:[-+]?)(?:(?=[.]?[0123456789])(?:[0123456789]*)(?:(?:[.])(?:[0123456789]{0,}))?)(?:(?:[eE])(?:(?:[-+]?)(?:[0123456789]+))|)))"  # uses PERL syntax
+        numeric <- function(x) as.numeric(x)
       }
+    else if (numeric.type=="roman")
+      {
+        regex <- switch(roman.case,
+                        "both"  = "([IVXCLDMivxcldm]+)",
+                        "upper" = "([IVXCLDM]+)",
+                        "lower" = "([ivxcldm]+)"
+                        )
+        numeric <- function(x) roman2int(x)
+      }
+    else
+      stop("Unknown value for numeric.type: ", numeric.type)
 
     nonnumeric <- function(x)
       {
-        ifelse(is.na(as.numeric(x)), toupper(x), NA)
+        ifelse(is.na(numeric(x)), toupper(x), NA)
       }
 
     x <- as.character(x)
@@ -43,8 +75,10 @@ mixedorder <- function(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
     ####
 
     # find and mark numbers in the form of +1.23e+45.67
-    delimited <- gsub("([+-]{0,1}[0-9]+\\.{0,1}[0-9]*([eE][\\+\\-]{0,1}[0-9]+\\.{0,1}[0-9]*){0,1})",
-                      paste(delim,"\\1",delim,sep=""), x)
+    delimited <- gsub(regex,
+                      paste(delim,"\\1",delim,sep=""),
+                      x,
+                      perl=TRUE)
 
     # separate out numbers
     step1 <- strsplit(delimited, delim)

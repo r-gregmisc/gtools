@@ -11,8 +11,13 @@
   that "a", will come before "B" and "C".
 }
 \usage{
-mixedsort(x,  decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
-mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
+mixedsort(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE,
+          numeric.type=c("decimal", "roman"),
+          roman.case=c("upper","lower","both") )
+)
+mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE,
+          numeric.type=c("decimal", "roman"),
+          roman.case=c("upper","lower","both") )
 }
 \arguments{
   \item{x}{Vector to be sorted.}
@@ -25,6 +30,12 @@ mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
   \item{blank.last}{for controlling the treatment of blank values.  If \code{TRUE}, blank
     values in the data are put last; if \code{FALSE}, they are put
     first; if \code{NA}, they are removed.}
+  \item{numeric.type}{either "decimal" (default) or "roman".  Are numeric values represented as
+    decimal numbers (\code{numeric.type="decimal"}) or as Roman numerals
+    (\code{numeric.type="roman"})? }
+  \item{roman.case}{one of "upper", "lower", or "both".  Are roman
+    numerals represented using only capital letters ('IX') or lower-case
+    letters ('ix') or both?}
 }
 \details{
   I often have character vectors (e.g. factor labels), such as compound
@@ -42,6 +53,11 @@ mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE)
   and \code{NA} values to the end.   Setting \code{descending=TRUE}
   changes the sort order to descending and reverses the meanings of
   \code{na.last} and \code{blank.last}.
+
+  Parsing looks for decimal numbers unless \code{numeric.type="roman"},
+  in which parsing looks for roman numerals, with character case
+  specified by \code{roman.case}.
+
 }
 \value{
   \code{mixedorder} returns a vector giving the sort order of the input
@@ -82,11 +98,21 @@ mixedsort(x, blank.last=TRUE)  # push blanks to the end
 
 mixedsort(x, decreasing=FALSE) # default
 mixedsort(x, decreasing=TRUE)  # reverse sort order
+
+## Roman numerals
+chapters <- c("V. Non Sequiturs", "II. More Nonsense",
+              "I. Nonsense", "IV. Nonesensical Citations",
+              "III. Utter Nonsense")
+mixedsort(chapters, numeric.type="roman" )
+
+## Lower-case Roman numerals
+vals <- c("xix", "xii", "mcv", "iii", "iv", "dcclxxii",   "cdxcii",
+          "dcxcviii",   "dcvi",   "cci")
+(ordered <- mixedsort(vals, numeric.type="roman", roman.case="lower"))
+roman2int(ordered)
 }
 \keyword{univar}
 \keyword{manip}
-
-
 \concept{natural sort}
 \concept{dictionary sort}
 
