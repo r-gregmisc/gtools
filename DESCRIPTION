@@ -20,10 +20,11 @@ Description: Functions to assist in R programming, including:
   - apply a function over adjacent subsets of a vector ('running'),
   - modify the TCP\_NODELAY ('de-Nagle') flag for socket objects,
   - efficient 'rbind' of data frames, even if the column names don't match ('smartbind'),
-  - generate significance stars from p-values ('stars.pval').
+  - generate significance stars from p-values ('stars.pval'),
+  - convert characters to/from ASCII codes.
 Version: 3.4.3
-Date: 2015-04-23
+Date: 2015-05-26
 Author: Gregory R. Warnes, Ben Bolker, and Thomas Lumley
 Maintainer: Gregory R. Warnes <greg@warnes.net>
-License: LGPL-2.1
+License: GPL-2
 

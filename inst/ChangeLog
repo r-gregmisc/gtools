@@ -1,3 +1,21 @@
+2015-05-27  warnes
+
+	* [r2039] R/mixedsort.R, man/mixedsort.Rd: Add roman numeral
+	  support to mixedorder() and mixedsort().
+	* [r2037] man/asc.Rd: Add asc() and chr() functions for converting
+	  between characters and ASCII codes
+	* [r2036] R/roman2int.R: roman2int() now returns NA for invalid
+	  roman numeral strings instead of generating an error.
+	* [r2035] NAMESPACE: Add asc(), chr(), assignEdgewise(),
+	  unByteCode(), and
+	  unByteCodeAssign() to package NAMESPACE.
+	* [r2034] R/asc.R: Add asc() and chr() functions for converting
+	  between characters and ASCII codes
+
+2015-05-26  warnes
+
+	* [r2030] inst/ChangeLog: Add changelog to svn repository
+
 2015-05-25  warnes
 
 	* [r2029] tests/test_ddirichlet.R: Add library call.

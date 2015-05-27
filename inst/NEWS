@@ -1,7 +1,33 @@
-gtools 3.4.3 - 2015-04-06
+gtools 3.5.0 - 2015-04-28
 -------------------------
 
-Enhancements:
+New Functions:
+
+- New roman2int() functon to convert roman numerals to integers
+  without the range restriction of utils::as.roman().
+
+- New asc() and chr() functions to convert between ASCII codes and
+  characters. (Based on the 'Data Debrief' blog entry for 2011-03-09
+  at http://datadebrief.blogspot.com/2011/03/ascii-code-table-in-r.html).
+
+- New unByteCode() and unByteCodeAssign() functions to convert a
+  byte-code functon to an interpeted code function.
+
+- New assignEdgewise() function for making assignments into locked
+  environments. (Used by unByteCodeAssign().)
+
+Enhacements:
+
+- mixedsort() and mixedorder() now have arguments 'decreasing',
+  'na.last', and 'blank.last' arguments to control sort ordering.
+
+- mixedsort() and mixedirdeR() now support Roman numerals via the
+  arguments 'numeric.type', and 'roman.case'.  (Request by David
+  Winsemius, suggested code changes by Henrik Bengtsson.)
+
+- speed up mixedorder() (and hence mixedsort()) by moving
+  suppressWarnings() outside of lapply loops. (Suggestion by Henrik
+  Bengtsson.)
 
 - The 'q' argument to quantcut() now accept an integer
   indicating the number of equally spaced quantile groups to
@@ -10,6 +36,9 @@ Enhancements:
 Bug fixes:
 
 - Removed stray browser() call in smartbind().
+
+- ddirichlet(x, alpha) was incorrectly returning NA when for any i,
+  x[i]=0 and alpha[i]=1.  (Bug report by John Nolan.)
 
 Other changes:
 
