@@ -54,18 +54,17 @@ unByteCodeAssign(fun)
   \code{\link{assign}}
 }
 \examples{
-datURL <- "https://bugs.r-project.org/bugzilla/attachment.cgi?id=1659"
-dat <- as.matrix(read.csv(file=datURL, row.names=1))
+data(badDend)
 dist2 <- function(x) as.dist(1-cor(t(x), method="pearson"))
 hclust1 <- function(x) hclust(x, method = "single")
 
-distance <- dist2(dat)
+distance <- dist2(badDend)
 cluster  <- hclust1(distance)
 
 dend <- as.dendrogram(cluster)
 
 \dontrun{
-    ## In R 2.3.0 and earlier crashes R: with a node stack overflow error
+    ## In R 2.3.0 and earlier crashes with a node stack overflow error
     plot(dend)
     ## Error in xy.coords(x, y, recycle = TRUE) : node stack overflow
 }
