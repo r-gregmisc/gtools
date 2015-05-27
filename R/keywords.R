@@ -8,20 +8,11 @@ keywords <- function( topic )
       }
   else
       {
-
-          ## Local copy of trim.character to avoid cyclic dependency with gdata ##
-          trim <-  function(s)
-              {
-                  s <- sub(pattern="^[[:blank:]]+", replacement="", x=s)
-                  s <- sub(pattern="[[:blank:]]+$", replacement="", x=s)
-                  s
-              }
-
           kw <- scan(file=file, what=character(), sep="\n", quiet=TRUE)
           kw <- grep("&", kw, value=TRUE)
           kw <- gsub("&[^&]*$","", kw)
           kw <- gsub("&+"," ", kw)
-          kw <- na.omit(trim(kw))
+          kw <- na.omit(trimws(kw))
 
           ischar <- tryCatch(is.character(topic) && length(topic) ==
                              1L, error = identity)

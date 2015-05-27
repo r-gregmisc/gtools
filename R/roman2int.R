@@ -30,7 +30,7 @@ roman2int.inner <- function(roman)
 
 roman2int <- function(roman)
     {
-        roman <- trim(toupper(as.character(roman)))
+        roman <- trimws(toupper(as.character(roman)))
 
         tryIt <- function(x)
             {
