@@ -1,2 +1,4 @@
-asc <- function(char) sapply(char, function(x) strtoi(charToRaw(x),16L) )
+asc <- function(char, simplify=TRUE)
+    sapply(char, function(x) strtoi(charToRaw(x),16L), simplify=simplify )
+
 chr <- function(n) sapply(n, function(x) rawToChar(as.raw(x)) )
