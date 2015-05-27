@@ -14,7 +14,6 @@
 mixedsort(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE,
           numeric.type=c("decimal", "roman"),
           roman.case=c("upper","lower","both") )
-)
 mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE,
           numeric.type=c("decimal", "roman"),
           roman.case=c("upper","lower","both") )
