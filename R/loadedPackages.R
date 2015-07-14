@@ -8,5 +8,5 @@ loadedPackages <- function(silent=FALSE)
   retval$SearchPath <- na.replace(retval$SearchPath, '-')
   retval <- retval[order(inSearchPath),]
   if(!silent) print(retval)
-  retval
+  invisible(retval)
 }

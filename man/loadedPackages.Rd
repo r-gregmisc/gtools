@@ -13,7 +13,7 @@ loadedPackages(silent = FALSE)
   \item{silent}{Logical indicating whether the results should be printed}
 }
 \value{
-  Data frame containing one row per loaded package namespace, with columns:
+  Invisibly returns a data frame containing one row per loaded package namespace, with columns:
   \item{Package}{Package name}
   \item{Version}{Version string}
   \item{Path}{Path to package files}
