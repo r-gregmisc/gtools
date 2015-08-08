@@ -4,11 +4,21 @@
 
 smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
   {
-    data <-list(...)
+    data <- base::list(...)
     if(!missing(list))
-      data <- modifyList(list, data)
+      {
+        data <- modifyList(list, data)
+      }
+
+    defaultNames <- seq.int(length(data))
+  
     if(is.null(names(data)))
-      names(data) <- as.character(1:length(data))
+      names(data) <- defaultNames
+
+    emptyNames <- names(data)==""
+    if (any(emptyNames) )
+      names(data)[emptyNames] <- defaultNames[emptyNames]
+  
     data <- lapply(data,
                    function(x)
                    if(is.matrix(x) || is.data.frame(x))
@@ -18,7 +28,7 @@ smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
                    )
 
     #retval <- new.env()
-    retval <- list()
+    retval <- base::list()
     rowLens <- unlist(lapply(data, nrow))
     nrows <- sum(rowLens)
 
@@ -37,9 +47,9 @@ smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
     blockIndex <- 1
     for(block in data)
       {
-        colClassList    [[blockIndex]] <- list()
+        colClassList    [[blockIndex]] <- base::list()
         factorColumnList[[blockIndex]] <- character(length=0)
-        factorLevelList [[blockIndex]] <- list()
+        factorLevelList [[blockIndex]] <- base::list()
 
         if(verbose) print(head(block))
         end <- start+nrow(block)-1
