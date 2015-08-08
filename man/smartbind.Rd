@@ -76,9 +76,11 @@ smartbind(..., list, fill=NA, sep=':', verbose=FALSE)
   # But smartbind will 'do the right thing'
   df <- do.call("smartbind",Z)
   df
+
+  # Equivalent call:
+  df <- smartbind(list=Z)
+
 }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{manip}
 

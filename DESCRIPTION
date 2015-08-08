@@ -22,8 +22,8 @@ Description: Functions to assist in R programming, including:
   - efficient 'rbind' of data frames, even if the column names don't match ('smartbind'),
   - generate significance stars from p-values ('stars.pval'),
   - convert characters to/from ASCII codes.
-Version: 3.5.0
-Date: 2015-05-26
+Version: 3.6.0
+Date: 2015-08-07
 Author: Gregory R. Warnes, Ben Bolker, and Thomas Lumley
 Maintainer: Gregory R. Warnes <greg@warnes.net>
 License: GPL-2
