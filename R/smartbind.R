@@ -2,9 +2,11 @@
 ## Function to do rbind of data frames quickly, even if the columns don't match
 ##
 
-smartbind <- function(..., fill=NA, sep=':', verbose=FALSE)
+smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
   {
-    data <- list(...)
+    data <-list(...)
+    if(!missing(list))
+      data <- modifyList(list, data)
     if(is.null(names(data)))
       names(data) <- as.character(1:length(data))
     data <- lapply(data,
@@ -95,12 +97,12 @@ smartbind <- function(..., fill=NA, sep=':', verbose=FALSE)
         blockIndex <- blockIndex+1
       }
 
-    all.equal.or.null <- function(x,y,...)
+    all.equal.or.null <- function(x,y)
       {
         if(is.null(x) || is.null(y) )
           return(TRUE)
         else
-          return(all.equal(x,y,...))
+          return(all.equal(x,y))
       }
 
     ## Handle factors, merging levels
@@ -149,9 +151,9 @@ smartbind <- function(..., fill=NA, sep=':', verbose=FALSE)
             ## and use that one
             longestIndex  <- which.max( sapply(colLevels, length) )
             longestLevels <- colLevels[[longestIndex]]
-            allSubset <- sapply(colLevels[-longestIndex],
+            allSubset <- all(sapply(colLevels[-longestIndex],
                                 function(l) all(l %in% longestLevels)
-                                )
+                                ))
             if(allSubset)
               {
                 if("ordered" %in% colClass)
