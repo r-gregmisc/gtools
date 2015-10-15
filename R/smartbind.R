@@ -11,14 +11,14 @@ smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
       }
 
     defaultNames <- seq.int(length(data))
-  
+
     if(is.null(names(data)))
       names(data) <- defaultNames
 
     emptyNames <- names(data)==""
     if (any(emptyNames) )
       names(data)[emptyNames] <- defaultNames[emptyNames]
-  
+
     data <- lapply(data,
                    function(x)
                    if(is.matrix(x) || is.data.frame(x))
@@ -95,7 +95,31 @@ smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
                 retval[[col]] <- as.vector(rep(fill,nrows), mode=newclass)
               }
 
-            mode <- class(retval[[col]])
+            ## Handle case when current and previous native types differ
+            oldclass <- class(retval[[col]])
+
+            if(oldclass != newclass)
+            {
+              # handle conversions in case of conflicts
+              #   numeric vs integer --> numeric
+              #   complex vs numeric or integer --> complex
+              #   anything else:  --> character
+              if(oldclass %in% c("integer", "numeric") && newclass %in% c("integer", "numeric") )
+                class(retval[[col]]) <- mode <- "numeric"
+              else if(oldclass=="complex" && newclass %in% c("integer", "numeric") )
+                class(retval[[col]]) <- mode <- "complex"
+              else if(oldclass %in% c("integer", "numeric") && newclass=="complex")
+                class(retval[[col]]) <- mode <- "complex"
+              else
+                {
+                  class(retval[[col]]) <- mode <- "character"
+                  warning("Column class mismatch for '", col, "'. ",
+                          "Converting column to class 'character'.")
+                }
+            }
+            else
+              mode <- oldclass
+
             if(mode=="character")
                 vals <- as.character(block[,col])
             else
