@@ -69,31 +69,29 @@ smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
                   levels(block[,col])
             }
 
-            if( !(col %in% names(retval)))
+            if(verbose) cat("Start:", start,
+                            "  End:", end,
+                            "  Column:", col,
+                            "\n", sep="")
+
+            if ("factor" %in% classVec)
               {
-                if(verbose) cat("Start:", start,
-                                "  End:", end,
-                                "  Column:", col,
-                                "\n", sep="")
-
-                if ("factor" %in% classVec)
-                  {
-                    newclass <- "character"
-                  }
-                else
-                  newclass <- classVec[1]
-
-                ## Coerce everything that isn't a native type to character
-                if(! (newclass %in% c("logical", "integer", "numeric",
-                                     "complex", "character", "raw") ))
-                    {
-                        newclass <- "character"
-                        warning("Converting non-atomic type column '", col,
-                                "' to type character.")
-                    }
-
-                retval[[col]] <- as.vector(rep(fill,nrows), mode=newclass)
+                newclass <- "character"
               }
+            else
+              newclass <- classVec[1]
+
+            ## Coerce everything that isn't a native type to character
+            if(! (newclass %in% c("logical", "integer", "numeric",
+                                 "complex", "character", "raw") ))
+                {
+                    newclass <- "character"
+                    warning("Converting non-atomic type column '", col,
+                            "' to type character.")
+                }
+
+            if(! (col %in% names(retval) ) )
+              retval[[col]] <- as.vector(rep(fill,nrows), mode=newclass)
 
             ## Handle case when current and previous native types differ
             oldclass <- class(retval[[col]])
