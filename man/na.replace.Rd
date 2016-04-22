@@ -7,11 +7,12 @@
     Replace missing values
 }
 \usage{
-na.replace(x, replace)
+na.replace(x, replace, ...)
 }
 \arguments{
-  \item{x}{vector possibly contining missing (\code{NA}) values.}
-  \item{replace}{scalar replacement value}
+  \item{x}{vector possibly contining missing (\code{NA}) values}
+  \item{replace}{either a scalar replacement value, or a function returning a scalar value}
+  \item{...}{Optional arguments to be passed to \code{replace}}
 }
 \details{
    This is a convenience function that is the same as
@@ -29,6 +30,11 @@ na.replace(x, replace)
 }
 \examples{
    x <- c(1,2,3,NA,6,7,8,NA,NA)
+   
+   # Replace with a specified value
    na.replace(x, '999')
+   
+   # Replace with the calculated median
+   na.replace(x, median, na.rm=TRUE)    
 }
 \keyword{ manip }
