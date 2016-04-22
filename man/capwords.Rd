@@ -1,0 +1,57 @@
+\name{capwords}
+\alias{capwords}
+\title{
+Capitalize Words for Titles
+}
+\description{
+This function capitalizes words for use in titles
+}
+\usage{
+capwords(s, strict=FALSE, AP=TRUE, firstonly=FALSE, 
+         preserveMixed=FALSE, sep=" ")
+}
+\arguments{
+  \item{s}{character string to be processed}
+  \item{strict}{Logical, remove all additional capitalization}
+  \item{AP}{Logical, apply the Associated Press (AP) rules for
+    prepositions and conjunctions that should not be capitalized
+    in titles.}
+  \item{preserveMixed}{Logical, preserve the capitalization
+    mixed-case words containing an upper-case letter after a 
+    lower-case letter.}
+}
+\details{
+This function separates the provided character string into separate words using \code{sep} as the word separator.  If \code{firstonly==TRUE}, it then capitalizes the first letter the first word, otherwise (the default), it capitalizes the first letter of every word.  If \code{AP==TRUE}, it then un-capitalizes words in the Associated Press's (AP) list of prepositions and conjunctions should not be capitalized in titles.  Next, it capitalizes the first word. It then re-joins the words using the specified separator.
+
+If \code{preserveMixed==TRUE}, words with an upper-case letter appearing after a lower-case letter will not be changed (e.g. "iDevice").
+}
+\value{
+A character scalar containing the capitalized words.
+}
+\references{
+Fogarty, Mignon. “Capitalizing Titles: Which words should you capitalize?” Grammar Girl's Quick and Dirty Tips for Better Writing. 9 Jun. 2011. Quick and Dirty Tips Website. Accessed 22 April 2016 \url{http://www.quickanddirtytips.com/education/grammar/capitalizing-titles}
+}
+\author{
+Gregory R. Warnes \email{greg@warnes.net} based on code from the \code{\link[base]{chartr}} manual page, 
+and \code{\link[taxize]{capwords}}
+in the taxize package.
+}
+\seealso{
+\code{\link[base]{chartr}},
+\code{\link[taxize]{capwords}},
+\code{\link[SGP]{capwords}}
+}
+\examples{
+capwords("a function to capitalize words in a title")
+capwords("a function to capitalize words in a title", AP=FALSE)
+
+capwords("testing the iProduct for defects")
+capwords("testing the iProduct for defects", strict=TRUE)
+capwords("testing the iProduct for defects", onlyfirst=TRUE)
+capwords("testing the iProduct for defects", preserveMixed=TRUE)
+
+capwords("title_using_underscores_as_separators", sep="_")
+
+}
+\keyword{utilites}
+\keyword{character}

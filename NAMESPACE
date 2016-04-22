@@ -9,6 +9,7 @@ export(
        assignEdgewise,
        binsearch,
        capture,
+       capwords,
        chr,
        checkRVersion,
        combinations,
