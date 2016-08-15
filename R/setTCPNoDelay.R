@@ -5,7 +5,11 @@ setTCPNoDelay <- function( socket, value=TRUE )
 
     buffer <- paste(rep(" ", 1000), sep='', collapse='')
 
-    conn <- getConnection(socket[1])
+    if("sockconn" %in% class(socket))
+      conn <- getConnection(socket[1])
+    else
+      conn <- socket
+ 
     
     retval <- .C("R_setTCPNoDelay",
                  socket=as.integer(socket[1]),
