@@ -98,7 +98,7 @@ void R_setTCPNoDelay(int *socket,
                        );
 
 
-  checkStatus(*status, status_str[0], *status_len);
+  checkStatus(errno, status_str[0], *status_len);
   
   return;
 }
