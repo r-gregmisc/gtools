@@ -1,5 +1,82 @@
+2016-08-15  warnes
+
+	* [r2142] DESCRIPTION: Update version number and date
+	* [r2141] tests/test_setTCPNoDelay.R: Add test code for
+	  setTCPNoDelay
+	* [r2140] R/setTCPNoDelay.R: Modify setTCPNoDelay to work with
+	  current socket objects
+	* [r2139] src/setTCPNoDelay.c: checkStatus() was not correctly
+	  getting the error message.
+
+2016-04-22  warnes
+
+	* [r2127] NAMESPACE, R/capwords.R, man/capwords.Rd: Add capwords()
+	  function to properly capatilize strings for use in titles
+	* [r2126] R/na.replace.R, man/na.replace.Rd: na.replace() now
+	  accepts a function providing the replcement value.
+
+2015-11-24  warnes
+
+	* [r2071] R/smartbind.R: Correct error when column types don't
+	  match (reported by
+
+2015-10-15  warnes
+
+	* [r2069] R/smartbind.R: smartbind() was not properly handling
+	  columsn that were numeric on one df and character in the other
+	  and other similar ctype conflicts. Fixed.
+
+2015-08-08  warnes
+
+	* [r2067] tests/smartbind_emptynames.R: Add half-hearted test file
+	* [r2066] R/smartbind.R: - Improve assignment of default names in
+	  smartbind.
+	  - Disambiguate 'list' into an object named 'list' and the
+	  function
+	  base::list() in smartbind().
+	* [r2065] DESCRIPTION, man/smartbind.Rd: Add example of using
+	  'list' argument to smartbind() man page.
+	* [r2064] R/smartbind.R, man/smartbind.Rd: - smartbind() gets a new
+	  argument 'list' to pass a list of data
+	  frames, instead of/in addition to data frames as arguments.
+	  - Fix bug in smartbind's handling of factor levels.
+	  
+
+2015-07-14  warnes
+
+	* [r2057] R/loadedPackages.R, man/loadedPackages.Rd: Modify
+	  loadedPackages() to return data silently so that the results
+	  don't get printed twice.
+
 2015-05-27  warnes
 
+	* [r2049] data/badDend.rda, man/badDend.Rd, man/unByteCode.Rd:
+	  Create local dataset to use in the example code for unByteCode
+	  instead of relying on web access.
+	* [r2048] R/trimws.R: Fix missing closing paren.
+	* [r2047] R/keywords.R, R/roman2int.R, R/trim.R, R/trimws.R: Two
+	  functions in gtools need to use either gdata::trim() or
+	  base::trimws() (added in R 3.2.0). The previous solution was to
+	  include gdata/R/gdata/R/trim.R in gtools using a symbolic link.
+	  
+	  Unfortunately, Rforge doesn't seem to like the symbolic link when
+	  building packages, and generates an error.
+	  
+	  So, instead, create the file trimws.R, which creates trimws() if
+	  it
+	  isn't already available (e.g. via base::trimws), and modify
+	  keywords()
+	  and roman2int() to use trimws() instead of gdata::trim().
+	* [r2046] man/roman2int.Rd: Add man page for roman2int().
+	* [r2045] man/mixedsort.Rd: Remove extraneous closing paren.
+	* [r2044] NAMESPACE: Add roman2int() to exported function list.
+	* [r2043] R/asc.R: Looks like we also lost the change of argument
+	  name to chr(). Fixed.
+	* [r2042] R/asc.R: Somehow lost 'simplify=TRUE' argument to asc.
+	  Fixed.
+	* [r2041] DESCRIPTION: Update gtools version number to 3.5.0
+	* [r2040] DESCRIPTION, inst/ChangeLog, inst/NEWS: Update
+	  DESCRIPTION, ChangeLog, NEWS
 	* [r2039] R/mixedsort.R, man/mixedsort.Rd: Add roman numeral
 	  support to mixedorder() and mixedsort().
 	* [r2037] man/asc.Rd: Add asc() and chr() functions for converting
