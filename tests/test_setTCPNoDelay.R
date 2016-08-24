@@ -37,8 +37,7 @@ print(socket)
 setTCPNoDelay(socket, TRUE)
 
 write.socket(socket, "GET /\n\n")
+write.socket(socket, "A\0B\n")
 while( (str <- read.socket(socket)) > "")
   cat(str)
 close.socket(socket)
-
-read.socket(socket)
