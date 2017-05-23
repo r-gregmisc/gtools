@@ -1,5 +1,5 @@
-ask <- function(msg="Press <RETURN> to continue: ")
+ask <- function(msg="Press <RETURN> to continue: ", con=stdin())
         {
           cat(msg);
-          readLines(con=stdin(),n=1)
+          readLines(con=con,n=1)
         }

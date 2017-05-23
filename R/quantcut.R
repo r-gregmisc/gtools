@@ -22,7 +22,7 @@ quantcut <- function(x, q=4, na.rm=TRUE, ... )
         reposition <- function(cut)
                            {
                              flag <- x>=cut
-                             if(sum(flag)==0)
+                             if(sum(flag, na.rm=na.rm)==0)
                                return(cut)
                              else
                                return(min(x[flag], na.rm=na.rm))
