@@ -36,7 +36,7 @@ Fogarty, Mignon. Capitalizing Titles: "Which words should you capitalize? Gramma
 \author{
 Gregory R. Warnes \email{greg@warnes.net} based on code from the
 \code{\link[base]{chartr}} manual page,
-and \code{\link[taxize]{capwords}}
+and \code{\link[taxize]{taxize_capwords}}
 in the taxize package.
 }
 \seealso{
