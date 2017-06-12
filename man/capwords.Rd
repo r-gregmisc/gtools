@@ -7,18 +7,20 @@ Capitalize Words for Titles
 This function capitalizes words for use in titles
 }
 \usage{
-capwords(s, strict=FALSE, AP=TRUE, firstonly=FALSE, 
+capwords(s, strict=FALSE, AP=TRUE, onlyfirst=FALSE,
          preserveMixed=FALSE, sep=" ")
 }
 \arguments{
   \item{s}{character string to be processed}
-  \item{strict}{Logical, remove all additional capitalization}
+  \item{strict}{Logical, remove all additional capitalization.}
   \item{AP}{Logical, apply the Associated Press (AP) rules for
     prepositions and conjunctions that should not be capitalized
     in titles.}
+  \item{onlyfirst}{Logical, only capitalize the first word.}
   \item{preserveMixed}{Logical, preserve the capitalization
-    mixed-case words containing an upper-case letter after a 
+    mixed-case words containing an upper-case letter after a
     lower-case letter.}
+  \item{sep}{Character string, word separator}
 }
 \details{
 This function separates the provided character string into separate words using \code{sep} as the word separator.  If \code{firstonly==TRUE}, it then capitalizes the first letter the first word, otherwise (the default), it capitalizes the first letter of every word.  If \code{AP==TRUE}, it then un-capitalizes words in the Associated Press's (AP) list of prepositions and conjunctions should not be capitalized in titles.  Next, it capitalizes the first word. It then re-joins the words using the specified separator.
@@ -29,10 +31,10 @@ If \code{preserveMixed==TRUE}, words with an upper-case letter appearing after a
 A character scalar containing the capitalized words.
 }
 \references{
-Fogarty, Mignon. “Capitalizing Titles: Which words should you capitalize?” Grammar Girl's Quick and Dirty Tips for Better Writing. 9 Jun. 2011. Quick and Dirty Tips Website. Accessed 22 April 2016 \url{http://www.quickanddirtytips.com/education/grammar/capitalizing-titles}
+Fogarty, Mignon. Capitalizing Titles: "Which words should you capitalize? Grammar Girl's Quick and Dirty Tips for Better Writing. 9 Jun. 2011. Quick and Dirty Tips Website." Accessed 22 April 2016 \url{http://www.quickanddirtytips.com/education/grammar/capitalizing-titles}
 }
 \author{
-Gregory R. Warnes \email{greg@warnes.net} based on code from the \code{\link[base]{chartr}} manual page, 
+Gregory R. Warnes \email{greg@warnes.net} based on code from the \code{\link[base]{chartr}} manual page,
 and \code{\link[taxize]{capwords}}
 in the taxize package.
 }
