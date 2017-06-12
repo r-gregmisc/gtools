@@ -5,15 +5,21 @@
   Display a prompt and collect the user's response
 }
 \usage{
-ask(msg = "Press <RETURN> to continue: ")
+ask(msg = "Press <RETURN> to continue: ", con=stdin())
 }
 \arguments{
   \item{msg}{Character vetor providing the message to be displayed}
+  \item{con}{Character connection to query, defaults to \code{stdin()}.}
 }
 \details{
   The prompt message will be displayed, and then \code{readLines} is
   used to collect a single input value (possibly empty), which is then
   returned.
+
+  In most situations using the default \code{con=stdin()} should work
+  properly.  Under RStudio, it is necessary to specify
+  \code{con=file("stdin")} for proper operaation.
+
 }
 \value{
   A character scalar containing the input providede by the user.
@@ -31,6 +37,6 @@ silly <- function()
    age <- as.numeric(age)
    cat("In 10 years you will be", age+10, "years old!\n")
 }
-   
+
 }
 \keyword{IO}
