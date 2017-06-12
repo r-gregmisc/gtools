@@ -13,20 +13,13 @@
 	* [r2158] R/capwords.R, man/capwords.Rd: Add capwords() function to
 	  apply standard capitalization rules to a scharacter string.
 
-2017-05-23  warnes
-
-	* [r2145] R/ask.R, R/quantcut.R, R/smartbind.R: - Integrate changes
-	  made by Mango Solutions at
-	  https://github.com/MangoTheCat/SASxport. - Remove functions
-	  duplicated from the Hmisc package. - Minor code cleanup.
-
 2016-08-24  warnes
 
 	* [r2144] tests/test_setTCPNoDelay.R: Add more testing code.
 
 2016-08-15  warnes
 
-	* [r2143] inst/ChangeLog: Update ChangeLog
+	* [r2143] inst/ChangeLog: Update ChangeLogtaxi
 
 	* [r2142] DESCRIPTION: Update version number and date
 
@@ -51,7 +44,7 @@
 2015-11-24  warnes
 
 	* [r2071] R/smartbind.R: Correct error when column types don't
-	  match (reported by
+	  match.
 
 2015-10-15  warnes
 
