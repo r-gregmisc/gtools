@@ -34,13 +34,14 @@ A character scalar containing the capitalized words.
 Fogarty, Mignon. Capitalizing Titles: "Which words should you capitalize? Grammar Girl's Quick and Dirty Tips for Better Writing. 9 Jun. 2011. Quick and Dirty Tips Website." Accessed 22 April 2016 \url{http://www.quickanddirtytips.com/education/grammar/capitalizing-titles}
 }
 \author{
-Gregory R. Warnes \email{greg@warnes.net} based on code from the \code{\link[base]{chartr}} manual page,
+Gregory R. Warnes \email{greg@warnes.net} based on code from the
+\code{\link[base]{chartr}} manual page,
 and \code{\link[taxize]{capwords}}
 in the taxize package.
 }
 \seealso{
 \code{\link[base]{chartr}},
-\code{\link[taxize]{capwords}},
+\code{\link[taxize]{taxize_capwords}},
 \code{\link[SGP]{capwords}}
 }
 \examples{
