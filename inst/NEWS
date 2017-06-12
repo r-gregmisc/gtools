@@ -1,3 +1,38 @@
+gtools 3.7.0 - 2017-06-11
+-------------------------
+
+New functions:
+
+- Add capwords() function to apply standard capitalization rules
+  to a character string.
+
+Enhancements:
+
+- Add 'con' argument to ask() to allow specification of the
+  connection to query for input.  For use under RStudio, use
+  ask(..., con=file('stdin')).
+
+- R/na.replace.R, man/na.replace.Rd: na.replace() now
+	accepts a function to provide the replcement value.
+
+- smartbind() has a new argument 'list' to pass a list of data frames,
+  /instead of/in addition to/ data frames as arguments.
+
+Bug Fixes:
+
+- smartbind() now works properly with empty column names
+
+- Correct error in smartbind() when column types don't
+	match.
+
+- Fix bug in smartbind's handling of factor levels.
+
+- Improve assignment of default names in smartbind().
+
+- loadedPackages() to return data silently so that the results
+	don't get printed twice.
+
+
 gtools 3.5.0 - 2015-04-28
 -------------------------
 
@@ -16,7 +51,7 @@ New Functions:
 - New assignEdgewise() function for making assignments into locked
   environments. (Used by unByteCodeAssign().)
 
-Enhacements:
+Enhancements:
 
 - mixedsort() and mixedorder() now have arguments 'decreasing',
   'na.last', and 'blank.last' arguments to control sort ordering.
