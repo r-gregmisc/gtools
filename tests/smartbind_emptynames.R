@@ -1,5 +1,4 @@
-library(devtools)
-load_all("~/src/r-gregmisc/gtools")  # for updated smartbind
+library(gtools)
 
 df1 <- data.frame(a=1, b=2,          d=TRUE )
 df2 <- data.frame(     b=7, c="YES", d=FALSE)
