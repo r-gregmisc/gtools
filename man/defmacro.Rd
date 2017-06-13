@@ -61,7 +61,7 @@ strmacro(..., expr, strexpr)
   The original \code{defmacro} code was directly taken from:
 
   Lumley T. "Programmer's Niche: Macros in R", R News, 2001, Vol 1,
-  No. 3, pp 11--13, \url{http://CRAN.R-project.org/doc/Rnews/}
+  No. 3, pp 11--13, \url{http://cran.r-project.org/doc/Rnews/}
 }
 \author{ Thomas Lumley wrote \code{defmacro}.  Gregory R. Warnes
   \email{greg@warnes.net} enhanced it and created
