@@ -1,4 +1,4 @@
-uantcut <- function(x, q=4, na.rm=TRUE, ... )
+quantcut <- function(x, q=4, na.rm=TRUE, ... )
   {
     if(length(q)==1)
         q <- seq(0,1, length.out=q+1)

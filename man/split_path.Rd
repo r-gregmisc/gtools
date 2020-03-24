@@ -20,7 +20,7 @@ This function converts a character scalar containing a
  \emph{valid} file path into a character vector of path components
  (e.g. directories).
 }
-\example{
+\examples{
     longPath = "/users/me/src/this/is/a/long/path"
     split_path(longPath)
 }
