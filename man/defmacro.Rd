@@ -61,7 +61,7 @@ strmacro(..., expr, strexpr)
   The original \code{defmacro} code was directly taken from:
 
   Lumley T. "Programmer's Niche: Macros in R", R News, 2001, Vol 1,
-  No. 3, pp 11--13, \url{http://cran.r-project.org/doc/Rnews/}
+  No. 3, pp 11--13, \url{https://cran.r-project.org/doc/Rnews/}
 }
 \author{ Thomas Lumley wrote \code{defmacro}.  Gregory R. Warnes
   \email{greg@warnes.net} enhanced it and created
@@ -87,7 +87,7 @@ setNA <- defmacro(df, var, values,
 
 # create example data using 999 as a missing value indicator
 d <- data.frame(
-   Grp=c("Trt", "Ctl", "Ctl", "Trt", "Ctl", "Ctl", "Trt", "Ctl", "Trt", "Ctl"),
+   Grp=factor(c("Trt", "Ctl", "Ctl", "Trt", "Ctl", "Ctl", "Trt", "Ctl", "Trt", "Ctl")),
    V1=c(1, 2, 3, 4, 5, 6, 999, 8,   9,  10),
    V2=c(1, 1, 1, 1, 1, 2, 999, 2, 999, 999)
                )

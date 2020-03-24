@@ -9,7 +9,7 @@
 ##  number       = 3,
 ##  pages	       = {11--13},
 ##  month	       = {September},
-##  url	       = {http://CRAN.R-project.org/doc/Rnews/}
+##  url	       = {https://cran.r-project.org/doc/Rnews/}
 ##}
 defmacro <- function(..., expr) #, DOTS=FALSE)
 {

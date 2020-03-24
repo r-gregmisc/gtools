@@ -22,10 +22,11 @@ Description: Functions to assist in R programming, including:
   - efficient 'rbind' of data frames, even if the column names don't match ('smartbind'),
   - generate significance stars from p-values ('stars.pval'),
   - convert characters to/from ASCII codes.
-Version: 3.7.0
-Date: 2017-06-11
+Version: 3.7.1
+Date: 2020-03-23
 Author: Gregory R. Warnes, Ben Bolker, and Thomas Lumley
 Maintainer: Gregory R. Warnes <greg@warnes.net>
 License: GPL-2
 Depends: methods, stats, utils
-
+URL: https://github.com/r-gregmisc/gtools
+BugReports: https://github.com/r-gregmisc/gtools/issues
