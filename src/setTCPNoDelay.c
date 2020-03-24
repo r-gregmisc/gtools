@@ -29,7 +29,7 @@
                ERRNO ":" DESCR,
                status_len);
       break;
-#endif  
+#endif
 
 
 
@@ -61,7 +61,7 @@ void checkStatus(int status,
       CASE_ERR(WSAENOPROTOOPT, "he option is unknown or unsupported for the specified provider or socket (see SO_GROUP_PRIORITY limitations).");
       CASE_ERR(WSAENOTCONN, "Connection has been reset when SO_KEEPALIVE is set.");
       CASE_ERR(WSAENOTSOCK, "The descriptor is not a socket.");
-      
+
     case 0:
       strncpy( status_str,
                "SUCCESS",
@@ -69,7 +69,7 @@ void checkStatus(int status,
       break;
 
     default:
-      strncpy(status_str, strerror(status), status_len);  
+      strncpy(status_str, strerror(status), status_len);
       break;
     }
 
@@ -78,17 +78,17 @@ void checkStatus(int status,
 
 
 /* Function to de-nagle a TCP socket connection */
-void R_setTCPNoDelay(int *socket,
+void setTCPNoDelay(int *socket,
                      int* flag,
                      int* status,
                      char** status_str,
                      int* status_len)
 {
   int off;
-  
+
   /* ensure that we use only 0,1 values */
   off = (*flag) ? 1 : 0;
-  
+
   *status = setsockopt(
                        *socket,
                        IPPROTO_TCP,
@@ -99,43 +99,6 @@ void R_setTCPNoDelay(int *socket,
 
 
   checkStatus(errno, status_str[0], *status_len);
-  
+
   return;
 }
-
-/* function to check socket options */
-/* NOT USED...
-void R_getsockopt(int *s,
-                  int *level,
-                  int *optname,
-                  int *optval,
-                  int *optlen,
-                  int *status,
-                  char *status_str,
-                  int *status_len)
-{
-  *status = getsockopt(*s, *level, *optname, optval, optlen);
-
-  checkStatus(*status, status_str, *status_len);
-  
-}
-*/
-
-/* function to set socket options */
-/* NOT USED ...
-void R_setsockopt(int *s,
-                  int *level,
-                  int *optname,
-                  int *optval,
-                  int *optlen,
-                  int *status,
-                  char *status_str,
-                  int *status_len)
-{
-
-  *status = setsockopt(*s, *level,  *optname, optval, *optlen);
-
-  checkStatus(*status, status_str, *status_len);
-}
-*/
-

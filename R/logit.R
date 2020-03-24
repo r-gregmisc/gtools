@@ -1,5 +1,3 @@
-# $Id$
-
 logit <- function(x, min=0, max=1)
   {
     p <- (x-min)/(max-min)
@@ -12,4 +10,4 @@ inv.logit <- function(x, min=0, max=1)
     p <- ifelse( is.na(p) & !is.na(x), 1, p ) # fix problems with +Inf
     p * (max-min) + min
   }
-                 
+

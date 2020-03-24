@@ -1,5 +1,3 @@
-% $Id$
-%
 \name{logit}
 \alias{logit}
 \alias{inv.logit}
@@ -25,12 +23,12 @@ inv.logit(x, min = 0, max = 1)
     \deqn{y = log(\frac{p}{(1-p)})}{y = log(p/(1-p))}
 
   where
-    
+
     \deqn{p=\frac{(x-min)}{(max-min)}}{p=(x-min)/(max-min)}
 
   The generized inverse logit function provides the inverse
   transformation:
-    
+
     \deqn{x = p' (max-min) + min}{x = p * (max-min) + min}
 
   where
@@ -46,12 +44,12 @@ inv.logit(x, min = 0, max = 1)
 \seealso{ \code{\link[car]{logit}} }
 \examples{
 
-  x <- seq(0,10, by=0.25)
+  x <- seq(0, 10, by=0.25)
   xt <- logit(x, min=0, max=10)
   cbind(x,xt)
 
   y <- inv.logit(xt, min=0, max=10)
-  cbind(x,xt,y)  
+  cbind(x, xt, y)
 
 }
 \keyword{math}

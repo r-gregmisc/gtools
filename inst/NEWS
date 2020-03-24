@@ -1,4 +1,31 @@
-gtools 3.7.0 - 2017-06-11
+gtools 3.8.2 - 2020-03-23
+-------------------------
+
+Minor changes to support R 4.0
+
+gtools 3.8.1 - 2018-06-21
+-------------------------
+
+Behind the scenes:
+
+- Remove softlinks per request from Uwe Ligges
+
+gtools 3.8.0 - 2018-06-20
+-------------------------
+
+New functions:
+
+- spit_path(): converts a file path into a vector of path components
+- baseOf(): Transform an integer to an array of base-n digits
+
+Behind the scenes:
+
+- Update C calls to use correct 'PACKAGE=' parameter.
+- Explicitly register C routines used by the package
+- Update link for taxise::taxize_capwords in gtools::capwords man page
+- Corrections to typographical errors
+
+gtools 3.7.0 - 2017-06-14
 -------------------------
 
 New functions:
@@ -17,6 +44,8 @@ Enhancements:
 
 - smartbind() has a new argument 'list' to pass a list of data frames,
   /instead of/in addition to/ data frames as arguments.
+
+- Internal changes to bring code up to current CRAN guidelines.
 
 Bug Fixes:
 

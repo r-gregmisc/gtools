@@ -1,5 +1,3 @@
-# $Id$
-
 "running" <- function(X, Y=NULL,
                       fun=mean,
                       width=min(length(X), 20),

@@ -1,12 +1,10 @@
-% $Id$
-%
 \name{ELISA}
 \docType{data}
 \alias{ELISA}
 \title{Data from an ELISA assay}
 \description{Observed signals and (for some observations) nominal
   concentrations for samples that were aliquoted to multiple assay plates,
-  which were read multiple times on multiple days.   
+  which were read multiple times on multiple days.
 }
 \usage{
 data(ELISA)

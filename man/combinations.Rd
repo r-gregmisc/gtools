@@ -1,5 +1,3 @@
-% $Id$
-%
 \name{combinations}
 \alias{combinations}
 \alias{permutations}
@@ -53,6 +51,6 @@ permutations(3,2,letters[1:3],repeats=TRUE)
 # To use large 'n', you need to change the default recusion limit
 options(expressions=1e5)
 cmat <- combinations(300,2)
-dim(cmat) # 44850 by 2 
+dim(cmat) # 44850 by 2
 }
 \keyword{ manip }

@@ -1,5 +1,3 @@
-% $Id$
-%
 \name{quantcut}
 \alias{quantcut}
 

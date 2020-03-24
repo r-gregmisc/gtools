@@ -1,20 +1,17 @@
-# $Id$
-#
-
 ##
 ## From email by Brian D Ripley <ripley@stats.ox.ac.uk> to r-help
 ## dated Tue, 14 Dec 1999 11:14:04 +0000 (GMT) in response to
 ## Alex Ahgarin <datamanagement@email.com>.  Original version was
-## named "subsets" and was Written by Bill Venables.  
+## named "subsets" and was Written by Bill Venables.
 ##
 
 combinations <- function(n, r, v = 1:n, set = TRUE, repeats.allowed=FALSE)
 {
-  if(mode(n) != "numeric" || length(n) != 1 
-     || n < 1 || (n %% 1) != 0) stop("bad value of n") 
-  if(mode(r) != "numeric" || length(r) != 1 
-     || r < 1 || (r %% 1) != 0) stop("bad value of r") 
-  if(!is.atomic(v) || length(v) < n) 
+  if(mode(n) != "numeric" || length(n) != 1
+     || n < 1 || (n %% 1) != 0) stop("bad value of n")
+  if(mode(r) != "numeric" || length(r) != 1
+     || r < 1 || (r %% 1) != 0) stop("bad value of r")
+  if(!is.atomic(v) || length(v) < n)
     stop("v is either non-atomic or too short")
   if( (r > n) & repeats.allowed==FALSE)
     stop("r > n and repeats.allowed=FALSE")
@@ -26,7 +23,7 @@ combinations <- function(n, r, v = 1:n, set = TRUE, repeats.allowed=FALSE)
   ## Inner workhorse
   if(repeats.allowed)
     sub <- function(n, r, v)
-      { 
+      {
         if(r == 0) v0 else
         if(r == 1) matrix(v, n, 1) else
         if(n == 1) matrix(v, 1, r) else
@@ -35,7 +32,7 @@ combinations <- function(n, r, v = 1:n, set = TRUE, repeats.allowed=FALSE)
       }
   else
     sub <- function(n, r, v)
-      { 
+      {
         if(r == 0) v0 else
         if(r == 1) matrix(v, n, 1) else
         if(r == n) matrix(v, 1, n) else
@@ -56,11 +53,11 @@ combinations <- function(n, r, v = 1:n, set = TRUE, repeats.allowed=FALSE)
 
 permutations <- function(n, r, v = 1:n, set = TRUE, repeats.allowed=FALSE)
 {
-  if(mode(n) != "numeric" || length(n) != 1 
-     || n < 1 || (n %% 1) != 0) stop("bad value of n") 
-  if(mode(r) != "numeric" || length(r) != 1 
-     || r < 1 || (r %% 1) != 0) stop("bad value of r") 
-  if(!is.atomic(v) || length(v) < n) 
+  if(mode(n) != "numeric" || length(n) != 1
+     || n < 1 || (n %% 1) != 0) stop("bad value of n")
+  if(mode(r) != "numeric" || length(r) != 1
+     || r < 1 || (r %% 1) != 0) stop("bad value of r")
+  if(!is.atomic(v) || length(v) < n)
     stop("v is either non-atomic or too short")
   if( (r > n) & repeats.allowed==FALSE)
     stop("r > n and repeats.allowed=FALSE")

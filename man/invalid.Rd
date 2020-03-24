@@ -1,9 +1,7 @@
-% $Id$
-%
 \name{invalid}
 \alias{invalid}
 \title{Test if a value is missing, empty, or contains only NA or NULL values}
-\description{ 
+\description{
   Test if a value is missing, empty, or contains only NA or NULL values.
 }
 \usage{

@@ -1,5 +1,3 @@
-% $Id$
-%
 \name{permute}
 \alias{permute}
 \title{Randomly Permute the Elements of a Vector}

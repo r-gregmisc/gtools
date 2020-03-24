@@ -1,5 +1,4 @@
-# $Id$
-
+# TODO: Depricate in favor of message
 # cat to stdout and immediately flush
 scat <- function(...)
   {

@@ -1,5 +1,3 @@
-% $Id$
-%
 \name{running}
 \alias{running}
 \title{Apply a Function Over Adjacent Subsets of a Vector}

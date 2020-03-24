@@ -1,5 +1,3 @@
-# $Id$
-
 invalid <- function(x)
   {
     if( missing(x) || is.null(x) || length(x)==0 )

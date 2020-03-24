@@ -1,5 +1,4 @@
-% $Id$
-%
+
 \name{rdirichlet}
 \alias{rdirichlet}
 \alias{ddirichlet}
@@ -14,7 +13,7 @@ ddirichlet(x, alpha)
 }
 \arguments{
   \item{x}{A vector containing a single random deviate or matrix
-    containg one random deviate per row.} 
+    containg one random deviate per row.}
   \item{n}{Number of random vectors to generate. }
   \item{alpha}{Vector or (for \code{ddirichlet}) matrix containing shape
     parameters. }

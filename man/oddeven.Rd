@@ -1,5 +1,3 @@
-% $Id$
-%
 \name{odd}
 \alias{odd}
 \alias{even}

@@ -21,8 +21,9 @@ Description: Functions to assist in R programming, including:
   - modify the TCP\_NODELAY ('de-Nagle') flag for socket objects,
   - efficient 'rbind' of data frames, even if the column names don't match ('smartbind'),
   - generate significance stars from p-values ('stars.pval'),
-  - convert characters to/from ASCII codes.
-Version: 3.7.1
+  - convert characters to/from ASCII codes ('asc', 'chr'),
+  - convert character vector to ASCII representation ('ASCIIfy').
+Version: 3.8.2
 Date: 2020-03-23
 Author: Gregory R. Warnes, Ben Bolker, and Thomas Lumley
 Maintainer: Gregory R. Warnes <greg@warnes.net>
