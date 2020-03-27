@@ -29,7 +29,7 @@ baseOf(v, base=10, len=1)
  To write decimal values in another base is very common in computer science.
  In particular at the basis 2 the then possible values 0 and 1 are often
  interpreted as logical false or true. And at the very interface to
- electrical engineering, it is indicacted as an absence or presence of
+ electrical engineering, it is indicated as an absence or presence of
  voltage. When several bit values are transported synchronously, then
  it is common to give every lane of such a data bus a unique 2^x value
  and interpret it as a number in the dual system. To distinguish 256

@@ -1,9 +1,9 @@
 \name{badDend}
 \alias{badDend}
 \docType{data}
-\title{Dataset That Crashes Base:::Plot.Dendogram with 'Node Stack Overflow'}
+\title{Dataset That Crashes Base:::Plot.Dendrogram with 'Node Stack Overflow'}
 \description{
-  Base:::Plot.Dendogram() will generate a 'Node Stack Overflow' when run
+  Base:::Plot.Dendrogram() will generate a 'Node Stack Overflow' when run
   on a dendrogram appropriately constructed from this data set.
 }
 \usage{data("badDend")}
@@ -16,7 +16,7 @@
 }
 \note{
   See help page for \code{\link{unByteCode}} to see how to construct the
-  'bad' dentrogram from this data and how to work around the issue.
+  'bad' dendrogram from this data and how to work around the issue.
   }
 \examples{
 data(badDend)

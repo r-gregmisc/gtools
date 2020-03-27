@@ -3,14 +3,14 @@
 
 \title{ Create a Factor Variable Using the Quantiles of a Continuous Variable}
 \description{
-  Create a factor variable using the quantiles of a continous variable.
+  Create a factor variable using the quantiles of a continuous variable.
 }
 \usage{
 quantcut(x, q=4, na.rm=TRUE, ...)
 }
 %- maybe also `usage' for other objects documented here.
 \arguments{
-  \item{x}{ Continous variable. }
+  \item{x}{ Continuous variable. }
   \item{q}{ Either a integer number of equally spaced quantile groups to
     create, or a vector of quantiles used for creating groups. Defaults to
     \code{q=4} which is equivalent to \code{q=seq(0, 1, by=0.25)}.

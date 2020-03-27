@@ -8,7 +8,7 @@
 ask(msg = "Press <RETURN> to continue: ", con=stdin())
 }
 \arguments{
-  \item{msg}{Character vetor providing the message to be displayed}
+  \item{msg}{Character vector providing the message to be displayed}
   \item{con}{Character connection to query, defaults to \code{stdin()}.}
 }
 \details{
@@ -18,11 +18,11 @@ ask(msg = "Press <RETURN> to continue: ", con=stdin())
 
   In most situations using the default \code{con=stdin()} should work
   properly.  Under RStudio, it is necessary to specify
-  \code{con=file("stdin")} for proper operaation.
+  \code{con=file("stdin")} for proper operation.
 
 }
 \value{
-  A character scalar containing the input providede by the user.
+  A character scalar containing the input provided by the user.
 }
 \author{Gregory R. Warnes \email{greg@warnes.net}}
 \seealso{ \code{\link{readLines}}, \code{\link{scan}} }

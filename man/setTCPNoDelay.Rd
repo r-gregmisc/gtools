@@ -2,7 +2,7 @@
 \alias{setTCPNoDelay}
 \title{Modify the TCP\_NODELAY (`de-Nagle') flag for socket objects}
 \description{
-  Modify the TCP\_NODELAY (`de-Nagele') flag for socket objects
+  Modify the TCP\_NODELAY (`de-Nagle') flag for socket objects
 }
 \usage{
 setTCPNoDelay(socket, value=TRUE)
@@ -29,7 +29,7 @@ setTCPNoDelay(socket, value=TRUE)
 }
 \value{
   The character string "SUCCESS" will be returned invisible if the
-  operation was succesful.  On failure, an error will be generated.
+  operation was successful.  On failure, an error will be generated.
 }
 \references{
   "Nagle's algorithm" at WhatIS.com \url{

@@ -51,7 +51,7 @@ getDependencies(pkgs,
   selected CRAN repository, prompting for one if necessary.
   }
 \author{
-  Gregory R. Warnes email{greg@warnes.net} based on the non exported
+  Gregory R. Warnes \email{greg@warnes.net} based on the non exported
   \code{utils:::getDependencies} and
   \code{utils:::.clean_up_dependencies2}.
 }

@@ -8,7 +8,7 @@
 checkRVersion(quiet = FALSE)
 }
 \arguments{
-  \item{quiet}{Logical indicating whether printed output should be supressed.}
+  \item{quiet}{Logical indicating whether printed output should be suppressed.}
 }
 \details{
   This function accesses the R web site to discover the latest released

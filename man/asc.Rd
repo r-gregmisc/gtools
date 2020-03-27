@@ -22,7 +22,7 @@
 \value{
   \code{asc} returns the integer ASCII values for each character
   in the elements of \code{char}.  If \code{simplify=FALSE} the result
-  will be a list contining one vector per element of \code{char}.  If
+  will be a list continuing one vector per element of \code{char}.  If
   \code{simplify=TRUE}, the code will attempt to convert the result into
   a vector or matrix.
 

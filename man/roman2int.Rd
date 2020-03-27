@@ -11,7 +11,7 @@ roman2int(roman)
   \item{roman}{character vector containing roman numerals}
 }
 \details{
-  This functon will convert roman numerals to integers without the upper bound
+  This function will convert roman numerals to integers without the upper bound
   imposed by R (3899), ignoring case.
 }
 \value{

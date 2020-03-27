@@ -31,3 +31,4 @@ License: GPL-2
 Depends: methods, stats, utils
 URL: https://github.com/r-gregmisc/gtools
 BugReports: https://github.com/r-gregmisc/gtools/issues
+Language: en-US

@@ -12,7 +12,7 @@ lastAdd(fun)
 }
 \details{
   \code{lastAdd} constructs a new function which can be used to replace
-  the exising definition of \code{.Last}, which will be executed when R
+  the existing definition of \code{.Last}, which will be executed when R
   terminates normally.
 
   If a \code{.Last} function already exists in the global environment,

@@ -11,7 +11,7 @@ data(ELISA)
 }
 \format{a data frame with the following columns:
   \itemize{
-    \item{PlateDay}{factor. Specifies one of four physically disctinct
+    \item{PlateDay}{factor. Specifies one of four physically distinct
       96 well plates}
     \item{Read}{factor. The signal was read 3 times for each plate.}
     \item{Description}{character. Indicates contents of sample.}

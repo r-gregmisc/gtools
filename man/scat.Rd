@@ -4,7 +4,7 @@
 \title{Display debugging text}
 \description{
   If \code{getOption('DEBUG')==TRUE}, write text to STDOUT and flush so
-  that the text is immediatly displayed. Otherwise, do nothing.
+  that the text is immediately displayed. Otherwise, do nothing.
 }
 
 \usage{

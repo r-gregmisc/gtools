@@ -26,7 +26,7 @@ inv.logit(x, min = 0, max = 1)
 
     \deqn{p=\frac{(x-min)}{(max-min)}}{p=(x-min)/(max-min)}
 
-  The generized inverse logit function provides the inverse
+  The generalized inverse logit function provides the inverse
   transformation:
 
     \deqn{x = p' (max-min) + min}{x = p * (max-min) + min}
