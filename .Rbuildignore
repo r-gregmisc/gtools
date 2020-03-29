@@ -3,3 +3,4 @@
 ^revdep$
 ^scripts$
 ^CRAN-RELEASE$
+^cran-comments.md
