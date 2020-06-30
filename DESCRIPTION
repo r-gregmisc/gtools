@@ -9,7 +9,7 @@ Description: Functions to assist in R programming, including:
   - define macros ('defmacro'),
   - detect odd and even integers ('odd', 'even'),
   - convert strings containing non-ASCII characters (like single quotes) to plain ASCII ('ASCIIfy'),
-  - convert numbers of base 10 to representations of any other base (e.g. dual, octal or hexadecimal)
+  - convert a base-10 number to a sequence of digits in other bases (e.g. dual, octal or hexadecimal)
   - perform a binary search ('binsearch'),
   - sort strings containing both numeric and character components ('mixedsort'),
   - create a factor variable from the quantiles of a continuous variable ('quantcut'),
