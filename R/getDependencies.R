@@ -1,5 +1,56 @@
 ## This function determines the dependencies for the specified
 ## package, exluding only packages found in "base".
+
+
+#' Get package dependencies
+#' 
+#' Get package dependencies
+#' 
+#' This function recursively constructs the list of dependencies for the
+#' packages given by \code{pkgs}.  By default, the dependency information is
+#' extracted from both installed and available packages.  As a consequence, it
+#' works both for local and CRAN packages.
+#' 
+#' @param pkgs character vector of package names
+#' @param dependencies character vector of dependency types to include.
+#' Choices are "Depends", "Imports", "LinkingTo", "Suggests", and "Enhances".
+#' Defaults to \code{c("Depends", "Imports", "LinkingTo")}.
+#' @param installed Logical indicating whether to pull dependency information
+#' from installed packages. Defaults to TRUE.
+#' @param available Logical indicating whether to pull dependency information
+#' from available packages.  Defaults to TRUE.
+#' @param base Logical indicating whether to include dependencies on base
+#' packages that are included in the R installation. Defaults to FALSE.
+#' @param recommended Logical indicating whether to include dependencies on
+#' recommended packages that are included in the R installation. Defaults to
+#' FALSE.
+#' @return A character vector of package names.
+#' @note If \code{available=TRUE} R will attempt to access the currently
+#' selected CRAN repository, prompting for one if necessary.
+#' @author Gregory R. Warnes emailgreg@@warnes.net based on the non exported
+#' \code{utils:::getDependencies} and \code{utils:::.clean_up_dependencies2}.
+#' @seealso \code{\link{installed.packages}}, \code{\link{available.packages}}
+#' @keywords utilities
+#' @examples
+#' 
+#' ## A locally installed package
+#' getDependencies("MASS", installed=TRUE, available=FALSE)
+#' 
+#' \dontrun{
+#' ## A package on CRAN
+#' getDependencies("gregmisc", installed=FALSE, available=TRUE)
+#' }
+#' 
+#' ## Show base and recommended dependencies
+#' getDependencies("MASS", available=FALSE, base=TRUE, recommended=TRUE)
+#' 
+#' \dontrun{
+#' ## Download the set of packages necessary to support a local package
+#' deps <- getDependencies("MyLocalPackage", available=FALSE)
+#' download.packages(deps, destdir="./R_Packages")
+#' }
+#' 
+#' 
 getDependencies <- function (pkgs,
                              dependencies = c("Depends", "Imports", "LinkingTo"),
                              installed=TRUE,

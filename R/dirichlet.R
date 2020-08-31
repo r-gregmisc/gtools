@@ -1,29 +1,38 @@
-# $Id$
-
-# Posted by Ben Bolker to R-News on Fri Dec 15 2000
-# http://www.r-project.org/nocvs/mail/r-help/2000/3865.html
-#
-# Some code (originally contributed by Ian Wilson
-# <i.wilson@maths.abdn.ac.uk>
-
-
-#  functions for the "Dirichlet function", the multidimensional
-#  generalization of the beta distribution: it's the Bayesian
-#  canonical # distribution for the parameter estimates of a
-#  multinomial distribution.
-
-# "pdirichlet" and "qdirichlet" (distribution function and quantiles)
-# would be more difficult because you'd first have to decide how to
-# define the distribution function for a multivariate distribution
-# ... I'm sure this could be done but I don't know how
-
-
-
+#' Functions for the Dirichlet Distribution
+#' 
+#' Functions to compute the density of or generate random deviates from the
+#' Dirichlet distribution.
+#' 
+#' The Dirichlet distribution is the multidimensional generalization of the
+#' beta distribution.  It is the canonical Bayesian distribution for the
+#' parameter estimates of a multinomial distribution.
+#' 
+#' @aliases rdirichlet ddirichlet
+#' @param x A vector containing a single random deviate or matrix containg one
+#' random deviate per row.
+#' @param n Number of random vectors to generate.
+#' @param alpha Vector or (for \code{ddirichlet}) matrix containing shape
+#' parameters.
+#' @return \code{ddirichlet} returns a vector containing the Dirichlet density
+#' for the corresponding rows of \code{x}.
+#' 
+#' \code{rdirichlet} returns a matrix with \code{n} rows, each containing a
+#' single Dirichlet random deviate.
+#' @author Code original posted by Ben Bolker to R-News on Fri Dec 15 2000. See
+#' \url{https://stat.ethz.ch/pipermail/r-help/2000-December/009561.html}.  Ben
+#' attributed the code to Ian Wilson \email{i.wilson@@maths.abdn.ac.uk}.
+#' Subsequent modifications by Gregory R. Warnes \email{greg@@warnes.net}.
+#' @seealso \code{\link{dbeta}}, \code{\link{rbeta}}
+#' @keywords distribution
+#' @examples
+#' 
+#' 
+#'   x <- rdirichlet(20, c(1,1,1) )
+#' 
+#'   ddirichlet(x, c(1,1,1) )
+#' 
+#' 
 ddirichlet<-function(x,alpha)
-## probability density for the Dirichlet function, where x=vector of
-## probabilities
-## and (alpha-1)=vector of observed samples of each type
-## ddirichlet(c(p,1-p),c(x1,x2)) == dbeta(p,x1,x2)
 {
 
   dirichlet1 <- function(x, alpha)
@@ -57,10 +66,10 @@ ddirichlet<-function(x,alpha)
   pd
 }
 
-
+# @export
 rdirichlet<-function(n,alpha)
 ## generate n random deviates from the Dirichlet function with shape
-## parameters alpha
+## parameter alpha
 {
     l<-length(alpha);
     x<-matrix(rgamma(l*n,alpha),ncol=l,byrow=TRUE);

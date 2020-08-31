@@ -1,3 +1,37 @@
+#' Convert Characters to ASCII
+#' 
+#' Convert character vector to ASCII, replacing non-ASCII characters with
+#' single-byte (\samp{\x00}) or two-byte (\samp{\u0000}) codes.
+#' 
+#' 
+#' @param x a character vector, possibly containing non-ASCII characters.
+#' @param bytes either \code{1} or \code{2}, for single-byte (\samp{\x00}) or
+#' two-byte (\samp{\u0000}) codes.
+#' @param fallback an output character to use, when input characters cannot be
+#' converted.
+#' @return A character vector like \code{x}, except non-ASCII characters have
+#' been replaced with \samp{\x00} or \samp{\u0000} codes.
+#' @note To render single backslashes, use these or similar
+#' techniques:\preformatted{ write(ASCIIfy(x), "file.txt")
+#' cat(paste(ASCIIfy(x), collapse="\n"), "\n", sep="")}
+#' 
+#' The resulting strings are plain ASCII and can be used in R functions and
+#' datasets to improve package portability.
+#' @author Arni Magnusson \email{arnima@@hafro.is}
+#' @seealso \code{\link[tools]{showNonASCII}} identifies non-ASCII characters
+#' in a character vector.
+#' @keywords utilites character
+#' @examples
+#' 
+#' cities <- c("S\u00e3o Paulo", "Reykjav\u00edk")
+#' print(cities)
+#' ASCIIfy(cities, 1)
+#' ASCIIfy(cities, 2)
+#' 
+#' athens <- "\u0391\u03b8\u03ae\u03bd\u03b1"
+#' print(athens)
+#' ASCIIfy(athens)
+#' 
 ASCIIfy <- function(x, bytes=2, fallback="?")
 {
   bytes <- match.arg(as.character(bytes), 1:2)

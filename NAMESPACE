@@ -37,6 +37,8 @@ export(
        roman2int,
        running,
        scat,
+       script_file,
+       script_path,
        setTCPNoDelay,
        smartbind,
        sprint,
@@ -45,9 +47,11 @@ export(
        unByteCode,
        unByteCodeAssign
        )
-
 importFrom("methods", "new")
 importFrom("stats", "na.omit", "quantile", "rgamma", "symnum")
 importFrom("utils", "available.packages", "flush.console", "head",
            "help.search", "installed.packages", "modifyList",
            "packageVersion")
+# importFrom("knitr", "current_input")
+# importFrom("rstudioapi", "getActiveDocumentContext", "getSourceEditorContext",
+#           "getConsoleEditorContext")
