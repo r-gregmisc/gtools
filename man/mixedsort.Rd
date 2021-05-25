@@ -13,10 +13,12 @@
 \usage{
 mixedsort(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE,
           numeric.type=c("decimal", "roman"),
-          roman.case=c("upper","lower","both") )
+          roman.case=c("upper","lower","both"),
+          scientific=TRUE)
 mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE,
           numeric.type=c("decimal", "roman"),
-          roman.case=c("upper","lower","both") )
+          roman.case=c("upper","lower","both"),
+          scientific=TRUE)
 }
 \arguments{
   \item{x}{Vector to be sorted.}
@@ -35,6 +37,7 @@ mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE,
   \item{roman.case}{one of "upper", "lower", or "both".  Are roman
     numerals represented using only capital letters ('IX') or lower-case
     letters ('ix') or both?}
+  \item{scientific}{logical. Should scientific notation (e.g. 1.0E-10) be supported?}
 }
 \details{
   I often have character vectors (e.g. factor labels), such as compound
@@ -53,9 +56,13 @@ mixedorder(x, decreasing=FALSE, na.last=TRUE, blank.last=FALSE,
   changes the sort order to descending and reverses the meanings of
   \code{na.last} and \code{blank.last}.
 
-  Parsing looks for decimal numbers unless \code{numeric.type="roman"},
-  in which parsing looks for roman numerals, with character case
-  specified by \code{roman.case}.
+  By default, parsing looks for decimal numbers in either decimal (0.0001)
+  or scientific notation (1.0E-4).  To prevent parsing numbers formatted in
+  scientific notation, set \code{scientific=FALSE}.
+  
+  To recognize roman numerals \emph{instead of} decimal numbers, specify 
+  \code{numeric.type="roman"}, in which parsing looks for roman numerals, 
+  with character case specified by \code{roman.case}.
 
 }
 \value{
@@ -109,6 +116,12 @@ vals <- c("xix", "xii", "mcv", "iii", "iv", "dcclxxii",   "cdxcii",
           "dcxcviii",   "dcvi",   "cci")
 (ordered <- mixedsort(vals, numeric.type="roman", roman.case="lower"))
 roman2int(ordered)
+
+## Scientific notation
+sci <- c("B1e3","B2e2", "A1e4", "A3e-4")
+
+mixedsort(sci, scientific=TRUE) # recognize scientific notation
+mixedsort(sci, scientific=FALSE) # don't recognize scientific notation
 }
 \keyword{univar}
 \keyword{manip}
