@@ -11,13 +11,12 @@ setTCPNoDelay <- function( socket, value=TRUE )
       conn <- socket
  
     
-    retval <- .C("R_setTCPNoDelay",
+    retval <- .C(C_setTCPNoDelay,
                  socket=as.integer(socket[1]),
                  flag=as.integer(value),
                  status=integer(1),
                  status.str=as.character(buffer),
-                 status.len=as.integer(nchar(buffer)),
-                 package="gtools"
+                 status.len=as.integer(nchar(buffer))
                  )
 
     if(retval$status != 0)

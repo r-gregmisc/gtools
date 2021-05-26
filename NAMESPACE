@@ -1,4 +1,4 @@
-useDynLib(gtools)
+useDynLib(gtools, .registration = TRUE)
 
 export(
        addLast,

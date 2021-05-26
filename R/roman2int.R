@@ -8,7 +8,7 @@ testConvert <- function()
 
 romandigit.convert <- function(roman)
     {
-        retval <- .C('convert',
+        retval <- .C(C_convert,
                      roman=as.character(roman),
                      nchar=as.integer(nchar(roman)),
                      values=integer(nchar(roman))
@@ -18,7 +18,7 @@ romandigit.convert <- function(roman)
 
 roman2int.inner <- function(roman)
     {
-        results <- .C("roman2int",
+        results <- .C(C_roman2int,
                       roman = as.character(roman),
                       nchar = as.integer(nchar(roman)),
                       value = integer(1),

@@ -34,9 +34,10 @@
 
 
 /* Convert integer status into a string error code */
-void checkStatus(int status,
-                 char* status_str,
-                 int status_len)
+void C_checkStatus(
+    int status,
+    char* status_str,
+    int status_len)
 {
 
   status_len = status_len>1000?1000:status_len;
@@ -78,11 +79,12 @@ void checkStatus(int status,
 
 
 /* Function to de-nagle a TCP socket connection */
-void R_setTCPNoDelay(int *socket,
-                     int* flag,
-                     int* status,
-                     char** status_str,
-                     int* status_len)
+void C_setTCPNoDelay(
+    int *socket,
+    int* flag,
+    int* status,
+    char** status_str,
+    int* status_len)
 {
   int off;
   
@@ -98,14 +100,14 @@ void R_setTCPNoDelay(int *socket,
                        );
 
 
-  checkStatus(errno, status_str[0], *status_len);
+  C_checkStatus(errno, status_str[0], *status_len);
   
   return;
 }
 
 /* function to check socket options */
 /* NOT USED...
-void R_getsockopt(int *s,
+void C_getsockopt(int *s,
                   int *level,
                   int *optname,
                   int *optval,
@@ -116,14 +118,14 @@ void R_getsockopt(int *s,
 {
   *status = getsockopt(*s, *level, *optname, optval, optlen);
 
-  checkStatus(*status, status_str, *status_len);
+  C_checkStatus(*status, status_str, *status_len);
   
 }
 */
 
 /* function to set socket options */
 /* NOT USED ...
-void R_setsockopt(int *s,
+void C_setsockopt(int *s,
                   int *level,
                   int *optname,
                   int *optval,
@@ -135,7 +137,7 @@ void R_setsockopt(int *s,
 
   *status = setsockopt(*s, *level,  *optname, optval, *optlen);
 
-  checkStatus(*status, status_str, *status_len);
+  C_checkStatus(*status, status_str, *status_len);
 }
 */
 
