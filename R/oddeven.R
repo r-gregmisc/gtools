@@ -18,7 +18,10 @@
 #' odd(1:10)
 #' even(1:10)
 #' 
-#' 
+#' @name oddeven
+NULL
+
+#' @rdname odd
 #' @export
 odd <- function(x) x %% 2 == 1
 
