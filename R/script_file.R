@@ -1,7 +1,5 @@
 #' Determine the directory or full path to the currently executing script
 #'
-#' @details
-#'
 #' @param fail character, one of "stop", "warning", "quiet". specifying what
 #'  should be done when the script path cannot be determined: 
 #'  "stop" causes an error to be generated, 
@@ -23,8 +21,11 @@
 #'
 #' @examples
 #'
-#' script_file()
-#' script_path()
+#' getwd()
+#' commandArgs(trailingOnly = FALSE)
+#'
+#' script_file("warning")
+#' script_path("warning")
 #'
 #' @export
 #' @describeIn script_file  Determine the full path of the currently executing
