@@ -41,6 +41,7 @@ export(
        smartbind,
        sprint,
        stars.pval,
+       stat_mode,
        strmacro,
        unByteCode,
        unByteCodeAssign
