@@ -2,9 +2,9 @@
 %
 \name{invalid}
 \alias{invalid}
-\title{Test if a value is missing, empty, or contains only NA or NULL values}
+\title{Test if a value is missing, empty, contains only NA or NULL values, or is a try-error}
 \description{ 
-  Test if a value is missing, empty, or contains only NA or NULL values.
+  Test if a value is missing, empty, contains only NA or NULL values, or is a try-error
 }
 \usage{
 invalid(x)
@@ -27,6 +27,8 @@ invalid()
 invalid(c(NA,NA,NULL,NA))
 
 invalid(list(a=1,b=NULL))
+
+invalid(try(log("A")))
 
 # example use in a function
 myplot <- function(x,y) {

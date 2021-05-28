@@ -100,7 +100,8 @@ mixedsort <- function(x,
                       na.last=TRUE,
                       blank.last=FALSE,
                       numeric.type=c("decimal", "roman"),
-                      roman.case=c("upper","lower","both")
+                      roman.case=c("upper","lower","both"),
+                      scientific=TRUE
                       )
     {
         ord <- mixedorder(x,
@@ -108,7 +109,8 @@ mixedsort <- function(x,
                           na.last=na.last,
                           blank.last=blank.last,
                           numeric.type=numeric.type,
-                          roman.case=roman.case
+                          roman.case=roman.case,
+                          scientific=scientific
                           )
         x[ord]
     }
@@ -118,7 +120,8 @@ mixedorder <- function(x,
                        na.last=TRUE,
                        blank.last=FALSE,
                        numeric.type=c("decimal", "roman"),
-                       roman.case=c("upper","lower","both")
+                       roman.case=c("upper","lower","both"),
+                       scientific=TRUE
                        )
   {
     # - Split each each character string into an vector of strings and
@@ -141,7 +144,11 @@ mixedorder <- function(x,
 
     if(numeric.type=="decimal")
       {
-        regex <- "((?:(?i)(?:[-+]?)(?:(?=[.]?[0123456789])(?:[0123456789]*)(?:(?:[.])(?:[0123456789]{0,}))?)(?:(?:[eE])(?:(?:[-+]?)(?:[0123456789]+))|)))"  # uses PERL syntax
+        if(scientific) 
+          regex <- "((?:(?i)(?:[-+]?)(?:(?=[.]?[0123456789])(?:[0123456789]*)(?:(?:[.])(?:[0123456789]{0,}))?)(?:(?:[eE])(?:(?:[-+]?)(?:[0123456789]+))|)))"  # uses PERL syntax
+        else
+          regex <- "((?:(?i)(?:[-+]?)(?:(?=[.]?[0123456789])(?:[0123456789]*)(?:(?:[.])(?:[0123456789]{0,}))?)))"  # uses PERL syntax
+
         numeric <- function(x) as.numeric(x)
       }
     else if (numeric.type=="roman")

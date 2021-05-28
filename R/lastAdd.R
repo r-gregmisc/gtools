@@ -1,8 +1,3 @@
-##
-## Replaces the (defunct) addLast() function.
-##
-
-
 #' Non-destructively construct a .Last function to be executed when R exits.
 #' 
 #' Non-destructively construct a \code{.Last} function to be executed when R
@@ -53,42 +48,20 @@
 #' ##   Process R finished at Tue Nov 22 10:28:55 2005
 #' }
 #' 
-#' ## Unix-flavour example: send Rplots.ps to printer on exit.
-#' myLast <- function()
-#' {
-#'   cat("Now sending PostScript graphics to the printer:\n")
-#'   system("lpr Rplots.ps")
-#'   cat("bye bye...\n")
-#' }
-#' .Last <- lastAdd(myLast)
-#' \dontshow{
-#' .Last()
-#' }
-#' \dontrun{
-#' quit("yes")
-#' 
-#' ## Should yield:
-#' ##
-#' ##  Now sending PostScript graphics to the printer:
-#' ##  lpr: job 1341 queued
-#' ##  bye bye...
-#' ##
-#' ##   Process R finished at Tue Nov 22 10:28:55 2005
-#' }
-#' 
-#' 
 lastAdd <- function( fun )
   {
     if (!is.function(fun)) stop("fun must be a function")
-    if(!exists(".Last", envir=.GlobalEnv))
+  
+    if(!exists(".Last", envir=.GlobalEnv, mode="function"))
       {
         return(fun)
       }
     else
       {
-        Last <- get(".Last", envir=.GlobalEnv)
+        Last <- get(".Last", envir=.GlobalEnv, mode="function")
         newfun <- function(...)
           {
+            browser()
             fun()
             Last()
           }

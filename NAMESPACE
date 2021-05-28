@@ -1,4 +1,4 @@
-useDynLib(gtools)
+useDynLib(gtools, .registration = TRUE)
 
 export(
        addLast,
@@ -43,15 +43,14 @@ export(
        smartbind,
        sprint,
        stars.pval,
+       stat_mode,
        strmacro,
        unByteCode,
        unByteCodeAssign
        )
+
 importFrom("methods", "new")
 importFrom("stats", "na.omit", "quantile", "rgamma", "symnum")
 importFrom("utils", "available.packages", "flush.console", "head",
            "help.search", "installed.packages", "modifyList",
            "packageVersion")
-# importFrom("knitr", "current_input")
-# importFrom("rstudioapi", "getActiveDocumentContext", "getSourceEditorContext",
-#           "getConsoleEditorContext")

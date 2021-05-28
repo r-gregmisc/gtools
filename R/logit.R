@@ -1,7 +1,3 @@
-# $Id$
-
-
-
 #' Generalized logit and inverse logit function
 #' 
 #' Compute generalized logit and generalized inverse logit functions.

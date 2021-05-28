@@ -2,5 +2,4 @@
 ^renv\.lock$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^.Rprofile
 ^TODO.md

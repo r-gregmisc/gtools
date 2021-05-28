@@ -87,7 +87,7 @@ setNA <- defmacro(df, var, values,
 
 # create example data using 999 as a missing value indicator
 d <- data.frame(
-   Grp=c("Trt", "Ctl", "Ctl", "Trt", "Ctl", "Ctl", "Trt", "Ctl", "Trt", "Ctl"),
+   Grp=factor(c("Trt", "Ctl", "Ctl", "Trt", "Ctl", "Ctl", "Trt", "Ctl", "Trt", "Ctl")),
    V1=c(1, 2, 3, 4, 5, 6, 999, 8,   9,  10),
    V2=c(1, 1, 1, 1, 1, 2, 999, 2, 999, 999)
                )
@@ -102,13 +102,13 @@ d
 ###
 # Expression macro
 ###
-plot.d <- defmacro( df, var, DOTS, col="red", title="", expr=
-  plot( df$var ~ df$Grp, type="b", col=col, main=title, ... )
+plot.d <- defmacro( df, var, DOTS, col="red", title="", 
+  expr=plot( df$var ~ df$Grp, type="b", col=col, main=title, ... )
 )
 
-plot.d( d, V1)
-plot.d( d, V1, col="blue" )
-plot.d( d, V1, lwd=4)  # use optional 'DOTS' argument
+plot.d(d, V1)
+plot.d(d, V1, col="blue" )
+plot.d(d, V1, lwd=4)  # use optional 'DOTS' argument
 
 ###
 # String macro (note the quoted text in the calls below)

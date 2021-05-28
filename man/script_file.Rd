@@ -5,36 +5,48 @@
 \alias{script_path}
 \title{Determine the directory or full path to the currently executing script}
 \usage{
-script_file()
+script_file(fail = c("stop", "warning", "quiet"))
 
-script_path()
+script_path(fail = c("stop", "warning", "quiet"))
+}
+\arguments{
+\item{fail}{character, one of "stop", "warning", "quiet". specifying what
+ should be done when the script path cannot be determined: 
+ "stop" causes an error to be generated, 
+ "warn" generates a warning message and returns NA,
+ "quiet" silently returns NA.
+
+These function should work with \code{Rscript}, \code{source()},
+\code{Rmarkdown} \code{RStudio}'s "Run selection", and the \code{RStudio}
+Console.}
 }
 \value{
-A character scalarr containing the full path to the current script
-  file (\code{script_file}) or its directory (\code{script_path}).  If unable
-  to determine the script path, it generates a warning and returns \code{""}
-  (empty string).
+A character scalar containing the full path to the currently
+  executing script file (\code{script_file}) or its directory
+  (\code{script_path}).  If unable to determine the script path, it generates
+  a warning and returns \code{""} (empty string).
 }
 \description{
 Determine the directory or full path to the currently executing script
 }
 \details{
-These function should work with \code{Rscript}, \code{source()}, \code{Rmarkdown}
-  \code{RStudio}'s "Run selection", and the \code{RStudio} Console.
+
 }
 \section{Functions}{
 \itemize{
-\item \code{script_file}: Determine the full path of the currently executing script
+\item \code{script_file}: Determine the full path of the currently executing
+script
 
 \item \code{script_path}: Determine the directory of the currently executing script
 }}
 
 \examples{
 
-\dontrun{
-script_file()
-script_path()
-}
+getwd()
+commandArgs(trailingOnly = FALSE)
+
+script_file("warning")
+script_path("warning")
 
 }
 \author{
