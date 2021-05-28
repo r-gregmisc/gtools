@@ -45,7 +45,7 @@
 #' close.socket(socket)
 #' }
 #' 
-#' 
+#' @export
 setTCPNoDelay <- function( socket, value=TRUE )
   {
     if(!any(c("socket","sockconn") %in% class(socket)))

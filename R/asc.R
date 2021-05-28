@@ -1,9 +1,5 @@
 #' Convert between characters and ASCII codes
 #' 
-#' \code{asc} returns the ASCII codes for the specified characters.  \code{chr}
-#' returns the characters corresponding to the specified ASCII codes.
-#' 
-#' 
 #' @aliases asc chr
 #' @param char vector of character strings
 #' @param simplify logical indicating whether to attempt to convert the result
@@ -47,7 +43,14 @@
 #'   asc( c('a', 'e', 'i', 'o', 'u', 'y' ), simplify=FALSE )
 #'   asc( c('ae', 'io', 'uy' ), simplify=FALSE)
 #' 
+#' @name asc
+NULL
+
+#' @describeIn asc return the characters corresponding to the specified ASCII codes
+#' @export 
 asc <- function(char, simplify=TRUE)
     sapply(char, function(x) strtoi(charToRaw(x),16L), simplify=simplify )
 
+#' @describeIn asc return the ASCII codes for the specified characters.
+#' @export
 chr <- function(ascii) sapply(ascii, function(x) rawToChar(as.raw(x)) )

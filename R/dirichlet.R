@@ -31,7 +31,11 @@
 #' 
 #'   ddirichlet(x, c(1,1,1) )
 #' 
-#' 
+#' @name dirichlet
+NULL
+
+#' @describeIn dirichlet  Dirichlet distribution function.
+#' @export
 ddirichlet<-function(x,alpha)
 {
 
@@ -66,6 +70,7 @@ ddirichlet<-function(x,alpha)
   pd
 }
 
+# @describeIn dirichlet Generate dirichlet random values.
 # @export
 rdirichlet<-function(n,alpha)
 ## generate n random deviates from the Dirichlet function with shape

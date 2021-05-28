@@ -29,9 +29,6 @@ A character scalar containing the full path to the currently
 \description{
 Determine the directory or full path to the currently executing script
 }
-\details{
-
-}
 \section{Functions}{
 \itemize{
 \item \code{script_file}: Determine the full path of the currently executing

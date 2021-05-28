@@ -1,8 +1,3 @@
-## Convert a byte-compiled function to an interpreted-code function
-
-
-#' Convert a Byte-Code Function to an Interpreted-Code Function
-#' 
 #' Convert a byte-code function to an interpreted-code function
 #' 
 #' The purpose of these functions is to allow a byte coded function to be
@@ -61,6 +56,7 @@
 #' # now the function does not crash
 #' plot(dend)
 #' 
+#' @export
 unByteCode <- function(fun)
 {
     FUN <- eval(parse(text=deparse(fun)))
@@ -68,7 +64,8 @@ unByteCode <- function(fun)
     FUN
 }
 
-## Replace function definition inside of a locked environment **HACK**
+#' @rdname unByteCode
+#' @export
 assignEdgewise <- function(name, env, value)
 {
     unlockBinding(name, env=env)
@@ -77,8 +74,8 @@ assignEdgewise <- function(name, env, value)
     invisible(value)
 }
 
-## Replace byte-compiled function in a locked environment with an
-## interpreted-code function
+#' @rdname unByteCode
+#' @export
 unByteCodeAssign <- function(fun)
 {
     name <- gsub('^.*::+','', deparse(substitute(fun)))

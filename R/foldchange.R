@@ -1,7 +1,3 @@
-# $Id$
-
-
-
 #' Compute fold-change or convert between log-ratio and fold-change.
 #' 
 #' \code{foldchange} computes the fold change for two sets of values.
@@ -37,14 +33,18 @@
 #' 
 #'   cbind(a,b,f)
 #' 
-#' 
+#' @name foldchange
+NULL
+
+#' @describeIn foldchange Compute fold-change.
+#' @export
 foldchange <- function(num,denom)
   {
     ifelse(num >= denom, num/denom, -denom/num)
   }
 
-
-# Compute foldchange from log-ratio values
+#' @describeIn foldchange Compute foldchange from log-ratio values.
+#' @export
 logratio2foldchange <- function(logratio, base=2)
   {
     retval <- base^(logratio)
@@ -52,7 +52,8 @@ logratio2foldchange <- function(logratio, base=2)
     retval
   }
 
-# vice versa
+#' @describeIn foldchange Compute log-ratio from fold-change values.
+#' @export
 foldchange2logratio <- function(foldchange, base=2)
   {
     retval <- ifelse( foldchange<0, 1/-foldchange, foldchange)

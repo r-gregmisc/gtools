@@ -27,9 +27,12 @@
 #' script_file("warning")
 #' script_path("warning")
 #'
-#' @export
+#' @name script_file
+NULL
+
 #' @describeIn script_file  Determine the full path of the currently executing
 #'   script
+#' @export
 script_file <- function(fail=c("stop","warning","quiet")) {
   
   fail <- match.arg(fail)

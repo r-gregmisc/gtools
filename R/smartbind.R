@@ -1,9 +1,3 @@
-##
-## Function to do rbind of data frames quickly, even if the columns don't match
-##
-
-
-
 #' Efficient rbind of data frames, even if the column names don't match
 #' 
 #' Efficient rbind of data frames, even if the column names don't match
@@ -80,6 +74,7 @@
 #' 
 #' }
 #' 
+#' @export
 smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
   {
     data <- base::list(...)

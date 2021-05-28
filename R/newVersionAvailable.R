@@ -1,3 +1,4 @@
+#' @export
 newVersionAvailable <- function(quiet=FALSE)
   {
     page <- scan(file="http://cran.r-project.org/src/base/R-2", what="", quiet=TRUE)

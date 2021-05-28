@@ -48,6 +48,7 @@
 #' ##   Process R finished at Tue Nov 22 10:28:55 2005
 #' }
 #' 
+#' @export
 lastAdd <- function( fun )
   {
     if (!is.function(fun)) stop("fun must be a function")

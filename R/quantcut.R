@@ -1,7 +1,3 @@
-# $Id$
-
-
-
 #' Create a Factor Variable Using the Quantiles of a Continuous Variable
 #' 
 #' Create a factor variable using the quantiles of a continous variable.
@@ -59,7 +55,7 @@
 #'   table(deciles) # note that there are only 5 groups (not 10)
 #'                  # due to duplicates
 #' 
-#' 
+#' @export
 quantcut <- function(x, q=4, na.rm=TRUE, ... )
   {
     if(length(q)==1)

@@ -120,7 +120,7 @@
 #' plot.blue(1:100,rnorm(100))
 #' 
 #' 
-#' 
+#' @export
 defmacro <- function(..., expr) #, DOTS=FALSE)
 {
   expr <- substitute(expr)

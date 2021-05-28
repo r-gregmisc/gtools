@@ -29,6 +29,7 @@
 #' print(ver)
 #' 
 #' 
+#' @export
 checkRVersion <- function(quiet=FALSE)
   {
     page2 <- scan(file="http://cran.r-project.org/src/base/R-2",

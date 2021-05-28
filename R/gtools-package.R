@@ -1,5 +1,3 @@
-
-
 #' Dataset That Crashes Base:::Plot.Dendogram with 'Node Stack Overflow'
 #' 
 #' Base:::Plot.Dendogram() will generate a 'Node Stack Overflow' when run on a

@@ -1,7 +1,3 @@
-## This function determines the dependencies for the specified
-## package, exluding only packages found in "base".
-
-
 #' Get package dependencies
 #' 
 #' Get package dependencies
@@ -51,6 +47,7 @@
 #' }
 #' 
 #' 
+#' @export
 getDependencies <- function (pkgs,
                              dependencies = c("Depends", "Imports", "LinkingTo"),
                              installed=TRUE,

@@ -1,8 +1,3 @@
-# $Id$
-
-# detect odd/even integers
-
-
 #' Detect odd/even integers
 #' 
 #' detect odd/even integers
@@ -24,5 +19,9 @@
 #' even(1:10)
 #' 
 #' 
+#' @export
 odd <- function(x) x %% 2 == 1
+
+#' @rdname odd
+#' @export
 even <- function(x) x %% 2 == 0 

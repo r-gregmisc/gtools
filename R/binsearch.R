@@ -82,6 +82,7 @@
 #' gregorius( freq=0.07, missprob=0.05)
 #' }
 #' 
+#' @export
 binsearch <- function(fun, range, ..., target=0,
                       lower=ceiling(min(range)),upper=floor(max(range)),
                       maxiter=100, showiter=FALSE)

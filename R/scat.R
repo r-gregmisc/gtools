@@ -1,8 +1,3 @@
-# $Id$
-
-# cat to stdout and immediately flush
-
-
 #' Display debugging text
 #' 
 #' If \code{getOption('DEBUG')==TRUE}, write text to STDOUT and flush so that
@@ -23,6 +18,7 @@
 #' scat("This will be displayed immediately (even in R BATCH output \n")
 #' scat("files), provided options()$DEBUG is TRUE.")
 #' 
+#' @export
 scat <- function(...)
   {
     DEBUG <- options()$DEBUG

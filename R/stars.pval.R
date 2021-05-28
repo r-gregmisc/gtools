@@ -18,6 +18,7 @@
 #' p.val <- c(0.0004, 0.0015, 0.013, 0.044, 0.067, 0.24)
 #' stars.pval(p.val)
 #' 
+#' @export
 stars.pval <- function(p.value)
     {
         unclass(

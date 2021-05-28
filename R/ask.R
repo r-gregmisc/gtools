@@ -29,6 +29,7 @@
 #' }
 #' 
 #' 
+#' @export
 ask <- function(msg="Press <RETURN> to continue: ", con=stdin())
         {
           cat(msg);

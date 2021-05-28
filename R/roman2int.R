@@ -63,7 +63,7 @@ roman2int.inner <- function(roman)
 #' roman2int(val.3900)
 #' roman2int(val.4000)
 #' 
-#' 
+#' @export
 roman2int <- function(roman)
     {
         roman <- trimws(toupper(as.character(roman)))

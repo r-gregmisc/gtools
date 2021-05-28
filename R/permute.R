@@ -1,7 +1,3 @@
-# $Id$
-
-
-
 #' Randomly Permute the Elements of a Vector
 #' 
 #' Randomly Permute the elements of a vector

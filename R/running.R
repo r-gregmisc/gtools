@@ -1,7 +1,3 @@
-# $Id$
-
-
-
 #' Apply a Function Over Adjacent Subsets of a Vector
 #' 
 #' Applies a function over subsets of the vector(s) formed by taking a fixed
@@ -99,7 +95,8 @@
 #' r <- 1 / sqrt(1 + sd.Y^2) # true cor of (X,X+Y)
 #' lines(r,type="l",col="blue")
 #' 
-"running" <- function(X, Y=NULL,
+#' @export
+running <- function(X, Y=NULL,
                       fun=mean,
                       width=min(length(X), 20),
                       allow.fewer=FALSE, pad=FALSE,

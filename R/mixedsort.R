@@ -95,6 +95,7 @@
 #' (ordered <- mixedsort(vals, numeric.type="roman", roman.case="lower"))
 #' roman2int(ordered)
 #' 
+#' @export
 mixedsort <- function(x,
                       decreasing=FALSE,
                       na.last=TRUE,
@@ -115,6 +116,8 @@ mixedsort <- function(x,
         x[ord]
     }
 
+#' @rdname mixedsort
+#' @export
 mixedorder <- function(x,
                        decreasing=FALSE,
                        na.last=TRUE,

@@ -1,4 +1,5 @@
-
+#' @rdname defmacro
+#' @export
 strmacro <- function(..., expr, strexpr)
 {
   if(!missing(expr))

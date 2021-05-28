@@ -45,6 +45,7 @@
 #' capwords("title_using_underscores_as_separators", sep="_")
 #' 
 #' 
+#' @export
 capwords <- function(s,
                      strict=FALSE,
                      AP=TRUE,

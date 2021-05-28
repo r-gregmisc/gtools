@@ -31,6 +31,8 @@
 #' athens <- "\u0391\u03b8\u03ae\u03bd\u03b1"
 #' print(athens)
 #' ASCIIfy(athens)
+#'
+#' @export
 #' 
 ASCIIfy <- function(x, bytes=2, fallback="?")
 {

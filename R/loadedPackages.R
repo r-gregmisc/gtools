@@ -19,6 +19,7 @@
 #' 
 #'   loadedPackages()
 #' 
+#' @export
 loadedPackages <- function(silent=FALSE)
 {
   packageNames    <- loadedNamespaces()

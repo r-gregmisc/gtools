@@ -49,6 +49,7 @@
 #' cmat <- combinations(300,2)
 #' dim(cmat) # 44850 by 2 
 #' 
+#' @export
 combinations <- function(n, r, v = 1:n, set = TRUE, repeats.allowed=FALSE)
 {
   if(mode(n) != "numeric" || length(n) != 1 

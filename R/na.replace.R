@@ -23,6 +23,7 @@
 #'    # Replace with the calculated median
 #'    na.replace(x, median, na.rm=TRUE)    
 #' 
+#' @export
 na.replace <- function(x, replace, ...)
 {
   if(is.function(replace))
