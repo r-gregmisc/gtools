@@ -28,4 +28,5 @@ Author: Gregory R. Warnes, Ben Bolker, and Thomas Lumley
 Maintainer: Gregory R. Warnes <greg@warnes.net>
 License: GPL-2
 Depends: methods, stats, utils
+Suggests: knitr, rstudioapi
 RoxygenNote: 7.1.1

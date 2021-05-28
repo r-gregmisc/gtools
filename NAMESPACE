@@ -37,6 +37,8 @@ export(
        roman2int,
        running,
        scat,
+       script_file,
+       script_path,
        setTCPNoDelay,
        smartbind,
        sprint,
