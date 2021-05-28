@@ -35,7 +35,7 @@
 #' 
 invalid <- function(x)
   {
-    if( missing(x) || is.null(x) || length(x)==0 )
+    if( missing(x) || is.null(x) || length(x)==0 || is(x, 'try-error'))
       return(TRUE)
     if(is.list(x))
       return(all(sapply(x,invalid)))
