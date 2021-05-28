@@ -1,10 +1,6 @@
-# $Id$
-
-
-
-#' Test if a value is missing, empty, or contains only NA or NULL values
+#' Test if a value is missing, empty, contains only NA or NULL values, or is a try-error.
 #' 
-#' Test if a value is missing, empty, or contains only NA or NULL values.
+#' Test if a value is missing, empty, contains only NA or NULL values, or is a try-error.
 #' 
 #' 
 #' @param x value to be tested
@@ -21,6 +17,9 @@
 #' invalid(c(NA,NA,NULL,NA))
 #' 
 #' invalid(list(a=1,b=NULL))
+#' 
+#' x<-try(log("A"))
+#' invalid(x)
 #' 
 #' # example use in a function
 #' myplot <- function(x,y) {
