@@ -51,12 +51,7 @@ close.socket(socket)
 
 }
 \references{
-"Nagle's algorithm" at WhatIS.com \url{
-http://searchnetworking.techtarget.com/sDefinition/0,,sid7_gci754347,00.html}
 
-Nagle, John. "Congestion Control in IP/TCP Internetworks", IETF Request for
-Comments 896, January 1984.
-\url{http://www.ietf.org/rfc/rfc0896.txt?number=896}
 }
 \seealso{
 \code{\link{make.socket}}, \code{\link{socketConnection}}

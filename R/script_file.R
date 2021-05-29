@@ -37,7 +37,7 @@ script_file <- function(fail=c("stop","warning","quiet")) {
   
   fail <- match.arg(fail)
   
-  # http://stackoverflow.com/a/32016824/2292993
+  # https://stackoverflow.com/a/32016824/2292993
   cmdArgs = commandArgs(trailingOnly = FALSE)
   needle = "--file="
   match = grep(needle, cmdArgs)

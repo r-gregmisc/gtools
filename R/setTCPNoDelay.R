@@ -22,12 +22,10 @@
 #' operation was succesful.  On failure, an error will be generated.
 #' @author Gregory R. Warnes \email{greg@@warnes.net}
 #' @seealso \code{\link{make.socket}}, \code{\link{socketConnection}}
-#' @references "Nagle's algorithm" at WhatIS.com \url{
-#' http://searchnetworking.techtarget.com/sDefinition/0,,sid7_gci754347,00.html}
-#' 
+#' @references "Nagle's algorithm"  \url{https://en.wikipedia.org/wiki/Nagle%27s_algorithm},
 #' Nagle, John. "Congestion Control in IP/TCP Internetworks", IETF Request for
 #' Comments 896, January 1984.
-#' \url{http://www.ietf.org/rfc/rfc0896.txt?number=896}
+#' \url{https://www.ietf.org/rfc/rfc0896.txt?number=896}
 #' @keywords programming misc utilities
 #' @examples
 #' 

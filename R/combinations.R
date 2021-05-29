@@ -26,7 +26,7 @@
 #' \code{repeats.allowed} by Gregory R. Warnes \email{greg@@warnes.net}.
 #' @seealso \code{\link[base]{choose}}, \code{\link[base]{options}}
 #' @references Venables, Bill.  "Programmers Note", R-News, Vol 1/1, Jan. 2001.
-#' \url{http://cran.r-project.org/doc/Rnews/}
+#' \url{https://cran.r-project.org/doc/Rnews/}
 #' @keywords manip
 #' 
 #' @details 
@@ -44,10 +44,12 @@
 #' permutations(3,2,letters[1:3])
 #' permutations(3,2,letters[1:3],repeats=TRUE)
 #' 
+#' \dontrun{
 #' # To use large 'n', you need to change the default recusion limit
 #' options(expressions=1e5)
 #' cmat <- combinations(300,2)
 #' dim(cmat) # 44850 by 2 
+#' }
 #' 
 #' @export
 combinations <- function(n, r, v = 1:n, set = TRUE, repeats.allowed=FALSE)

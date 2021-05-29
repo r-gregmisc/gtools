@@ -15,7 +15,7 @@
 #' values.
 #' @author Adapted by Gregory R. Warnes \email{greg@@warnes.net} from code
 #' posted on the 'Data Debrief' blog on 2011-03-09 at
-#' \url{http://datadebrief.blogspot.com/2011/03/ascii-code-table-in-r.html}.
+#' \url{https://datadebrief.blogspot.com/2011/03/ascii-code-table-in-r.html}.
 #' @seealso \code{\link[base]{strtoi}}, \code{\link[base]{charToRaw}},
 #' \code{\link[base]{rawToChar}}, \code{\link[base]{as.raw}}
 #' @keywords character programming

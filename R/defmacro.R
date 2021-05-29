@@ -49,7 +49,7 @@
 #' @references The original \code{defmacro} code was directly taken from:
 #' 
 #' Lumley T. "Programmer's Niche: Macros in R", R News, 2001, Vol 1, No. 3, pp
-#' 11--13, \url{http://cran.r-project.org/doc/Rnews/}
+#' 11--13, \url{https://cran.r-project.org/doc/Rnews/}
 #' 
 #' @keywords programming
 #' ## Code from

@@ -54,15 +54,17 @@ combinations(3,2,letters[1:3],repeats=TRUE)
 permutations(3,2,letters[1:3])
 permutations(3,2,letters[1:3],repeats=TRUE)
 
+\dontrun{
 # To use large 'n', you need to change the default recusion limit
 options(expressions=1e5)
 cmat <- combinations(300,2)
 dim(cmat) # 44850 by 2 
+}
 
 }
 \references{
 Venables, Bill.  "Programmers Note", R-News, Vol 1/1, Jan. 2001.
-\url{http://cran.r-project.org/doc/Rnews/}
+\url{https://cran.r-project.org/doc/Rnews/}
 }
 \seealso{
 \code{\link[base]{choose}}, \code{\link[base]{options}}

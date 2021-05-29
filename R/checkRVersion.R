@@ -32,12 +32,14 @@
 #' @export
 checkRVersion <- function(quiet=FALSE)
   {
-    page2 <- scan(file="http://cran.r-project.org/src/base/R-2",
+    page2 <- scan(file="https://cran.r-project.org/src/base/R-2",
                   what="", quiet=TRUE)
-    page3 <- scan(file="http://cran.r-project.org/src/base/R-3",
+    page3 <- scan(file="https://cran.r-project.org/src/base/R-3",
                   what="", quiet=TRUE)
-
-    combined <- c(page2, page3)
+    page4 <- scan(file="https://cran.r-project.org/src/base/R-4",
+                  what="", quiet=TRUE)
+    
+    combined <- c(page2, page3, page4)
     
     matches <- grep("R-[0-9]\\.[0-9]+\\.[0-9]+", combined, value=TRUE)
     versionList <- gsub("^.*R-([0-9].[0-9]+.[0-9]+).*$","\\1",matches)
