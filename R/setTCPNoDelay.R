@@ -18,14 +18,19 @@
 #' @param socket A socket connection object
 #' @param value Logical indicating whether to set (\code{TRUE}) or unset
 #' (\code{FALSE}) the flag
+#' 
 #' @return The character string "SUCCESS" will be returned invisible if the
 #' operation was succesful.  On failure, an error will be generated.
+#' 
 #' @author Gregory R. Warnes \email{greg@@warnes.net}
+#' 
 #' @seealso \code{\link{make.socket}}, \code{\link{socketConnection}}
-#' @references "Nagle's algorithm"  \url{https://en.wikipedia.org/wiki/Nagle%27s_algorithm},
-#' Nagle, John. "Congestion Control in IP/TCP Internetworks", IETF Request for
-#' Comments 896, January 1984.
-#' \url{https://www.ietf.org/rfc/rfc0896.txt?number=896}
+#' 
+#' @references
+#'   "Nagles algorithm"  \url{https://en.wikipedia.org/wiki/Nagle%27s_algorithm},
+#'   Nagle, John. "Congestion Control in IP/TCP Internetworks", IETF Request for
+#'     Comments 896, January 1984. \url{https://www.ietf.org/rfc/rfc0896.txt?number=896}
+#'     
 #' @keywords programming misc utilities
 #' @examples
 #' 
