@@ -68,7 +68,6 @@ deps <- getDependencies("MyLocalPackage", available=FALSE)
 download.packages(deps, destdir="./R_Packages")
 }
 
-
 }
 \seealso{
 \code{\link{installed.packages}}, \code{\link{available.packages}}

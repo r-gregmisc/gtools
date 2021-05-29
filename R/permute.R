@@ -14,4 +14,5 @@
 #'   x <- 1:10
 #'   permute(x)
 #' 
+#' @export
 permute <- function(x) sample( x, size=length(x), replace=FALSE )

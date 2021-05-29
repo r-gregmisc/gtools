@@ -7,6 +7,8 @@
 \title{Functions for the Dirichlet Distribution}
 \usage{
 ddirichlet(x, alpha)
+
+rdirichlet(n, alpha)
 }
 \arguments{
 \item{x}{A vector containing a single random deviate or matrix containg one
@@ -36,6 +38,8 @@ parameter estimates of a multinomial distribution.
 \section{Functions}{
 \itemize{
 \item \code{ddirichlet}: Dirichlet distribution function.
+
+\item \code{rdirichlet}: Generate dirichlet random deviates.
 }}
 
 \examples{

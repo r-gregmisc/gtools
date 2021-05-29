@@ -48,6 +48,8 @@ Roman numerals (\code{numeric.type="roman"})?}
 \item{roman.case}{one of "upper", "lower", or "both".  Are roman numerals
 represented using only capital letters ('IX') or lower-case letters ('ix')
 or both?}
+
+\item{scientific}{logical. Should exponential notation be allowed for numeric values.}
 }
 \value{
 \code{mixedorder} returns a vector giving the sort order of the

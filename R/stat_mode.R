@@ -53,6 +53,7 @@
 #' stat_mode(x = vector('numeric'))
 #' stat_mode(x = vector('character'))
 #' 
+#' @importFrom stats na.omit
 #' @export
 stat_mode <- function(x, 
                       na.rm = TRUE,

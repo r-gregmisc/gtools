@@ -32,6 +32,9 @@
 #' myplot(1:10)
 #' myplot(1:10,NA)
 #' 
+#' @importFrom methods is
+#' 
+#' @export
 invalid <- function(x)
   {
     if( missing(x) || is.null(x) || length(x)==0 || is(x, 'try-error'))

@@ -19,6 +19,9 @@
 #' keywords(merge)
 #' keywords("merge")
 #' 
+#' @importFrom stats na.omit
+#' @importFrom utils help.search
+#' @export
 keywords <- function( topic )
 {
 

@@ -95,6 +95,7 @@
 #' r <- 1 / sqrt(1 + sd.Y^2) # true cor of (X,X+Y)
 #' lines(r,type="l",col="blue")
 #' 
+#' @importFrom methods new
 #' @export
 running <- function(X, Y=NULL,
                       fun=mean,

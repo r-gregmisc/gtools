@@ -43,6 +43,7 @@
 #' @param roman.case one of "upper", "lower", or "both".  Are roman numerals
 #' represented using only capital letters ('IX') or lower-case letters ('ix')
 #' or both?
+#' @param scientific logical. Should exponential notation be allowed for numeric values.
 #' @return \code{mixedorder} returns a vector giving the sort order of the
 #' input elements. \code{mixedsort} returns the sorted vector.
 #' @author Gregory R. Warnes \email{greg@@warnes.net}

@@ -95,7 +95,8 @@ combinations <- function(n, r, v = 1:n, set = TRUE, repeats.allowed=FALSE)
 ##
 ##
 
-
+#' @rdname combinations
+#' @export
 permutations <- function(n, r, v = 1:n, set = TRUE, repeats.allowed=FALSE)
 {
   if(mode(n) != "numeric" || length(n) != 1 

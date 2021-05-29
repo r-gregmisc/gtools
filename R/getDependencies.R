@@ -46,7 +46,10 @@
 #' download.packages(deps, destdir="./R_Packages")
 #' }
 #' 
-#' 
+#' @importFrom utils available.packages
+#' @importFrom utils flush.console
+#' @importFrom utils head
+#' @importFrom utils installed.packages
 #' @export
 getDependencies <- function (pkgs,
                              dependencies = c("Depends", "Imports", "LinkingTo"),

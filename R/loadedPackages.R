@@ -19,6 +19,7 @@
 #' 
 #'   loadedPackages()
 #' 
+#' @importFrom utils packageVersion
 #' @export
 loadedPackages <- function(silent=FALSE)
 {

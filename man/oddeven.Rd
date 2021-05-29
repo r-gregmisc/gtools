@@ -5,6 +5,11 @@
 \alias{odd}
 \alias{even}
 \title{Detect odd/even integers}
+\usage{
+odd(x)
+
+even(x)
+}
 \arguments{
 \item{x}{vector of integers}
 }

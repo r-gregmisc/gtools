@@ -10,7 +10,6 @@
 #' @aliases rdirichlet ddirichlet
 #' @param x A vector containing a single random deviate or matrix containg one
 #' random deviate per row.
-#' @param n Number of random vectors to generate.
 #' @param alpha Vector or (for \code{ddirichlet}) matrix containing shape
 #' parameters.
 #' @return \code{ddirichlet} returns a vector containing the Dirichlet density
@@ -70,11 +69,11 @@ ddirichlet<-function(x,alpha)
   pd
 }
 
-# @describeIn dirichlet Generate dirichlet random values.
-# @export
+#' @describeIn dirichlet Generate dirichlet random deviates.
+#' @param n Number of random vectors to generate.
+#' @importFrom stats rgamma
+#' @export
 rdirichlet<-function(n,alpha)
-## generate n random deviates from the Dirichlet function with shape
-## parameter alpha
 {
     l<-length(alpha);
     x<-matrix(rgamma(l*n,alpha),ncol=l,byrow=TRUE);

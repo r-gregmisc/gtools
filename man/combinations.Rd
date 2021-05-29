@@ -6,6 +6,8 @@
 \title{Enumerate the Combinations or Permutations of the Elements of a Vector}
 \usage{
 combinations(n, r, v = 1:n, set = TRUE, repeats.allowed = FALSE)
+
+permutations(n, r, v = 1:n, set = TRUE, repeats.allowed = FALSE)
 }
 \arguments{
 \item{n}{Size of the source vector}

@@ -21,10 +21,10 @@
 #' @name oddeven
 NULL
 
-#' @rdname odd
+#' @rdname oddeven
 #' @export
 odd <- function(x) x %% 2 == 1
 
-#' @rdname odd
+#' @rdname oddeven
 #' @export
 even <- function(x) x %% 2 == 0 

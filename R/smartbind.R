@@ -74,6 +74,7 @@
 #' 
 #' }
 #' 
+#' @importFrom utils modifyList
 #' @export
 smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
   {
