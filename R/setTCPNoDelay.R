@@ -1,6 +1,6 @@
-#' Modify the TCP\_NODELAY (`de-Nagle') flag for socket objects
+#' Modify the TCP_NODELAY (`de-Nagle') flag for socket objects
 #' 
-#' Modify the TCP\_NODELAY (`de-Nagele') flag for socket objects
+#' Modify the TCP_NODELAY (`de-Nagele') flag for socket objects
 #' 
 #' By default, TCP connections wait a small fixed interval before actually
 #' sending data, in order to permit small packets to be combined.  This
@@ -26,11 +26,12 @@
 #' 
 #' @seealso \code{\link{make.socket}}, \code{\link{socketConnection}}
 #' 
-#' @references
-#'   "Nagles algorithm"  \url{https://en.wikipedia.org/wiki/Nagle%27s_algorithm},
+#' @references 
+#'   "Nagles algorithm" \url{https://en.wikipedia.org/wiki/Nagle's_algorithm},
+#'   
 #'   Nagle, John. "Congestion Control in IP/TCP Internetworks", IETF Request for
-#'     Comments 896, January 1984. \url{https://www.ietf.org/rfc/rfc0896.txt?number=896}
-#'     
+#'   Comments 896, January 1984. \url{https://www.ietf.org/rfc/rfc0896.txt?number=896}
+#'   
 #' @keywords programming misc utilities
 #' @examples
 #' 

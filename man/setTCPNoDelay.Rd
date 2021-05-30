@@ -2,7 +2,7 @@
 % Please edit documentation in R/setTCPNoDelay.R
 \name{setTCPNoDelay}
 \alias{setTCPNoDelay}
-\title{Modify the TCP\_NODELAY (`de-Nagle') flag for socket objects}
+\title{Modify the TCP_NODELAY (`de-Nagle') flag for socket objects}
 \usage{
 setTCPNoDelay(socket, value = TRUE)
 }
@@ -17,7 +17,7 @@ The character string "SUCCESS" will be returned invisible if the
 operation was succesful.  On failure, an error will be generated.
 }
 \description{
-Modify the TCP\_NODELAY (`de-Nagele') flag for socket objects
+Modify the TCP_NODELAY (`de-Nagele') flag for socket objects
 }
 \details{
 By default, TCP connections wait a small fixed interval before actually
@@ -51,7 +51,10 @@ close.socket(socket)
 
 }
 \references{
-
+"Nagles algorithm" \url{https://en.wikipedia.org/wiki/Nagle's_algorithm},
+  
+  Nagle, John. "Congestion Control in IP/TCP Internetworks", IETF Request for
+  Comments 896, January 1984. \url{https://www.ietf.org/rfc/rfc0896.txt?number=896}
 }
 \seealso{
 \code{\link{make.socket}}, \code{\link{socketConnection}}
