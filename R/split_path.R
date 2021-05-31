@@ -12,18 +12,24 @@
 #'
 #' @export
 #'
-split_path <- function(x, depth_first=TRUE)
-{
-  if(length(x)>1) warning("This function is not vectorized.",
-                          "Only processing the first element of x.")
+split_path <- function(x, depth_first = TRUE) {
+  if (length(x) > 1) {
+    warning(
+      "This function is not vectorized.",
+      "Only processing the first element of x."
+    )
+  }
   retval <- split_path_inner(x)
-  if(!depth_first)
+  if (!depth_first) {
     retval <- rev(retval)
-  retval[retval>""]
+  }
+  retval[retval > ""]
 }
 
 
 split_path_inner <- function(path) {
-  if (dirname(path) %in% c(".", path)) return(basename(path))
+  if (dirname(path) %in% c(".", path)) {
+    return(basename(path))
+  }
   return(c(basename(path), split_path_inner(dirname(path))))
 }

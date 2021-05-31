@@ -41,7 +41,6 @@ ASCIIfy(cities, 2)
 athens <- "\u0391\u03b8\u03ae\u03bd\u03b1"
 print(athens)
 ASCIIfy(athens)
-
 }
 \seealso{
 \code{\link[tools]{showNonASCII}} identifies non-ASCII characters

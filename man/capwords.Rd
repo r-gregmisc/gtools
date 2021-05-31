@@ -49,16 +49,14 @@ after a lower-case letter will not be changed (e.g. "iDevice").
 \examples{
 
 capwords("a function to capitalize words in a title")
-capwords("a function to capitalize words in a title", AP=FALSE)
+capwords("a function to capitalize words in a title", AP = FALSE)
 
 capwords("testing the iProduct for defects")
-capwords("testing the iProduct for defects", strict=TRUE)
-capwords("testing the iProduct for defects", onlyfirst=TRUE)
-capwords("testing the iProduct for defects", preserveMixed=TRUE)
+capwords("testing the iProduct for defects", strict = TRUE)
+capwords("testing the iProduct for defects", onlyfirst = TRUE)
+capwords("testing the iProduct for defects", preserveMixed = TRUE)
 
-capwords("title_using_underscores_as_separators", sep="_")
-
-
+capwords("title_using_underscores_as_separators", sep = "_")
 }
 \references{
 Fogarty, Mignon. Capitalizing Titles: "Which words should you

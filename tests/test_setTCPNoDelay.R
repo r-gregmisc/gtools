@@ -1,4 +1,4 @@
-library('gtools')
+library("gtools")
 
 host <- "www.r-project.org"
 
@@ -11,7 +11,8 @@ write.socket(socket, "GET /\n\n")
 write.socket(socket, "A")
 write.socket(socket, "B\n")
 
-while( (str <- read.socket(socket)) > "" )
- cat(str)
+while ((str <- read.socket(socket)) > "") {
+  cat(str)
+}
 
 close.socket(socket)

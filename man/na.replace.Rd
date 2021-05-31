@@ -26,14 +26,13 @@ This is a convenience function that is the same as x[is.na(x)] <- replace
 }
 \examples{
 
-   x <- c(1,2,3,NA,6,7,8,NA,NA)
-   
-   # Replace with a specified value
-   na.replace(x, '999')
-   
-   # Replace with the calculated median
-   na.replace(x, median, na.rm=TRUE)    
+x <- c(1, 2, 3, NA, 6, 7, 8, NA, NA)
 
+# Replace with a specified value
+na.replace(x, "999")
+
+# Replace with the calculated median
+na.replace(x, median, na.rm = TRUE)
 }
 \seealso{
 \code{\link[base]{is.na}}, \code{\link[stats]{na.omit}}

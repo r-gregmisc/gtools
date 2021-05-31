@@ -45,10 +45,9 @@ parameter estimates of a multinomial distribution.
 \examples{
 
 
-  x <- rdirichlet(20, c(1,1,1) )
+x <- rdirichlet(20, c(1, 1, 1))
 
-  ddirichlet(x, c(1,1,1) )
-
+ddirichlet(x, c(1, 1, 1))
 }
 \seealso{
 \code{\link{dbeta}}, \code{\link{rbeta}}

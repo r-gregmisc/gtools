@@ -38,8 +38,6 @@ checkRVersion()
 
 ver <- checkRVersion()
 print(ver)
-
-
 }
 \seealso{
 \code{\link[base]{R.Version}}

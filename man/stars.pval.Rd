@@ -26,7 +26,6 @@ Mapping from p-value ranges to symbols: \describe{ \item{0 - 0.001}{'***'}
 
 p.val <- c(0.0004, 0.0015, 0.013, 0.044, 0.067, 0.24)
 stars.pval(p.val)
-
 }
 \seealso{
 \code{\link[stats]{symnum}}

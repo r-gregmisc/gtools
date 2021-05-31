@@ -20,24 +20,23 @@ Test if a value is missing, empty, contains only NA or NULL values, or is a try-
 
 invalid(NA)
 invalid()
-invalid(c(NA,NA,NULL,NA))
+invalid(c(NA, NA, NULL, NA))
 
-invalid(list(a=1,b=NULL))
+invalid(list(a = 1, b = NULL))
 
-x<-try(log("A"))
+x <- try(log("A"))
 invalid(x)
 
 # example use in a function
-myplot <- function(x,y) {
-                if(invalid(y)) {
-                        y <- x
-                        x <- 1:length(y)
-                }
-                plot(x,y)
-        }
+myplot <- function(x, y) {
+  if (invalid(y)) {
+    y <- x
+    x <- 1:length(y)
+  }
+  plot(x, y)
+}
 myplot(1:10)
-myplot(1:10,NA)
-
+myplot(1:10, NA)
 }
 \seealso{
 \code{\link[base]{missing}}, \code{\link[base]{is.na}},

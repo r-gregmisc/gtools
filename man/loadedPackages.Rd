@@ -22,8 +22,7 @@ Provide name, version, and path of loaded package namespaces
 }
 \examples{
 
-  loadedPackages()
-
+loadedPackages()
 }
 \seealso{
 \code{\link[base]{loadedNamespaces}},

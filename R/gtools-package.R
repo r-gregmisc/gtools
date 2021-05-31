@@ -1,6 +1,6 @@
 #' gtools: Various R Programming Tools
 #'
-#' Functions to assist in R programming, including: 
+#' Functions to assist in R programming, including:
 #' \describe{
 #' \item{developing, updating, and maintaining R and R packages}{'ask', 'checkRVersion', 'getDependencies', 'keywords', 'scat'}
 #' \item{calculate the logit and inverse logit transformations}{'logit', 'inv.logit'}
@@ -19,10 +19,10 @@
 #' \item{modify the TCP\_NODELAY ('de-Nagle') flag for socket objects}{'tcpNoDelay'}
 #' \item{efficient 'rbind' of data frames, even if the column names don't match}{'smartbind'}
 #' \item{generate significance stars from p-values}{'stars.pval'}
-#' \item{convert characters to/from ASCII codes}{asc, chr} 
+#' \item{convert characters to/from ASCII codes}{asc, chr}
 #' \item{convert character vector to ASCII representation}{'ASCIIfy'}
 #' }
-#' 
+#'
 #' @docType package
 #' @name gtools
 #' @useDynLib gtools, .registration=TRUE

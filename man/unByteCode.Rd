@@ -50,29 +50,27 @@ promtply reported to the R maintainers via the R Bug Tracking System at
 \examples{
 
 data(badDend)
-dist2 <- function(x) as.dist(1-cor(t(x), method="pearson"))
+dist2 <- function(x) as.dist(1 - cor(t(x), method = "pearson"))
 hclust1 <- function(x) hclust(x, method = "single")
 
 distance <- dist2(badDend)
-cluster  <- hclust1(distance)
+cluster <- hclust1(distance)
 
 dend <- as.dendrogram(cluster)
-
 \dontrun{
-    ## In R 2.3.0 and earlier crashes with a node stack overflow error
-    plot(dend)
-    ## Error in xy.coords(x, y, recycle = TRUE) : node stack overflow
+## In R 2.3.0 and earlier crashes with a node stack overflow error
+plot(dend)
+## Error in xy.coords(x, y, recycle = TRUE) : node stack overflow
 }
 
 ## convert stats:::plotNode from byte-code to interpreted-code
 unByteCodeAssign(stats:::plotNode)
 
 # increase recursion limit
-options("expressions"=5e4)
+options("expressions" = 5e4)
 
 # now the function does not crash
 plot(dend)
-
 }
 \references{
 These functions were inspired as a work-around to R bug

@@ -20,6 +20,5 @@ See help page for \code{\link{unByteCode}} to see how to construct the
 \examples{
 
 data(badDend)
-
 }
 \keyword{datasets}

@@ -11,8 +11,8 @@ script_path(fail = c("stop", "warning", "quiet"))
 }
 \arguments{
 \item{fail}{character, one of "stop", "warning", "quiet". specifying what
- should be done when the script path cannot be determined: 
- "stop" causes an error to be generated, 
+ should be done when the script path cannot be determined:
+ "stop" causes an error to be generated,
  "warn" generates a warning message and returns NA,
  "quiet" silently returns NA.
 
@@ -44,7 +44,6 @@ commandArgs(trailingOnly = FALSE)
 
 script_file("warning")
 script_path("warning")
-
 }
 \author{
 Greg Warnes <greg@warnes.net> based on on a Stack Overflow post by

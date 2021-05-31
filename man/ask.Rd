@@ -31,14 +31,11 @@ properly.  Under RStudio, it is necessary to specify
 # use default prompt
 ask()
 
-silly <- function()
-{
-   age <- ask("How old aroe you? ")
-   age <- as.numeric(age)
-   cat("In 10 years you will be", age+10, "years old!\n")
+silly <- function() {
+  age <- ask("How old aroe you? ")
+  age <- as.numeric(age)
+  cat("In 10 years you will be", age + 10, "years old!\n")
 }
-
-
 }
 \seealso{
 \code{\link{readLines}}, \code{\link{scan}}

@@ -53,13 +53,12 @@ statisticians prefer to use log-ratios.
 \examples{
 
 
-  a <- 1:21
-  b <- 21:1
+a <- 1:21
+b <- 21:1
 
-  f <- foldchange(a,b)
+f <- foldchange(a, b)
 
-  cbind(a,b,f)
-
+cbind(a, b, f)
 }
 \author{
 Gregory R. Warnes \email{greg@warnes.net}

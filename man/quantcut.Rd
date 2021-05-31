@@ -38,34 +38,33 @@ intervals.
 \examples{
 
 
-  ## create example data
-  \testonly{
-  set.seed(1234)
-  }
-  x <- rnorm(1000)
+## create example data
+# testonly{
+set.seed(1234)
+# }
+x <- rnorm(1000)
 
-  ## cut into quartiles
-  quartiles <- quantcut( x )
-  table(quartiles)
+## cut into quartiles
+quartiles <- quantcut(x)
+table(quartiles)
 
-  ## cut into deciles
-  deciles.1 <- quantcut( x, 10 )
-  table(deciles.1)
-  # or equivalently
-  deciles.2 <- quantcut( x, seq(0,1,by=0.1) )
+## cut into deciles
+deciles.1 <- quantcut(x, 10)
+table(deciles.1)
+# or equivalently
+deciles.2 <- quantcut(x, seq(0, 1, by = 0.1))
 
-  \testonly{
-    stopifnot(identical(deciles.1, deciles.2))
-  }
+# testonly{
+stopifnot(identical(deciles.1, deciles.2))
+# }
 
-  ## show handling of 'tied' quantiles.
-  x <- round(x)  # discretize to create ties
-  stem(x)        # display the ties
-  deciles <- quantcut( x, 10 )
+## show handling of 'tied' quantiles.
+x <- round(x) # discretize to create ties
+stem(x) # display the ties
+deciles <- quantcut(x, 10)
 
-  table(deciles) # note that there are only 5 groups (not 10)
-                 # due to duplicates
-
+table(deciles) # note that there are only 5 groups (not 10)
+# due to duplicates
 }
 \seealso{
 \code{\link{cut}}, \code{\link{quantile}}

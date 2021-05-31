@@ -43,14 +43,12 @@ where
 \examples{
 
 
-  x <- seq(0,10, by=0.25)
-  xt <- logit(x, min=0, max=10)
-  cbind(x,xt)
+x <- seq(0, 10, by = 0.25)
+xt <- logit(x, min = 0, max = 10)
+cbind(x, xt)
 
-  y <- inv.logit(xt, min=0, max=10)
-  cbind(x,xt,y)  
-
-
+y <- inv.logit(xt, min = 0, max = 10)
+cbind(x, xt, y)
 }
 \seealso{
 \code{\link[car]{logit}}

@@ -85,9 +85,11 @@ which parsing looks for roman numerals, with character case specified by
 \examples{
 
 ## compound & dose labels
-Treatment <- c("Control", "Asprin 10mg/day", "Asprin 50mg/day",
-               "Asprin 100mg/day", "Acetomycin 100mg/day",
-               "Acetomycin 1000mg/day")
+Treatment <- c(
+  "Control", "Asprin 10mg/day", "Asprin 50mg/day",
+  "Asprin 100mg/day", "Acetomycin 100mg/day",
+  "Acetomycin 1000mg/day"
+)
 
 ## ordinary sort puts the dosages in the wrong order
 sort(Treatment)
@@ -96,45 +98,50 @@ sort(Treatment)
 mixedsort(Treatment)
 
 ## Here is a more complex example
-x <- rev(c("AA 0.50 ml", "AA 1.5 ml", "AA 500 ml", "AA 1500 ml",
-           "EXP 1", "AA 1e3 ml", "A A A", "1 2 3 A", "NA", NA, "1e2",
-           "", "-", "1A", "1 A", "100", "100A", "Inf"))
+x <- rev(c(
+  "AA 0.50 ml", "AA 1.5 ml", "AA 500 ml", "AA 1500 ml",
+  "EXP 1", "AA 1e3 ml", "A A A", "1 2 3 A", "NA", NA, "1e2",
+  "", "-", "1A", "1 A", "100", "100A", "Inf"
+))
 
 mixedorder(x)
 
-mixedsort(x)  # Notice that plain numbers, including 'Inf' show up
-              # before strings, NAs at the end, and blanks at the
-              # beginning .
+mixedsort(x) # Notice that plain numbers, including 'Inf' show up
+# before strings, NAs at the end, and blanks at the
+# beginning .
 
 
-mixedsort(x, na.last=TRUE)  # default
-mixedsort(x, na.last=FALSE) # push NAs to the front
+mixedsort(x, na.last = TRUE) # default
+mixedsort(x, na.last = FALSE) # push NAs to the front
 
 
-mixedsort(x, blank.last=FALSE) # default
-mixedsort(x, blank.last=TRUE)  # push blanks to the end
+mixedsort(x, blank.last = FALSE) # default
+mixedsort(x, blank.last = TRUE) # push blanks to the end
 
-mixedsort(x, decreasing=FALSE) # default
-mixedsort(x, decreasing=TRUE)  # reverse sort order
+mixedsort(x, decreasing = FALSE) # default
+mixedsort(x, decreasing = TRUE) # reverse sort order
 
 ## Roman numerals
-chapters <- c("V. Non Sequiturs", "II. More Nonsense",
-              "I. Nonsense", "IV. Nonesensical Citations",
-              "III. Utter Nonsense")
-mixedsort(chapters, numeric.type="roman" )
+chapters <- c(
+  "V. Non Sequiturs", "II. More Nonsense",
+  "I. Nonsense", "IV. Nonesensical Citations",
+  "III. Utter Nonsense"
+)
+mixedsort(chapters, numeric.type = "roman")
 
 ## Lower-case Roman numerals
-vals <- c("xix", "xii", "mcv", "iii", "iv", "dcclxxii",   "cdxcii",
-          "dcxcviii",   "dcvi",   "cci")
-(ordered <- mixedsort(vals, numeric.type="roman", roman.case="lower"))
+vals <- c(
+  "xix", "xii", "mcv", "iii", "iv", "dcclxxii", "cdxcii",
+  "dcxcviii", "dcvi", "cci"
+)
+(ordered <- mixedsort(vals, numeric.type = "roman", roman.case = "lower"))
 roman2int(ordered)
 
-## Control scientific notation for number matching: 
-vals <- c("3E1","2E3", "4e0")
+## Control scientific notation for number matching:
+vals <- c("3E1", "2E3", "4e0")
 
 mixedsort(vals) # With scientfic notation
-mixedsort(vals, scientific=FALSE) # Without scientfic notation
-
+mixedsort(vals, scientific = FALSE) # Without scientfic notation
 }
 \seealso{
 \code{\link[base]{sort}}, \code{\link[base]{order}}

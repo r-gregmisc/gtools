@@ -20,9 +20,8 @@ This is simply a wrapper function for \code{\link{sample}}.
 }
 \examples{
 
-  x <- 1:10
-  permute(x)
-
+x <- 1:10
+permute(x)
 }
 \seealso{
 \code{\link{sample}}

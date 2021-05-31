@@ -34,7 +34,6 @@ This function allows this feature to be disabled (de-Nagling,
 specified socket.
 }
 \examples{
-
 \dontrun{
 host <- "www.r-project.org"
 socket <- make.socket(host, 80)
@@ -44,15 +43,16 @@ setTCPNoDelay(socket, TRUE)
 write.socket(socket, "GET /\n\n")
 write.socket(socket, "A")
 write.socket(socket, "B\n")
-while( (str <- read.socket(socket)) > "")
+while ((str <- read.socket(socket)) > "") {
   cat(str)
+}
 close.socket(socket)
 }
 
 }
 \references{
 "Nagles algorithm" \url{https://en.wikipedia.org/wiki/Nagle's_algorithm},
-  
+
   Nagle, John. "Congestion Control in IP/TCP Internetworks", IETF Request for
   Comments 896, January 1984. \url{https://www.ietf.org/rfc/rfc0896.txt?number=896}
 }

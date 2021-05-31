@@ -41,7 +41,6 @@ byeWorld <- function() cat("\nGoodbye World!\n")
 
 .Last <- lastAdd(byeWorld)
 .Last <- lastAdd(helloWorld)
-
 \dontshow{
 .Last()
 }

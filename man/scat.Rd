@@ -18,13 +18,12 @@ the text is immediatly displayed. Otherwise, do nothing.
 }
 \examples{
 
-options(DEBUG=NULL) # makee sure DEBUG isn't set
+options(DEBUG = NULL) # makee sure DEBUG isn't set
 scat("Not displayed")
 
-options(DEBUG=TRUE)
+options(DEBUG = TRUE)
 scat("This will be displayed immediately (even in R BATCH output \n")
 scat("files), provided options()$DEBUG is TRUE.")
-
 }
 \seealso{
 \code{\link[base]{cat}}

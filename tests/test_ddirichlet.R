@@ -8,8 +8,7 @@
 ##
 library(gtools)
 
-x = c(0,0,1)
-alpha = c(1,2,3)
+x <- c(0, 0, 1)
+alpha <- c(1, 2, 3)
 
-stopifnot( ddirichlet(x=x, alpha=alpha) == 0 )
-
+stopifnot(ddirichlet(x = x, alpha = alpha) == 0)

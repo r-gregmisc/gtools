@@ -24,19 +24,19 @@ Most frequently occuring value
 \examples{
 
 # Character vector
-chr_vec <- c('a','d','d','h','h',NA,NA) # Multiple modes
+chr_vec <- c("a", "d", "d", "h", "h", NA, NA) # Multiple modes
 stat_mode(x = chr_vec)
-stat_mode(x = chr_vec, na.rm=FALSE)
-stat_mode(x = chr_vec, na.rm=FALSE, ties="first")
-stat_mode(x = chr_vec, na.rm=FALSE, ties="last")
+stat_mode(x = chr_vec, na.rm = FALSE)
+stat_mode(x = chr_vec, na.rm = FALSE, ties = "first")
+stat_mode(x = chr_vec, na.rm = FALSE, ties = "last")
 
 # - # Numeric vector
 # See that it keeps the original vector type
-num_vec <- c(2,3,3,4,4,NA,NA)
+num_vec <- c(2, 3, 3, 4, 4, NA, NA)
 stat_mode(x = num_vec)
-stat_mode(x = num_vec, na.rm=FALSE)
-stat_mode(x = num_vec, na.rm=FALSE, ties="first")
-stat_mode(x = num_vec, na.rm=FALSE, ties="last")
+stat_mode(x = num_vec, na.rm = FALSE)
+stat_mode(x = num_vec, na.rm = FALSE, ties = "first")
+stat_mode(x = num_vec, na.rm = FALSE, ties = "last")
 
 # The default option is ties="all" but it is very easy for the user to control
 # the ties without changing this parameter.
@@ -44,27 +44,26 @@ stat_mode(x = num_vec, na.rm=FALSE, ties="last")
 stat_mode(x = num_vec)[1]
 
 # Select the first and the second stat_mode
-stat_mode(x = num_vec)[c(1,2)]
+stat_mode(x = num_vec)[c(1, 2)]
 
 # Logical Vectors
-stat_mode(x = c(TRUE,TRUE))
-stat_mode(x = c(FALSE,FALSE,TRUE,TRUE))
+stat_mode(x = c(TRUE, TRUE))
+stat_mode(x = c(FALSE, FALSE, TRUE, TRUE))
 
 # - # Single element cases
 stat_mode(x = c(NA_real_))
 stat_mode(x = 2)
 stat_mode(x = NA)
-stat_mode(x = c('a'))
+stat_mode(x = c("a"))
 
 # Not allowing multiple stat_mode, returning NA if that happens
-stat_mode(x = c(1,1,2,2), multiple_modes = FALSE) # multiple stat_mode
-stat_mode(x = c(1,1), multiple_modes = FALSE) # single mode
+stat_mode(x = c(1, 1, 2, 2), multiple_modes = FALSE) # multiple stat_mode
+stat_mode(x = c(1, 1), multiple_modes = FALSE) # single mode
 
 # Empty vector cases
-# The ties of any empty vector will be itself (an empty vector of the same type) 
+# The ties of any empty vector will be itself (an empty vector of the same type)
 stat_mode(x = double())
 stat_mode(x = complex())
-stat_mode(x = vector('numeric'))
-stat_mode(x = vector('character'))
-
+stat_mode(x = vector("numeric"))
+stat_mode(x = vector("character"))
 }

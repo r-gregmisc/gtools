@@ -81,18 +81,21 @@ values mean.
 ### Toy examples
 
 # search for x=10
-binsearch( function(x) x-10, range=c(0,20) )
+binsearch(function(x) x - 10, range = c(0, 20))
 
 # search for x=10.1
-binsearch( function(x) x-10.1, range=c(0,20) )
+binsearch(function(x) x - 10.1, range = c(0, 20))
 
 ### Classical toy example
 
 # binary search for the index of 'M' among the sorted letters
-fun <- function(X) ifelse(LETTERS[X] > 'M', 1,
-                          ifelse(LETTERS[X] < 'M', -1, 0 ) )
+fun <- function(X) {
+  ifelse(LETTERS[X] > "M", 1,
+    ifelse(LETTERS[X] < "M", -1, 0)
+  )
+}
 
-binsearch( fun, range=1:26 ) 
+binsearch(fun, range = 1:26)
 # returns $where=13
 LETTERS[13]
 
@@ -101,12 +104,12 @@ LETTERS[13]
 library(genetics)
 # Determine the necessary sample size to detect all alleles with
 # frequency 0.07 or greater with probability 0.95.
-power.fun <- function(N) 1 - gregorius(N=N, freq=0.07)$missprob
+power.fun <- function(N) 1 - gregorius(N = N, freq = 0.07)$missprob
 
-binsearch( power.fun, range=c(0,100), target=0.95 )
+binsearch(power.fun, range = c(0, 100), target = 0.95)
 
 # equivalent to
-gregorius( freq=0.07, missprob=0.05)
+gregorius(freq = 0.07, missprob = 0.05)
 }
 
 }
