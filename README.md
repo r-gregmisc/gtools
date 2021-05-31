@@ -37,6 +37,8 @@ including:
 -   convert character vector to ASCII representation (`ASCIIfy`).
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/r-gregmisc/gtools/workflows/R-CMD-check/badge.svg)](https://github.com/r-gregmisc/gtools/actions)
 <!-- badges: end -->
 
 ## Installation
