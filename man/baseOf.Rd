@@ -20,7 +20,7 @@ Transform an integer to an array of base-n digits
 This function converts the elements of an integer vector as an array of its
 digits.  The base of the numbering scheme may be changed away from 10, which
 defines our decimal system, to any other integer value. For base=2, the
-number is returned in the dual system. The least significant digit has the
+number is returned in the binary system. The least significant digit has the
 highest index in the array, i.e. it appears on the right.  The highest
 exponent is at position 1, i.e. left.
 
@@ -30,7 +30,7 @@ interpreted as logical false or true. And at the very interface to
 electrical engineering, it is indicated as an absence or presence of
 voltage. When several bit values are transported synchronously, then it is
 common to give every lane of such a data bus a unique 2^x value and
-interpret it as a number in the dual system. To distinguish 256 characters
+interpret it as a number in the binary system. To distinguish 256 characters
 one once needed 8 bit ("byte"). It is the common unit in which larger
 non-printable data is presented.  Because of the many non-printable
 characters and the difficulty for most humans to memorize an even longer
@@ -50,7 +50,7 @@ Venn diagram.
 # decimal representation
 baseOf(123)
 
-# dual representation
+# binary representation
 baseOf(123,base=2)
 
 # octal representation
