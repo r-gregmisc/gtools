@@ -1,6 +1,6 @@
 #include <R.h>
 
-void convert(
+void C_convert(
 	     char**  letters,
 	     int*  nchar,
 	     int*  values
@@ -28,7 +28,7 @@ void convert(
     }
 }
 
-void roman2int(char** str,
+void C_roman2int(char** str,
                int*  nchar,
                int*  retval)
 {
@@ -39,7 +39,7 @@ void roman2int(char** str,
     }
 
   int* values = (int*) R_alloc(*nchar, sizeof(int));
-  convert(str, nchar, values);
+  C_convert(str, nchar, values);
 
   int total=0;
   if (*nchar > 1)

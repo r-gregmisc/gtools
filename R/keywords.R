@@ -1,3 +1,27 @@
+#' List valid keywords for R man pages
+#' 
+#' List valid keywords for R man pages
+#' 
+#' If \code{topic} is provided, return a list of the keywords associated with
+#' \code{topic}.  Otherwise, display the list of valid R keywords from the R
+#' doc/KEYWORDS file.
+#' 
+#' @param topic object or man page topic
+#' @author Gregory R. Warnes \email{greg@@warnes.net}
+#' @seealso \code{\link[utils]{help}}
+#' @keywords documentation
+#' @examples
+#' 
+#' ## Show all valid R keywords
+#' keywords()
+#' 
+#' ## Show keywords associated with the 'merge' function
+#' keywords(merge)
+#' keywords("merge")
+#' 
+#' @importFrom stats na.omit
+#' @importFrom utils help.search
+#' @export
 keywords <- function( topic )
 {
 
