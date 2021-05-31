@@ -9,3 +9,5 @@
 ^revdep$
 ^scripts$
 ^TODO.md
+^\.github$
+^README\.Rmd$
