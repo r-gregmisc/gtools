@@ -5,7 +5,7 @@
 #' This function converts the elements of an integer vector as an array of its
 #' digits.  The base of the numbering scheme may be changed away from 10, which
 #' defines our decimal system, to any other integer value. For base=2, the
-#' number is returned in the dual system. The least significant digit has the
+#' number is returned in the binary system. The least significant digit has the
 #' highest index in the array, i.e. it appears on the right.  The highest
 #' exponent is at position 1, i.e. left.
 #' 
@@ -15,7 +15,7 @@
 #' electrical engineering, it is indicated as an absence or presence of
 #' voltage. When several bit values are transported synchronously, then it is
 #' common to give every lane of such a data bus a unique 2^x value and
-#' interpret it as a number in the dual system. To distinguish 256 characters
+#' interpret it as a number in the binary system. To distinguish 256 characters
 #' one once needed 8 bit ("byte"). It is the common unit in which larger
 #' non-printable data is presented.  Because of the many non-printable
 #' characters and the difficulty for most humans to memorize an even longer
@@ -40,7 +40,7 @@
 #' # decimal representation
 #' baseOf(123)
 #' 
-#' # dual representation
+#' # binary representation
 #' baseOf(123,base=2)
 #' 
 #' # octal representation
@@ -77,7 +77,7 @@
 #' m.counts[,"num",drop=TRUE]
 #' 
 #' @export
-baseOf <- function(v,
+ baseOf <- function(v,
                    base=10,
                    len=1)
 {
@@ -100,7 +100,7 @@ baseOf <- function(v,
     
     # add informative row and column names
     rownames(retval) <- paste0('v.', v)
-    colnames(retval) <- paste0('b.', c(0, base^(1: (longest- 1) ) ) )
+    colnames(retval) <- paste0('b.', rev(c(0, base^(1: (longest- 1) ) ) ) )
     
     retval
   }
@@ -142,7 +142,7 @@ baseOf.inner <- function(v,
   }
   
   if(length(ret)>1)
-    names(ret) <-  c(0, base^( 1:(length(ret)- 1 ) ) )
+    names(ret) <-  rev( c(0, base^( 1:(length(ret)- 1 ) ) ) )
   
   return(ret)
 }
