@@ -2,7 +2,7 @@
 
 This submission was generated using the devtools and revdepcheck packages, and was built and checked via Rhub and winbuilder.
 
-Its primary purpose is to provide compatibility with R 4.0, but also includes correction of a suprising number of spelling errors and a few other minor issues.
+It passes R CMD check on linux-release, linux-devel, and Windows-release.   (Windows-devel currently fails due to the lack of BioConductor support for R 4.2.)
 
 `devtools::check` shows one *expected* NOTE:  
 
