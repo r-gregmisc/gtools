@@ -129,6 +129,12 @@ vals <- c("xix", "xii", "mcv", "iii", "iv", "dcclxxii",   "cdxcii",
 (ordered <- mixedsort(vals, numeric.type="roman", roman.case="lower"))
 roman2int(ordered)
 
+## Control scientific notation for number matching: 
+vals <- c("3E1","2E3", "4e0")
+
+mixedsort(vals) # With scientfic notation
+mixedsort(vals, scientific=FALSE) # Without scientfic notation
+
 }
 \seealso{
 \code{\link[base]{sort}}, \code{\link[base]{order}}
