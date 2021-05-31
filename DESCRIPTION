@@ -24,7 +24,7 @@ Description: Functions to assist in R programming, including:
   - convert characters to/from ASCII codes ('asc', 'chr'),
   - convert character vector to ASCII representation ('ASCIIfy').
 Version: 3.9.0
-Date: 2021-04-25
+Date: 2021-05-31
 Author: Gregory R. Warnes, Ben Bolker, and Thomas Lumley
 Maintainer: Gregory R. Warnes <greg@warnes.net>
 License: GPL-2
