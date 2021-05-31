@@ -1,5 +1,11 @@
-^renv$
-^renv\.lock$
+^.*\.Rproj$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.Rproj\.user$
+^cran-comments.md
+^CRAN-RELEASE$
+^renv\.lock$
+^renv$
+^revdep$
+^scripts$
 ^TODO.md

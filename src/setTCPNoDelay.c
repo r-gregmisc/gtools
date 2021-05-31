@@ -29,7 +29,7 @@
                ERRNO ":" DESCR,
                status_len);
       break;
-#endif  
+#endif
 
 
 
@@ -62,7 +62,7 @@ void C_checkStatus(
       CASE_ERR(WSAENOPROTOOPT, "he option is unknown or unsupported for the specified provider or socket (see SO_GROUP_PRIORITY limitations).");
       CASE_ERR(WSAENOTCONN, "Connection has been reset when SO_KEEPALIVE is set.");
       CASE_ERR(WSAENOTSOCK, "The descriptor is not a socket.");
-      
+
     case 0:
       strncpy( status_str,
                "SUCCESS",
@@ -70,7 +70,7 @@ void C_checkStatus(
       break;
 
     default:
-      strncpy(status_str, strerror(status), status_len);  
+      strncpy(status_str, strerror(status), status_len);
       break;
     }
 
@@ -87,10 +87,10 @@ void C_setTCPNoDelay(
     int* status_len)
 {
   int off;
-  
+
   /* ensure that we use only 0,1 values */
   off = (*flag) ? 1 : 0;
-  
+
   *status = setsockopt(
                        *socket,
                        IPPROTO_TCP,
@@ -140,4 +140,3 @@ void C_setsockopt(int *s,
   C_checkStatus(*status, status_str, *status_len);
 }
 */
-

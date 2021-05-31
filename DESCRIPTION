@@ -21,12 +21,16 @@ Description: Functions to assist in R programming, including:
   - modify the TCP\_NODELAY ('de-Nagle') flag for socket objects,
   - efficient 'rbind' of data frames, even if the column names don't match ('smartbind'),
   - generate significance stars from p-values ('stars.pval'),
-  - convert characters to/from ASCII codes.
+  - convert characters to/from ASCII codes ('asc', 'chr'),
+  - convert character vector to ASCII representation ('ASCIIfy').
 Version: 3.9.0
 Date: 2021-04-25
 Author: Gregory R. Warnes, Ben Bolker, and Thomas Lumley
 Maintainer: Gregory R. Warnes <greg@warnes.net>
 License: GPL-2
 Depends: methods, stats, utils
+URL: https://github.com/r-gregmisc/gtools
+BugReports: https://github.com/r-gregmisc/gtools/issues
+Language: en-US
 Suggests: knitr, rstudioapi
 RoxygenNote: 7.1.1

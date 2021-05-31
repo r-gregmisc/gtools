@@ -1,5 +1,7 @@
 library(gtools)
 
+Sys.setlocale(category = "LC_ALL", locale = "C")
+
 ## Examples from man page
 Treatment <- c("Control", "Asprin 10mg/day", "Asprin 50mg/day",
                "Asprin 100mg/day", "Acetomycin 100mg/day",

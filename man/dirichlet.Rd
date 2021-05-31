@@ -28,7 +28,7 @@ single Dirichlet random deviate.
 }
 \description{
 Functions to compute the density of or generate random deviates from the
-Dirichlet distribution.
+Dirichlet distribution
 }
 \details{
 The Dirichlet distribution is the multidimensional generalization of the

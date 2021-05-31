@@ -11,7 +11,8 @@ romandigit.convert <- function(roman)
         retval <- .C(C_convert,
                      roman=as.character(roman),
                      nchar=as.integer(nchar(roman)),
-                     values=integer(nchar(roman))
+                     values=integer(nchar(roman)),
+                     PACKAGE="gtools"
                      )
         retval$values
     }
@@ -22,7 +23,6 @@ roman2int.inner <- function(roman)
                       roman = as.character(roman),
                       nchar = as.integer(nchar(roman)),
                       value = integer(1),
-
                       PACKAGE="gtools")
 
         return(results$value)

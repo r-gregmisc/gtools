@@ -50,7 +50,17 @@
 #' 
 #' Lumley T. "Programmer's Niche: Macros in R", R News, 2001, Vol 1, No. 3, pp
 #' 11--13, \url{https://cran.r-project.org/doc/Rnews/}
-#' 
+#' @Article{Rnews:Lumley:2001,
+#'  author       = {Thomas Lumley},
+#'  title	       = {Programmer's Niche: Macros in {R}},
+#'  journal      = {R News},
+#'  year	       = 2001,
+#'  volume       = 1,
+#'  number       = 3,
+#'  pages	       = {11--13},
+#'  month	       = {September},
+#'  url	       = {https://cran.r-project.org/doc/Rnews/}
+#' }
 #' @keywords programming
 #' ## Code from
 #' @examples
@@ -157,17 +167,17 @@ defmacro <- function(..., expr) #, DOTS=FALSE)
                           eval(tmp, parent.frame())
                         },
                         list(body = expr)))
-  
+
   ## add the argument list
   formals(ff) <- a
-  
+
   ## create a fake source attribute
   mm <- match.call()
   mm$expr <- NULL
   mm[[1]] <- as.name("macro")
   attr(ff, "source") <- c(deparse(mm),
                           deparse(expr))
-  
+
   ## return the 'macro'
   ff
 }

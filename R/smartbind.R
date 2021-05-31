@@ -83,8 +83,8 @@ smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
       {
         data <- modifyList(list, data)
       }
-    data <- data[!sapply(data, function(l) is.null(l) | ncol(l)==0 | nrow(l)==0)]
-    
+    data <- data[!sapply(data, function(l) is.null(l) | (ncol(l)==0) | (nrow(l)==0) )]
+
 
     defaultNames <- seq.int(length(data))
 
@@ -102,7 +102,7 @@ smartbind <- function(..., list, fill=NA, sep=':', verbose=FALSE)
                    else
                      data.frame(as.list(x), check.names=FALSE)
                    )
-    
+
     #retval <- new.env()
     retval <- base::list()
     rowLens <- unlist(lapply(data, nrow))

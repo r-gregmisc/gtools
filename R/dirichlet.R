@@ -1,7 +1,7 @@
 #' Functions for the Dirichlet Distribution
 #' 
 #' Functions to compute the density of or generate random deviates from the
-#' Dirichlet distribution.
+#' Dirichlet distribution
 #' 
 #' The Dirichlet distribution is the multidimensional generalization of the
 #' beta distribution.  It is the canonical Bayesian distribution for the

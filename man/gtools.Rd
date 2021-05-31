@@ -25,5 +25,6 @@ Functions to assist in R programming, including:
 \item{efficient 'rbind' of data frames, even if the column names don't match}{'smartbind'}
 \item{generate significance stars from p-values}{'stars.pval'}
 \item{convert characters to/from ASCII codes}{asc, chr} 
+\item{convert character vector to ASCII representation}{'ASCIIfy'}
 }
 }

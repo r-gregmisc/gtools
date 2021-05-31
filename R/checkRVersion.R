@@ -38,7 +38,6 @@ checkRVersion <- function(quiet=FALSE)
                   what="", quiet=TRUE)
     page4 <- scan(file="https://cran.r-project.org/src/base/R-4",
                   what="", quiet=TRUE)
-    
     combined <- c(page2, page3, page4)
     
     matches <- grep("R-[0-9]\\.[0-9]+\\.[0-9]+", combined, value=TRUE)
@@ -64,5 +63,5 @@ checkRVersion <- function(quiet=FALSE)
           }
         invisible( NULL );
       }
-    
+
   }
