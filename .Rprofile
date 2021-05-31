@@ -1,2 +1,2 @@
 source("renv/activate.R")
-library(devtools)
+require('devtools')
