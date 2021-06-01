@@ -312,10 +312,15 @@
     },
     "cli": {
       "Package": "cli",
-      "Version": "2.5.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "a94ba44cee3ea571e813721e64184172"
+      "Version": "2.5.0.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "cli",
+      "RemoteUsername": "r-lib",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "87c6d5ba762aaafc0f16e5e3e2b510b43e0931e3",
+      "Hash": "d1d2f62aaa63bf99c54cdc28c8c35c47"
     },
     "clipr": {
       "Package": "clipr",
@@ -323,6 +328,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "ebaa97ac99cc2daf04e77eecc7b781d7"
+    },
+    "clisymbols": {
+      "Package": "clisymbols",
+      "Version": "1.2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "96c01552bfd5661b9bbdefbc762f4bcd"
     },
     "cluster": {
       "Package": "cluster",
@@ -373,6 +385,25 @@
       "Repository": "CRAN",
       "Hash": "730eebcc741a5c36761f7d4d0f5e37b8"
     },
+    "crancache": {
+      "Package": "crancache",
+      "Version": "0.0.0.9001",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "crancache",
+      "RemoteUsername": "r-lib",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "7ea4e479bdf780adadd1bd421a5ca23e5f951697",
+      "Hash": "795b8389734f11481fdcdf9cdde3002f"
+    },
+    "cranlike": {
+      "Package": "cranlike",
+      "Version": "1.0.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2a531c8d1d45799fe2e880708dfc1097"
+    },
     "crayon": {
       "Package": "crayon",
       "Version": "1.4.1",
@@ -414,6 +445,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "d1b8b1a821ee564a3515fa6c6d5c52dc"
+    },
+    "debugme": {
+      "Package": "debugme",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2d8a9e4f08f3dd669cb8ddd1eb575959"
     },
     "desc": {
       "Package": "desc",
@@ -548,6 +586,13 @@
       "Repository": "CRAN",
       "Hash": "44594a07a42e5f91fac9f93fda6d0109"
     },
+    "gargle": {
+      "Package": "gargle",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "bc3bc77ea458de0a6efe94e8e7e9c641"
+    },
     "generics": {
       "Package": "generics",
       "Version": "0.1.0",
@@ -589,6 +634,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "6efd734b14c6471cfe443345f3e35e29"
+    },
+    "gmailr": {
+      "Package": "gmailr",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e717784f7de215d2e40d11b1cb3e0e73"
     },
     "gplots": {
       "Package": "gplots",
@@ -891,6 +943,13 @@
       "Repository": "CRAN",
       "Hash": "2253a430965e222d11a2f9277cd34c2e"
     },
+    "parsedate": {
+      "Package": "parsedate",
+      "Version": "1.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "7ea462fc29a69bd66f0ec4e596373c3d"
+    },
     "pbapply": {
       "Package": "pbapply",
       "Version": "1.4-3",
@@ -1128,6 +1187,19 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "0f4d941129e00ed34a7d192b1da7ccef"
+    },
+    "revdepcheck": {
+      "Package": "revdepcheck",
+      "Version": "1.0.0.9001",
+      "Source": "GitHub",
+      "Remotes": "r-lib/crancache, r-lib/cli",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "revdepcheck",
+      "RemoteUsername": "r-lib",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "b0a0b97abb8ff2167d10ddf6aa6232b2f7cd886a",
+      "Hash": "105c42664dfd9935b997f181b8ea574c"
     },
     "rex": {
       "Package": "rex",
@@ -1434,6 +1506,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "ca970b96d894e90397ed20637a0c1bbe"
+    },
+    "whoami": {
+      "Package": "whoami",
+      "Version": "1.3.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ef0f4d9b8f2cc2ebeccae1d725b8a023"
     },
     "wikitaxa": {
       "Package": "wikitaxa",
