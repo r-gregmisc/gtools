@@ -1,3 +1,50 @@
+gtools 3.9.0 - 2021-05-31
+-------------------------
+
+New functions:
+
+- New `script_file` and `script_path` functions to obtain the 
+  directory or full path to the currently executing script.
+
+- New 'stat_mode` function to calculate the statistical mode (most
+  frequently occuring value).
+
+- New `capwords` function to apply title capitalization rules to a
+  character vector.
+  
+- Move `baseOf` from `gplots` as requested by Steffen Möller. #2 
+
+New parameters:
+
+- Add `scientific` parameter to `mixedsort` and `mixedorder` to 
+  control whether numbers in scientific notation are recognized. 
+  Resolved #7.
+  
+- Enhance `invalid` to detect `try-error` objects. #6
+
+Bug fixes:
+
+- Add support for R version 4 to `checkRVersion`.  Resolved #5.
+
+- Correct bug in `lastAdd` by explicitly checking for a `.Last` of
+  mode function.
+
+Behind the scenes:
+
+- Modernize package code by using `roxygen2` for documentation and 
+  managing the NAMESPACE.
+
+- Modernize C function registration. 
+
+- Replace http URLs with `https` and resolve broken links.
+
+- Add github actions to automated testing
+
+- Use pkgdown to generate HTML documentation.
+
+- Use `styler` package to standardize R code formatting.
+
+
 gtools 3.8.2 - 2020-03-23
 -------------------------
 

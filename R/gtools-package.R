@@ -21,6 +21,7 @@
 #' \item{generate significance stars from p-values}{'stars.pval'}
 #' \item{convert characters to/from ASCII codes}{asc, chr}
 #' \item{convert character vector to ASCII representation}{'ASCIIfy'}
+#' \item{apply title capitalization rules to a character vector}{'capwords'}
 #' }
 #'
 #' @docType package

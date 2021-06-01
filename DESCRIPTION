@@ -23,6 +23,7 @@ Description: Functions to assist in R programming, including:
   - generate significance stars from p-values ('stars.pval'),
   - convert characters to/from ASCII codes ('asc', 'chr'),
   - convert character vector to ASCII representation ('ASCIIfy').
+  - apply title capitalization rules to a character vector ('capwords')
 Version: 3.9.1
 Date: 2021-05-31
 Author: Gregory R. Warnes, Ben Bolker, and Thomas Lumley

@@ -1,11 +1,18 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# gtools
+# gtools R package
 
 <!-- badges: start -->
 
+[![Project Status: Active - The project has reached a stable, usable
+state and is being actively
+developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![R-CMD-check](https://github.com/r-gregmisc/gtools/workflows/R-CMD-check/badge.svg)](https://github.com/r-gregmisc/gtools/actions)
+[![](http://www.r-pkg.org/badges/version/gtools)](http://www.r-pkg.org/pkg/gtools)
+[![CRAN RStudio mirror
+downloads](http://cranlogs.r-pkg.org/badges/gtools)](http://www.r-pkg.org/pkg/gtools)
+
 <!-- badges: end -->
 
 The `gtools` R package provides functions to assist in R programming,
@@ -40,6 +47,7 @@ including:
 -   generate significance stars from p-values (`stars.pval`),
 -   convert characters to/from ASCII codes (`asc`, `chr`),
 -   convert character vector to ASCII representation (`ASCIIfy`).
+-   apply title capitalization rules to a character vector (‘capwords’)
 
 ## Installation
 
