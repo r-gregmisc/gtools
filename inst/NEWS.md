@@ -1,3 +1,17 @@
+gtools 3.9.1 - 2021-06-01
+-------------------------
+
+Bug fixes:
+
+- Use valid HTTP request for example in `setTCPNoDelay` to prevent
+  errors when runnings tests.
+
+Behind the scenes:
+
+- Fixed numerous spelling/typographical errors.
+
+- Update obsolete http URLs to https 
+
 gtools 3.9.0 - 2021-05-31
 -------------------------
 
