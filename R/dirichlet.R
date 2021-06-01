@@ -8,7 +8,7 @@
 #' parameter estimates of a multinomial distribution.
 #'
 #' @aliases rdirichlet ddirichlet
-#' @param x A vector containing a single random deviate or matrix containg one
+#' @param x A vector containing a single random deviate or matrix containing one
 #' random deviate per row.
 #' @param alpha Vector or (for \code{ddirichlet}) matrix containing shape
 #' parameters.

@@ -10,7 +10,7 @@
 #' attr(*, "dimnames")=List of 2 ..$ : NULL ..$ : chr [1:12] "X" "V1" "V2" "V3"
 #' ...
 #' @note See help page for \code{\link{unByteCode}} to see how to construct the
-#' 'bad' dentrogram from this data and how to work around the issue.
+#' 'bad' dendrogram from this data and how to work around the issue.
 #' @keywords datasets
 #' @examples
 #'

@@ -1,6 +1,6 @@
 #' Create a Factor Variable Using the Quantiles of a Continuous Variable
 #'
-#' Create a factor variable using the quantiles of a continous variable.
+#' Create a factor variable using the quantiles of a continuous variable.
 #'
 #'
 #' This function uses \code{\link{quantile}} to obtain the specified quantiles
@@ -12,7 +12,7 @@
 #' be fewer generated factor levels than the specified number of quantile
 #' intervals.
 #'
-#' @param x Continous variable.
+#' @param x Continuous variable.
 #' @param q Either a integer number of equally spaced quantile groups to
 #' create, or a vector of quantiles used for creating groups. Defaults to
 #' \code{q=4} which is equivalent to \code{q=seq(0, 1, by=0.25)}.  See

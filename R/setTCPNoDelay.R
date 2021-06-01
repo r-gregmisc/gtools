@@ -1,6 +1,6 @@
 #' Modify the TCP_NODELAY (`de-Nagle') flag for socket objects
 #'
-#' Modify the TCP_NODELAY (`de-Nagele') flag for socket objects
+#' Modify the TCP_NODELAY (`de-Nagle') flag for socket objects
 #'
 #' By default, TCP connections wait a small fixed interval before actually
 #' sending data, in order to permit small packets to be combined.  This
@@ -20,14 +20,14 @@
 #' (\code{FALSE}) the flag
 #'
 #' @return The character string "SUCCESS" will be returned invisible if the
-#' operation was succesful.  On failure, an error will be generated.
+#' operation was successful.  On failure, an error will be generated.
 #'
 #' @author Gregory R. Warnes \email{greg@@warnes.net}
 #'
 #' @seealso \code{\link{make.socket}}, \code{\link{socketConnection}}
 #'
 #' @references
-#'   "Nagles algorithm" \url{https://en.wikipedia.org/wiki/Nagle's_algorithm},
+#'   "Nagle's algorithm" \url{https://en.wikipedia.org/wiki/Nagle's_algorithm},
 #'
 #'   Nagle, John. "Congestion Control in IP/TCP Internetworks", IETF Request for
 #'   Comments 896, January 1984. \url{https://www.ietf.org/rfc/rfc0896.txt?number=896}

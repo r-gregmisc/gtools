@@ -4,7 +4,7 @@
 #'
 #' This is a convenience function that is the same as x[is.na(x)] <- replace
 #'
-#' @param x vector possibly contining missing (\code{NA}) values
+#' @param x vector possibly containing missing (\code{NA}) values
 #' @param replace either a scalar replacement value, or a function returning a
 #' scalar value
 #' @param ... Optional arguments to be passed to \code{replace}

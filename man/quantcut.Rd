@@ -7,7 +7,7 @@
 quantcut(x, q = 4, na.rm = TRUE, ...)
 }
 \arguments{
-\item{x}{Continous variable.}
+\item{x}{Continuous variable.}
 
 \item{q}{Either a integer number of equally spaced quantile groups to
 create, or a vector of quantiles used for creating groups. Defaults to
@@ -23,7 +23,7 @@ when computing quantiles.  Defaults to TRUE.}
 Factor variable with one level for each quantile interval.
 }
 \description{
-Create a factor variable using the quantiles of a continous variable.
+Create a factor variable using the quantiles of a continuous variable.
 }
 \details{
 This function uses \code{\link{quantile}} to obtain the specified quantiles

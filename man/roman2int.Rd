@@ -17,7 +17,7 @@ strings which are not valid roman numerals will be converted to \code{NA}.
 Convert roman numerals to integers
 }
 \details{
-This functon will convert roman numerals to integers without the upper bound
+This function will convert roman numerals to integers without the upper bound
 imposed by R (3899), ignoring case.
 }
 \examples{

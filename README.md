@@ -47,7 +47,7 @@ including:
 -   generate significance stars from p-values (`stars.pval`),
 -   convert characters to/from ASCII codes (`asc`, `chr`),
 -   convert character vector to ASCII representation (`ASCIIfy`).
--   apply title capitalization rules to a character vector (‘capwords’)
+-   apply title capitalization rules to a character vector (`capwords`)
 
 ## Installation
 

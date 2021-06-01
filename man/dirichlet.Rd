@@ -11,7 +11,7 @@ ddirichlet(x, alpha)
 rdirichlet(n, alpha)
 }
 \arguments{
-\item{x}{A vector containing a single random deviate or matrix containg one
+\item{x}{A vector containing a single random deviate or matrix containing one
 random deviate per row.}
 
 \item{alpha}{Vector or (for \code{ddirichlet}) matrix containing shape

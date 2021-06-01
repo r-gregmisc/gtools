@@ -2,7 +2,7 @@
 % Please edit documentation in R/stat_mode.R
 \name{stat_mode}
 \alias{stat_mode}
-\title{Most frequently occuring value}
+\title{Most frequently occurring value}
 \usage{
 stat_mode(x, na.rm = TRUE, ties = c("all", "first", "last", "missing"), ...)
 }
@@ -19,7 +19,7 @@ stat_mode(x, na.rm = TRUE, ties = c("all", "first", "last", "missing"), ...)
 vector of the same class as \code{x}
 }
 \description{
-Most frequently occuring value
+Most frequently occurring value
 }
 \examples{
 

@@ -54,7 +54,7 @@ at each value in the X/Y range.}
 \item{\dots}{parameters to be passed to \code{fun}}
 }
 \value{
-List (if \code{simplify==TRUE}), vector, or matrix containg the
+List (if \code{simplify==TRUE}), vector, or matrix containing the
 results of applying the function \code{fun} to the subsets of \code{X}
 (\code{running}) or \code{X} and \code{Y}.
 

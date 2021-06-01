@@ -7,7 +7,7 @@
 #' \code{unByteCode} returns a copy of the function that is directly
 #' interpreted from text rather than from byte-code.
 #'
-#' \code{assignEdgewise} makes an assignment into a locked environemnt.
+#' \code{assignEdgewise} makes an assignment into a locked environment.
 #'
 #' \code{unByteCodeAssign} changes the specified function \emph{in its source
 #' environment} to be directly interpreted from text rather than from
@@ -22,7 +22,7 @@
 #' assigned value.
 #' @note These functions are not intended as a permanent solution to issues
 #' with byte-code compilation or interpretation.  Any such issues should be
-#' promtply reported to the R maintainers via the R Bug Tracking System at
+#' promptly reported to the R maintainers via the R Bug Tracking System at
 #' \url{https://bugs.r-project.org} and via the R-devel mailing list
 #' \url{https://stat.ethz.ch/mailman/listinfo/r-devel}.
 #' @author Gregory R. Warnes \email{greg@@warnes.net}

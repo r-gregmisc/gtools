@@ -1,4 +1,4 @@
-#' Most frequently occuring value
+#' Most frequently occurring value
 #'
 #' @param x vector of values
 #' @param na.rm logical.  Should \code{NA} values be removed before processing?

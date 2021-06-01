@@ -46,7 +46,7 @@ script_file("warning")
 script_path("warning")
 }
 \author{
-Greg Warnes <greg@warnes.net> based on on a Stack Overflow post by
+Greg Warnes \email{greg@warnes.net} based on on a Stack Overflow post by
   jerry-t (\url{https://stackoverflow.com/users/2292993/jerry-t}) at
   \url{https://stackoverflow.com/a/36777602/2744062}.
 }

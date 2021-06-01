@@ -23,7 +23,7 @@
 #' @return A character vector of package names.
 #' @note If \code{available=TRUE} R will attempt to access the currently
 #' selected CRAN repository, prompting for one if necessary.
-#' @author Gregory R. Warnes emailgreg@@warnes.net based on the non exported
+#' @author Gregory R. Warnes \email{greg@@warnes.net} based on the non exported
 #' \code{utils:::getDependencies} and \code{utils:::.clean_up_dependencies2}.
 #' @seealso \code{\link{installed.packages}}, \code{\link{available.packages}}
 #' @keywords utilities

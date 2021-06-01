@@ -10,7 +10,7 @@
 #' \code{Rmarkdown} \code{RStudio}'s "Run selection", and the \code{RStudio}
 #' Console.
 #'
-#' @author Greg Warnes <greg@warnes.net> based on on a Stack Overflow post by
+#' @author Greg Warnes \email{greg@warnes.net} based on on a Stack Overflow post by
 #'   jerry-t (\url{https://stackoverflow.com/users/2292993/jerry-t}) at
 #'   \url{https://stackoverflow.com/a/36777602/2744062}.
 #'

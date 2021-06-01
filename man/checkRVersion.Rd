@@ -7,7 +7,7 @@
 checkRVersion(quiet = FALSE)
 }
 \arguments{
-\item{quiet}{Logical indicating whether printed output should be supressed.}
+\item{quiet}{Logical indicating whether printed output should be suppressed.}
 }
 \value{
 Either the version number of the latest version of R, if the running

@@ -7,11 +7,11 @@
 #'
 #' In most situations using the default \code{con=stdin()} should work
 #' properly.  Under RStudio, it is necessary to specify
-#' \code{con=file("stdin")} for proper operaation.
+#' \code{con=file("stdin")} for proper operation.
 #'
-#' @param msg Character vetor providing the message to be displayed
+#' @param msg Character vector providing the message to be displayed
 #' @param con Character connection to query, defaults to \code{stdin()}.
-#' @return A character scalar containing the input providede by the user.
+#' @return A character scalar containing the input provided by the user.
 #' @author Gregory R. Warnes \email{greg@@warnes.net}
 #' @seealso \code{\link{readLines}}, \code{\link{scan}}
 #' @keywords IO

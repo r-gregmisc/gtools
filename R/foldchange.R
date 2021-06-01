@@ -10,7 +10,7 @@
 #' \eqn{\frac{-denom}{num}}{-denom/num} otherwise.
 #'
 #' Fold-changes have the advantage of ease of interpretation and symmetry about
-#' \eqn{num=denom}, but suffer from a discontinuty between -1 and 1, which can
+#' \eqn{num=denom}, but suffer from a discontinuity between -1 and 1, which can
 #' cause significant problems when performing data analysis.  Consequently
 #' statisticians prefer to use log-ratios.
 #'

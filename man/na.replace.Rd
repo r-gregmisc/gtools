@@ -7,7 +7,7 @@
 na.replace(x, replace, ...)
 }
 \arguments{
-\item{x}{vector possibly contining missing (\code{NA}) values}
+\item{x}{vector possibly containing missing (\code{NA}) values}
 
 \item{replace}{either a scalar replacement value, or a function returning a
 scalar value}

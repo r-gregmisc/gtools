@@ -15,7 +15,7 @@ dendrogram appropriately constructed from this data set.
 }
 \note{
 See help page for \code{\link{unByteCode}} to see how to construct the
-'bad' dentrogram from this data and how to work around the issue.
+'bad' dendrogram from this data and how to work around the issue.
 }
 \examples{
 

@@ -71,7 +71,7 @@ download.packages(deps, destdir = "./R_Packages")
 \code{\link{installed.packages}}, \code{\link{available.packages}}
 }
 \author{
-Gregory R. Warnes emailgreg@warnes.net based on the non exported
+Gregory R. Warnes \email{greg@warnes.net} based on the non exported
 \code{utils:::getDependencies} and \code{utils:::.clean_up_dependencies2}.
 }
 \keyword{utilities}

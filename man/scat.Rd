@@ -14,7 +14,7 @@ NULL (invisibly)
 }
 \description{
 If \code{getOption('DEBUG')==TRUE}, write text to STDOUT and flush so that
-the text is immediatly displayed. Otherwise, do nothing.
+the text is immediately displayed. Otherwise, do nothing.
 }
 \examples{
 

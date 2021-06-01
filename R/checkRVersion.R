@@ -12,7 +12,7 @@
 #'
 #' If \code{quiet=TRUE}, no printing is performed.
 #'
-#' @param quiet Logical indicating whether printed output should be supressed.
+#' @param quiet Logical indicating whether printed output should be suppressed.
 #' @return Either the version number of the latest version of R, if the running
 #' version is less than the latest version, or NULL.
 #' @note This function utilizes the internet to access the R project web site.
