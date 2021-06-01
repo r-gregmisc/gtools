@@ -7,11 +7,11 @@
 
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
-developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![R-CMD-check](https://github.com/r-gregmisc/gtools/workflows/R-CMD-check/badge.svg)](https://github.com/r-gregmisc/gtools/actions)
-[![](http://www.r-pkg.org/badges/version/gtools)](http://www.r-pkg.org/pkg/gtools)
+[![](https://www.r-pkg.org/badges/version/gtools)](https://www.r-pkg.org/pkg/gtools)
 [![CRAN RStudio mirror
-downloads](http://cranlogs.r-pkg.org/badges/gtools)](http://www.r-pkg.org/pkg/gtools)
+downloads](https://cranlogs.r-pkg.org/badges/gtools)](https://www.r-pkg.org/pkg/gtools)
 
 <!-- badges: end -->
 
