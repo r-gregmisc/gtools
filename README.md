@@ -3,6 +3,11 @@
 
 # gtools
 
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/r-gregmisc/gtools/workflows/R-CMD-check/badge.svg)](https://github.com/r-gregmisc/gtools/actions)
+<!-- badges: end -->
+
 The `gtools` R package provides functions to assist in R programming,
 including:
 
@@ -35,11 +40,6 @@ including:
 -   generate significance stars from p-values (`stars.pval`),
 -   convert characters to/from ASCII codes (`asc`, `chr`),
 -   convert character vector to ASCII representation (`ASCIIfy`).
-
-<!-- badges: start -->
-
-[![R-CMD-check](https://github.com/r-gregmisc/gtools/workflows/R-CMD-check/badge.svg)](https://github.com/r-gregmisc/gtools/actions)
-<!-- badges: end -->
 
 ## Installation
 
