@@ -8,5 +8,9 @@
 #  - revdep_details(revdep = "pkg") to see the details for a specific package
 #
 
+script_path <- file.path(gtools::script_path(), "..")
+setwd(script_path)
+getwd()
+
 revdepcheck::revdep_check(num_workers=parallel::detectCores(), bioc=TRUE )
 
