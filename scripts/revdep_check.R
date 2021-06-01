@@ -1,4 +1,4 @@
-#!Rscript
+#!/usr/bin/env Rscript
 # 
 # Run revdep_check() to run R CMD check on all reverse dependencies of this package,
 # utilizing the number of (virtual) cores for the number of concurrent workers.

@@ -1,12 +1,13 @@
-#!/usr/local/bin/Rscript
+#!/usr/bin/env Rscript
 # 
 # Run revdep_check() to run R CMD check on all reverse dependencies of this package,
 # utilizing the number of (virtual) cores for the number of concurrent workers.
 #
+# Run this script in a terminal to reset the revdep process.
 
 script_path <- file.path(gtools::script_path(), "..")
 setwd(script_path)
 getwd()
 
-rs <- revdepcheck::revdep_summary()
-print(rs)
+revdepcheck::revdep_reset()
+
