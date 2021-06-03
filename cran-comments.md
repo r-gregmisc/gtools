@@ -4,6 +4,8 @@ This submission was generated using the `devtools` and `revdepcheck` packages, a
 
 It passes `R CMD check` on rhub:linux-release, rhub:linux-devel, rhub:Windows-release, and win-builder:Windows-devel.   (rhub:Windows-devel currently fails prior to building `gtools` due to the lack of BioConductor support for R 4.2.)
 
+There is one expected NOTE.
+
 ## Expected NOTE for `unlockBinding`
 
 `devtools::check` shows one *expected* NOTE:  
