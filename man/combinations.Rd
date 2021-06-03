@@ -43,7 +43,7 @@ command for details on how to do this.
 
 Taken from an email by Brian D Ripley <ripley@stats.ox.ac.uk> to r-help
 dated Tue, 14 Dec 1999 11:14:04 +0000 (GMT) in response to
-Alex Ahgarin <datamanagement@email.com>.  Original version was
+Alex Ahgarin \email{datamanagement@email.com}.  Original version was
 named "subsets" and was Written by Bill Venables.
 }
 \examples{

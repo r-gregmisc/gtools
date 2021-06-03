@@ -1,3 +1,16 @@
+gtools 3.9.2 - 2021-06-03
+-------------------------
+
+Bug fixes:
+
+- Fix missing man page and export for `combinations` and `permutations`.
+
+Behind the scenes:
+
+- Fixed more spelling/typographical errors, mostly in `NEWS.md`.
+
+- Speed up `checkRversion` by removing checks for versions 2.x and 3.x.
+
 gtools 3.9.1 - 2021-06-01
 -------------------------
 
