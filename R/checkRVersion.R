@@ -17,7 +17,7 @@
 #' version is less than the latest version, or NULL.
 #' @note This function utilizes the internet to access the R project web site.
 #' If internet access is unavailable, the function will fail.
-#' @author Gregory R. Warnes \email{gregory.warnes@@rochester.edu>}
+#' @author Gregory R. Warnes
 #' @seealso \code{\link[base]{R.Version}}
 #' @keywords utilities
 #' @examples

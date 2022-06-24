@@ -43,6 +43,6 @@ print(ver)
 \code{\link[base]{R.Version}}
 }
 \author{
-Gregory R. Warnes \email{gregory.warnes@rochester.edu>}
+Gregory R. Warnes
 }
 \keyword{utilities}
