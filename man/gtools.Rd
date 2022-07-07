@@ -21,7 +21,7 @@ Functions to assist in R programming, including:
 \item{calculate and convert between fold-change and log-ratio}{'foldchange', 'logratio2foldchange', 'foldchange2logratio'}
 \item{calculate probabilities and generate random numbers from Dirichlet distributions}{'rdirichlet', 'ddirichlet'}
 \item{apply a function over adjacent subsets of a vector}{'running'}
-\item{modify the TCP\_NODELAY ('de-Nagle') flag for socket objects}{'tcpNoDelay'}
+\item{modify the TCP_NODELAY ('de-Nagle') flag for socket objects}{'tcpNoDelay'}
 \item{efficient 'rbind' of data frames, even if the column names don't match}{'smartbind'}
 \item{generate significance stars from p-values}{'stars.pval'}
 \item{convert characters to/from ASCII codes}{asc, chr}

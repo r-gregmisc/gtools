@@ -74,7 +74,7 @@ plot(dend)
 }
 \references{
 These functions were inspired as a work-around to R bug
-\url{https://bugs.r-project.org/bugzilla/show_bug.cgi?id=15215}.
+\url{https://bugs.r-project.org/show_bug.cgi?id=15215}.
 }
 \seealso{
 \code{\link[compiler]{disassemble}}, \code{\link{assign}}
