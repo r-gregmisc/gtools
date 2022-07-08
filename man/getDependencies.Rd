@@ -51,16 +51,17 @@ selected CRAN repository, prompting for one if necessary.
 }
 \examples{
 
+\dontrun{
 ## A locally installed package
 getDependencies("MASS", installed = TRUE, available = FALSE)
-\dontrun{
+
 ## A package on CRAN
 getDependencies("gregmisc", installed = FALSE, available = TRUE)
-}
+
 
 ## Show base and recommended dependencies
 getDependencies("MASS", available = FALSE, base = TRUE, recommended = TRUE)
-\dontrun{
+
 ## Download the set of packages necessary to support a local package
 deps <- getDependencies("MyLocalPackage", available = FALSE)
 download.packages(deps, destdir = "./R_Packages")
