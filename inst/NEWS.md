@@ -1,3 +1,9 @@
+gtools 3.9.3 - 2022-07-08
+-------------------------
+
+- maintainer switch to Ben Bolker 
+- removed `assignEdgewise`/`unByteCodeAssign` (uses CRAN-deprecated `unlockBindings()` call)
+
 gtools 3.9.2 - 2021-06-03
 -------------------------
 
