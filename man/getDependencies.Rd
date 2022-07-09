@@ -53,7 +53,7 @@ selected CRAN repository, prompting for one if necessary.
 
 \dontrun{
 ## A locally installed package
-getDependencies("MASS", installed = TRUE, available = FALSE)
+#' getDependencies("MASS", installed = TRUE, available = FALSE)
 
 ## A package on CRAN
 getDependencies("gregmisc", installed = FALSE, available = TRUE)

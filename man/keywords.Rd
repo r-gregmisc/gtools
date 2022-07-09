@@ -19,10 +19,9 @@ doc/KEYWORDS file.
 }
 \examples{
 
-\dontrun{
 ## Show all valid R keywords
+\dontrun{
 keywords()
-
 
 ## Show keywords associated with the 'merge' function
 keywords(merge)
