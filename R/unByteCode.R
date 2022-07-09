@@ -13,6 +13,10 @@
 #' environment} to be directly interpreted from text rather than from
 #' byte-code.
 #'
+#' The latter two functions no longer work out of the box because \code{assignEdgewise}
+#' (which \code{unByteCodeAssign} uses) makes use of an unsafe \code{unlockBinding}
+#' call, but running \code{assignEdgewise()} will 
+#'
 #' @aliases unByteCode unByteCodeAssign assignEdgewise
 #' @param fun function to be modified
 #' @param name object name
@@ -47,7 +51,9 @@
 #' }
 #'
 #' ## convert stats:::plotNode from byte-code to interpreted-code
-#' unByteCodeAssign(stats:::plotNode)
+#' ## (no longer available unless assignEdgewise is defined by the user)
+#' ## unByteCodeAssign(stats:::plotNode)
+#' ## illustrated in https://stackoverflow.com/questions/16559250/error-in-heatmap-2-gplots
 #'
 #' # increase recursion limit
 #' options("expressions" = 5e4)
@@ -64,10 +70,15 @@ unByteCode <- function(fun) {
 #' @rdname unByteCode
 #' @export
 assignEdgewise <- function(name, env, value) {
-  unlockBinding(name, env = env)
-  assign(name, envir = env, value = value)
-  lockBinding(name, env = env)
-  invisible(value)
+    stop("assignEdgewise no longer works due to unsafe use of ",
+         sQuote("unlockBinding"),
+         ". You can define this function yourself: ",
+         "\n\nassignEdgewise <- function(name, env, value) {",
+         "\n  unlockBinding(name, env = env)",
+         "\n  assign(name, envir = env, value = value)",
+         "\n  lockBinding(name, env = env)",
+         "\n  invisible(value)",
+         "\n}")
 }
 
 #' @rdname unByteCode
