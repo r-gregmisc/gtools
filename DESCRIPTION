@@ -24,7 +24,7 @@ Description: Functions to assist in R programming, including:
   - convert characters to/from ASCII codes ('asc', 'chr'),
   - convert character vector to ASCII representation ('ASCIIfy'),
   - apply title capitalization rules to a character vector ('capwords').
-Version: 3.9.3
+Version: 3.9.3.9000
 Authors@R: c(person("Ben","Bolker", role=c("aut", "cre"),
                      email = "bolker@mcmaster.ca",
 				    comment=c(ORCID="0000-0002-2127-0443")),
