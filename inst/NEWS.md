@@ -1,3 +1,8 @@
+gtools 3.9.3.9000
+-------------------------
+
+- correct `stars.pval` code/doc mismatch (GH #13)
+
 gtools 3.9.3 - 2022-07-08
 -------------------------
 

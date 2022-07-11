@@ -1,10 +1,10 @@
 #' Generate significance stars from p-values
 #'
-#' Generate significance stars (e.g. '***', '**', '*', '+') from p-values using
+#' Generate significance stars (e.g. '***', '**', '*', '.') from p-values using
 #' R's standard definitions.
 #'
 #' Mapping from p-value ranges to symbols: \describe{ \item{0 - 0.001}{'***'}
-#' \item{0.001 - 0.01}{'**'} \item{0.01 - 0.05}{'*'} \item{0.05 - 0.1}{'+'}
+#' \item{0.001 - 0.01}{'**'} \item{0.01 - 0.05}{'*'} \item{0.05 - 0.1}{'.'}
 #' \item{0.1 - 1.0}{'' (No symbol)} }
 #'
 #' @param p.value numeric vector of p-values
