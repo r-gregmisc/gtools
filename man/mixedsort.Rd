@@ -86,8 +86,8 @@ which parsing looks for roman numerals, with character case specified by
 
 ## compound & dose labels
 Treatment <- c(
-  "Control", "Asprin 10mg/day", "Asprin 50mg/day",
-  "Asprin 100mg/day", "Acetomycin 100mg/day",
+  "Control", "Aspirin 10mg/day", "Aspirin 50mg/day",
+  "Aspirin 100mg/day", "Acetomycin 100mg/day",
   "Acetomycin 1000mg/day"
 )
 
