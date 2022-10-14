@@ -43,13 +43,13 @@ statisticians prefer to use log-ratios.
 }
 \section{Functions}{
 \itemize{
-\item \code{foldchange}: Compute fold-change.
+\item \code{foldchange()}: Compute fold-change.
 
-\item \code{logratio2foldchange}: Compute foldchange from log-ratio values.
+\item \code{logratio2foldchange()}: Compute foldchange from log-ratio values.
 
-\item \code{foldchange2logratio}: Compute log-ratio from fold-change values.
+\item \code{foldchange2logratio()}: Compute log-ratio from fold-change values.
+
 }}
-
 \examples{
 
 

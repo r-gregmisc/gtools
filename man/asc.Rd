@@ -32,11 +32,11 @@ Convert between characters and ASCII codes
 }
 \section{Functions}{
 \itemize{
-\item \code{asc}: return the characters corresponding to the specified ASCII codes
+\item \code{asc()}: return the characters corresponding to the specified ASCII codes
 
-\item \code{chr}: return the ASCII codes for the specified characters.
+\item \code{chr()}: return the ASCII codes for the specified characters.
+
 }}
-
 \examples{
 
 ## ascii codes for lowercase letters

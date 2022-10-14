@@ -37,11 +37,11 @@ parameter estimates of a multinomial distribution.
 }
 \section{Functions}{
 \itemize{
-\item \code{ddirichlet}: Dirichlet distribution function.
+\item \code{ddirichlet()}: Dirichlet distribution function.
 
-\item \code{rdirichlet}: Generate dirichlet random deviates.
+\item \code{rdirichlet()}: Generate dirichlet random deviates.
+
 }}
-
 \examples{
 
 

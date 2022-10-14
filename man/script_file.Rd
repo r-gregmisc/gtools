@@ -31,12 +31,12 @@ Determine the directory or full path to the currently executing script
 }
 \section{Functions}{
 \itemize{
-\item \code{script_file}: Determine the full path of the currently executing
+\item \code{script_file()}: Determine the full path of the currently executing
 script
 
-\item \code{script_path}: Determine the directory of the currently executing script
-}}
+\item \code{script_path()}: Determine the directory of the currently executing script
 
+}}
 \examples{
 
 getwd()
