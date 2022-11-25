@@ -30,7 +30,7 @@
 #' @references Fogarty, Mignon. Capitalizing Titles: "Which words should you
 #' capitalize? Grammar Girl's Quick and Dirty Tips for Better Writing. 9 Jun.
 #' 2011. Quick and Dirty Tips Website." Accessed 22 April 2016
-#' \url{https://www.quickanddirtytips.com/education/grammar/capitalizing-titles}
+#' \url{https://www.quickanddirtytips.com/articles/capitalizing-titles/}
 #' @keywords utilites character
 #' @examples
 #'

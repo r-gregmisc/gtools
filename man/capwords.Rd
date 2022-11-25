@@ -62,7 +62,7 @@ capwords("title_using_underscores_as_separators", sep = "_")
 Fogarty, Mignon. Capitalizing Titles: "Which words should you
 capitalize? Grammar Girl's Quick and Dirty Tips for Better Writing. 9 Jun.
 2011. Quick and Dirty Tips Website." Accessed 22 April 2016
-\url{https://www.quickanddirtytips.com/education/grammar/capitalizing-titles}
+\url{https://www.quickanddirtytips.com/articles/capitalizing-titles/}
 }
 \seealso{
 \code{\link[base]{chartr}}, \code{\link[taxize]{taxize_capwords}},

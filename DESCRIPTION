@@ -18,7 +18,7 @@ Description: Functions to assist in R programming, including:
   - calculate probabilities and generate random numbers from Dirichlet distributions
     ('rdirichlet', 'ddirichlet'),
   - apply a function over adjacent subsets of a vector ('running'),
-  - modify the TCP\_NODELAY ('de-Nagle') flag for socket objects,
+  - modify the TCP_NODELAY ('de-Nagle') flag for socket objects,
   - efficient 'rbind' of data frames, even if the column names don't match ('smartbind'),
   - generate significance stars from p-values ('stars.pval'),
   - convert characters to/from ASCII codes ('asc', 'chr'),
@@ -36,5 +36,5 @@ URL: https://github.com/r-gregmisc/gtools
 BugReports: https://github.com/r-gregmisc/gtools/issues
 Language: en-US
 Suggests: car, gplots, knitr, rstudioapi, SGP, taxize
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.2
 Encoding: UTF-8
