@@ -4,9 +4,8 @@
 
 # Potential Tasks
 
-* Depricate `scat` in favor of message
-* Depricate `smartbind` in favor of `plyr:;bind_rows`
-
+* Deprecate `scat` in favor of message
+* Deprecate `smartbind` in favor of `plyr::bind_rows`
 
 # Completed Tasks
 

@@ -57,7 +57,6 @@ lastAdd <- function(fun) {
   else {
     Last <- get(".Last", envir = .GlobalEnv, mode = "function")
     newfun <- function(...) {
-      browser()
       fun()
       Last()
     }
