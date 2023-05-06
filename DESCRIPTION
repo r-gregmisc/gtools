@@ -34,6 +34,7 @@ Authors@R: c(person("Ben","Bolker", role=c("aut", "cre"),
              person("Bill", "Venables", role = "aut"),
              person("Genei", "Ryodan", role = "aut"),
              person("Steffen", "Moeller", role = "aut"),
+             person("Ian", "Wilson", role = "ctb"),
              person("Mark", "Davis", role = "ctb"),
              person("Scott", "Chamberlain", role = "ctb"))
 License: GPL-2
