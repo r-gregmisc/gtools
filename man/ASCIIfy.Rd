@@ -16,23 +16,22 @@ two-byte (\samp{\u0000}) codes.}
 converted.}
 }
 \value{
-A character vector like \code{x}, except non-ASCII characters have
-been replaced with \samp{\x00} or \samp{\u0000} codes.
+A character vector like \code{x}, except non-ASCII characters have been
+replaced with \samp{\x00} or \samp{\u0000} codes.
 }
 \description{
 Convert character vector to ASCII, replacing non-ASCII characters with
 single-byte (\samp{\x00}) or two-byte (\samp{\u0000}) codes.
 }
 \note{
-To render single backslashes, use these or similar
-techniques:\preformatted{ write(ASCIIfy(x), "file.txt")
+To render single backslashes, use these or similar techniques: \preformatted{
+write(ASCIIfy(x), "file.txt")
 cat(paste(ASCIIfy(x), collapse="\n"), "\n", sep="")}
 
 The resulting strings are plain ASCII and can be used in R functions and
 datasets to improve package portability.
 }
 \examples{
-
 cities <- c("S\u00e3o Paulo", "Reykjav\u00edk")
 print(cities)
 ASCIIfy(cities, 1)
@@ -41,13 +40,14 @@ ASCIIfy(cities, 2)
 athens <- "\u0391\u03b8\u03ae\u03bd\u03b1"
 print(athens)
 ASCIIfy(athens)
+
 }
 \seealso{
-\code{\link[tools]{showNonASCII}} identifies non-ASCII characters
-in a character vector.
+\code{\link[tools]{showNonASCII}} identifies non-ASCII characters in a
+character vector.
 }
 \author{
-Arni Magnusson \email{arnima@hafro.is}
+Arni Magnusson.
 }
 \keyword{character}
 \keyword{utilites}

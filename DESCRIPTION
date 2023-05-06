@@ -30,6 +30,7 @@ Authors@R: c(person("Ben","Bolker", role=c("aut", "cre"),
                                     comment=c(ORCID="0000-0002-2127-0443")),
              person("Gregory R.", "Warnes", role = "aut"),
              person("Thomas", "Lumley", role = "aut"),
+             person("Arni", "Magnusson", role = "aut"),
              person("Genei", "Ryodan", role = "aut"))
 License: GPL-2
 Depends: methods, stats, utils
