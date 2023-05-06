@@ -70,7 +70,7 @@ capitalize? Grammar Girl's Quick and Dirty Tips for Better Writing. 9 Jun.
 }
 \author{
 Gregory R. Warnes \email{greg@warnes.net} based on code from the
-\code{\link[base]{chartr}} manual page, and
+\code{\link[base]{chartr}} manual page, and Scott Chamberlain's
 \code{\link[taxize]{taxize_capwords}} in the taxize package.
 }
 \keyword{character}

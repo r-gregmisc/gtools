@@ -27,14 +27,22 @@ Description: Functions to assist in R programming, including:
 Version: 3.9.4
 Authors@R: c(person("Ben","Bolker", role=c("aut", "cre"),
                      email = "bolker@mcmaster.ca",
-				    comment=c(ORCID="0000-0002-2127-0443")),
-	     person("Gregory R.", "Warnes", role = "aut"),	
-	     person("Thomas", "Lumley", role = "aut"))
+                                    comment=c(ORCID="0000-0002-2127-0443")),
+             person("Gregory R.", "Warnes", role = "aut"),
+             person("Thomas", "Lumley", role = "aut"),
+             person("Arni", "Magnusson", role = "aut"),
+             person("Bill", "Venables", role = "aut"),
+             person("Genei", "Ryodan", role = "aut"),
+             person("Steffen", "Moeller", role = "aut"),
+             person("Ian", "Wilson", role = "ctb"),
+             person("Mark", "Davis", role = "ctb"),
+             person("Nitin", "Jain", role="ctb"),
+             person("Scott", "Chamberlain", role = "ctb"))
 License: GPL-2
 Depends: methods, stats, utils
 URL: https://github.com/r-gregmisc/gtools
 BugReports: https://github.com/r-gregmisc/gtools/issues
 Language: en-US
 Suggests: car, gplots, knitr, rstudioapi, SGP, taxize
-RoxygenNote: 7.2.2
+RoxygenNote: 7.2.3
 Encoding: UTF-8

@@ -67,3 +67,6 @@ stat_mode(x = complex())
 stat_mode(x = vector("numeric"))
 stat_mode(x = vector("character"))
 }
+\author{
+Genei Ryodan and Gregory R. Warnes \email{greg@warnes.net}.
+}

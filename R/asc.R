@@ -14,7 +14,7 @@
 #' \code{asc} returns the characters corresponding to the provided ASCII
 #' values.
 #' @author Adapted by Gregory R. Warnes \email{greg@@warnes.net} from code
-#' posted on the 'Data Debrief' blog on 2011-03-09 at
+#' posted by Mark Davis on the 'Data Debrief' blog on 2011-03-09 at
 #' \url{https://datadebrief.blogspot.com/2011/03/ascii-code-table-in-r.html}.
 #' @seealso \code{\link[base]{strtoi}}, \code{\link[base]{charToRaw}},
 #' \code{\link[base]{rawToChar}}, \code{\link[base]{as.raw}}
