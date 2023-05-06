@@ -23,7 +23,7 @@
 #' @param sep Character string, word separator
 #' @return A character scalar containing the capitalized words.
 #' @author Gregory R. Warnes \email{greg@@warnes.net} based on code from the
-#' \code{\link[base]{chartr}} manual page, and
+#' \code{\link[base]{chartr}} manual page, and Scott Chamberlain's
 #' \code{\link[taxize]{taxize_capwords}} in the taxize package.
 #' @seealso \code{\link[base]{chartr}}, \code{\link[taxize]{taxize_capwords}},
 #' \code{\link[SGP]{capwords}}
