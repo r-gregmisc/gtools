@@ -31,7 +31,8 @@ Authors@R: c(person("Ben","Bolker", role=c("aut", "cre"),
              person("Gregory R.", "Warnes", role = "aut"),
              person("Thomas", "Lumley", role = "aut"),
              person("Arni", "Magnusson", role = "aut"),
-             person("Genei", "Ryodan", role = "aut"))
+             person("Genei", "Ryodan", role = "aut"),
+             person("Mark", "Davis", role = "ctb"))
 License: GPL-2
 Depends: methods, stats, utils
 URL: https://github.com/r-gregmisc/gtools
