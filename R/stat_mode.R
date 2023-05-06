@@ -7,6 +7,8 @@
 #'
 #' @return vector of the same class as \code{x}
 #'
+#' @author Genei Ryodan and Gregory R. Warnes \email{greg@warnes.net}.
+#'
 #' @examples
 #'
 #' # Character vector
