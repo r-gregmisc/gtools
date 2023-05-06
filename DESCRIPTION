@@ -25,10 +25,10 @@ Description: Functions to assist in R programming, including:
   - convert character vector to ASCII representation ('ASCIIfy'),
   - apply title capitalization rules to a character vector ('capwords').
 Version: 3.9.4
-Authors@R: c(person("Ben","Bolker", role=c("aut", "cre"),
+Authors@R: c(person("Gregory R.", "Warnes", role = "aut"),
+             person("Ben", "Bolker", role = c("aut", "cre"),
                      email = "bolker@mcmaster.ca",
-                                    comment=c(ORCID="0000-0002-2127-0443")),
-             person("Gregory R.", "Warnes", role = "aut"),
+                     comment=c(ORCID="0000-0002-2127-0443")),
              person("Thomas", "Lumley", role = "aut"),
              person("Arni", "Magnusson", role = "aut"),
              person("Bill", "Venables", role = "aut"),
