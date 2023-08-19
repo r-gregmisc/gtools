@@ -27,4 +27,5 @@
 #' @docType package
 #' @name gtools
 #' @useDynLib gtools, .registration=TRUE
-NULL
+#' @keywords internal
+"_PACKAGE"

@@ -3,6 +3,7 @@
 \docType{package}
 \name{gtools}
 \alias{gtools}
+\alias{gtools-package}
 \title{gtools: Various R Programming Tools}
 \description{
 Functions to assist in R programming, including:
@@ -29,3 +30,34 @@ Functions to assist in R programming, including:
 \item{apply title capitalization rules to a character vector}{'capwords'}
 }
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/r-gregmisc/gtools}
+  \item Report bugs at \url{https://github.com/r-gregmisc/gtools/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Ben Bolker \email{bolker@mcmaster.ca} (\href{https://orcid.org/0000-0002-2127-0443}{ORCID})
+
+Authors:
+\itemize{
+  \item Gregory R. Warnes
+  \item Thomas Lumley
+  \item Arni Magnusson
+  \item Bill Venables
+  \item Genei Ryodan
+  \item Steffen Moeller
+}
+
+Other contributors:
+\itemize{
+  \item Ian Wilson [contributor]
+  \item Mark Davis [contributor]
+  \item Nitin Jain [contributor]
+  \item Scott Chamberlain [contributor]
+}
+
+}
+\keyword{internal}
