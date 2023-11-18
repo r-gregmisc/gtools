@@ -28,15 +28,14 @@ the corresponding version number, and returns the version number.
 If \code{quiet=TRUE}, no printing is performed.
 }
 \note{
-This function utilizes the internet to access the R project web site.
-If internet access is unavailable, the function will fail.
+This function uses the internet to access the R project web site.
+If internet access is unavailable or the R project web site is down, the function will fail.
 }
 \examples{
 
-
-checkRVersion()
-
-ver <- checkRVersion()
+try(
+   ver <- checkRVersion()
+)
 print(ver)
 }
 \seealso{

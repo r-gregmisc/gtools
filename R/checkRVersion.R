@@ -15,24 +15,27 @@
 #' @param quiet Logical indicating whether printed output should be suppressed.
 #' @return Either the version number of the latest version of R, if the running
 #' version is less than the latest version, or NULL.
-#' @note This function utilizes the internet to access the R project web site.
-#' If internet access is unavailable, the function will fail.
+#' @note This function uses the internet to access the R project web site.
+#' If internet access is unavailable or the R project web site is down, the function will fail.
 #' @author Gregory R. Warnes
 #' @seealso \code{\link[base]{R.Version}}
 #' @keywords utilities
 #' @examples
 #'
-#'
-#' checkRVersion()
-#'
-#' ver <- checkRVersion()
+#' try(
+#'    ver <- checkRVersion()
+#' )
 #' print(ver)
 #' @export
 checkRVersion <- function(quiet = FALSE) {
 
-  cran_page <- scan(
-    file = "https://cran.r-project.org/src/base/R-4",
-    what = "", quiet = TRUE
+  cran_page <- tryCatch(
+      suppressWarnings(scan(
+          file = "https://cran.r-project.org/src/base/R-4",
+          what = "", quiet = TRUE)),
+      error = function(cond) {
+          stop("Your internet connection is not working (or CRAN is down)")
+      }
   )
 
   matches <- grep("R-[0-9]\\.[0-9]+\\.[0-9]+", cran_page, value = TRUE)
