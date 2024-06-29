@@ -33,7 +33,7 @@ including:
 -   create a factor variable from the quantiles of a continuous variable
     (`quantcut`),
 -   enumerate permutations and combinations (`combinations`,
-    `permutation`),
+    `permutations`),
 -   calculate and convert between fold-change and log-ratio
     (`foldchange`, `logratio2foldchange`, `foldchange2logratio`),
 -   calculate probabilities and generate random numbers from Dirichlet
