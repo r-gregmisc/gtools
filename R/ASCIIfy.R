@@ -58,12 +58,12 @@ ASCIIfy <- function(x, bytes = 2, fallback = "?") {
       } else {
         ascii <- fallback
         warning(char, " could not be converted to 1 byte")
-      }
-    } else if (length(raw) == 2 && bytes == 2) { # UTF-8 to \u0000
+      } # UTF-8 to \u0000
+    } else if (nchar(format.hexmode(utf8ToInt(char))) <= 4 && bytes == 2) {
       ascii <- paste0("\\u", format.hexmode(utf8ToInt(char), width = 4))
     } else {
       ascii <- fallback
-      warning(char, " could not be converted to ", bytes, " byte")
+      warning(char, " could not be converted to ", bytes, " bytes")
     }
     return(ascii)
   }

@@ -1,3 +1,8 @@
+gtools  3.9.6 - development
+---------------------------
+
+- improve `ASCIIfy()` so it handles a wider range of Unicode characters.
+
 gtools  3.9.5 - 2023-11-20
 --------------------------
 
