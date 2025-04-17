@@ -2,8 +2,8 @@
 % Please edit documentation in R/gtools-package.R
 \docType{package}
 \name{gtools}
-\alias{gtools}
 \alias{gtools-package}
+\alias{gtools}
 \title{gtools: Various R Programming Tools}
 \description{
 Functions to assist in R programming, including:
