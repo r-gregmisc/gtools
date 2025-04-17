@@ -30,7 +30,7 @@
 #'   "Nagle's algorithm" \url{https://en.wikipedia.org/wiki/Nagle's_algorithm},
 #'
 #'   Nagle, John. "Congestion Control in IP/TCP Internetworks", IETF Request for
-#'   Comments 896, January 1984. \url{https://www.ietf.org/rfc/rfc0896.txt?number=896}
+#'   Comments 896, January 1984. \url{https://datatracker.ietf.org/doc/html/rfc896}
 #'
 #' @keywords programming misc utilities
 #' @examples
