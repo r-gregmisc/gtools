@@ -31,3 +31,7 @@ tmp <- c(
 )
 
 stopifnot(mixedorder(tmp) == c(4, 5, 1, 2, 3))
+
+hyphx <- c("pat-3", "pat-2", "pat-1")
+stopifnot(mixedorder(hyphx, hyphen.separator = TRUE) == c(3,2,1))
+stopifnot(mixedorder(hyphx, hyphen.separator = FALSE) == c(1,2,3))

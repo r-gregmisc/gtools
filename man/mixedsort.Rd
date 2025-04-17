@@ -13,7 +13,8 @@ mixedsort(
   blank.last = FALSE,
   numeric.type = c("decimal", "roman"),
   roman.case = c("upper", "lower", "both"),
-  scientific = TRUE
+  scientific = TRUE,
+  hyphen.separator = FALSE
 )
 
 mixedorder(
@@ -23,7 +24,8 @@ mixedorder(
   blank.last = FALSE,
   numeric.type = c("decimal", "roman"),
   roman.case = c("upper", "lower", "both"),
-  scientific = TRUE
+  scientific = TRUE,
+  hyphen.separator = FALSE
 )
 }
 \arguments{
@@ -50,6 +52,8 @@ represented using only capital letters ('IX') or lower-case letters ('ix')
 or both?}
 
 \item{scientific}{logical. Should exponential notation be allowed for numeric values.}
+
+\item{hyphen.separator}{logical. Should hyphenated strings be treated as separators? (If not, they will be treated as potential components of numeric values.)}
 }
 \value{
 \code{mixedorder} returns a vector giving the sort order of the
@@ -110,10 +114,8 @@ mixedsort(x) # Notice that plain numbers, including 'Inf' show up
 # before strings, NAs at the end, and blanks at the
 # beginning .
 
-
 mixedsort(x, na.last = TRUE) # default
 mixedsort(x, na.last = FALSE) # push NAs to the front
-
 
 mixedsort(x, blank.last = FALSE) # default
 mixedsort(x, blank.last = TRUE) # push blanks to the end
@@ -142,6 +144,11 @@ vals <- c("3E1", "2E3", "4e0")
 
 mixedsort(vals) # With scientfic notation
 mixedsort(vals, scientific = FALSE) # Without scientfic notation
+
+## Hyphenated strings
+hyphx <- c("pat-3", "pat-2", "pat-1")
+mixedsort(hyphx)
+mixedsort(hyphx, hyphen.separator = TRUE)
 }
 \seealso{
 \code{\link[base]{sort}}, \code{\link[base]{order}}

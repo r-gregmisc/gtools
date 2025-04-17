@@ -44,6 +44,7 @@
 #' represented using only capital letters ('IX') or lower-case letters ('ix')
 #' or both?
 #' @param scientific logical. Should exponential notation be allowed for numeric values.
+#' @param hyphen.separator logical. Should hyphenated strings be treated as separators? (If not, they will be treated as potential components of numeric values.)
 #' @return \code{mixedorder} returns a vector giving the sort order of the
 #' input elements. \code{mixedsort} returns the sorted vector.
 #' @author Gregory R. Warnes \email{greg@@warnes.net}
@@ -77,10 +78,8 @@
 #' # before strings, NAs at the end, and blanks at the
 #' # beginning .
 #'
-#'
 #' mixedsort(x, na.last = TRUE) # default
 #' mixedsort(x, na.last = FALSE) # push NAs to the front
-#'
 #'
 #' mixedsort(x, blank.last = FALSE) # default
 #' mixedsort(x, blank.last = TRUE) # push blanks to the end
@@ -109,6 +108,11 @@
 #'
 #' mixedsort(vals) # With scientfic notation
 #' mixedsort(vals, scientific = FALSE) # Without scientfic notation
+#'
+#' ## Hyphenated strings
+#' hyphx <- c("pat-3", "pat-2", "pat-1")
+#' mixedsort(hyphx)
+#' mixedsort(hyphx, hyphen.separator = TRUE)
 #' @export
 mixedsort <- function(x,
                       decreasing = FALSE,
@@ -116,14 +120,16 @@ mixedsort <- function(x,
                       blank.last = FALSE,
                       numeric.type = c("decimal", "roman"),
                       roman.case = c("upper", "lower", "both"),
-                      scientific = TRUE) {
+                      scientific = TRUE,
+                      hyphen.separator = FALSE) {
   ord <- mixedorder(x,
     decreasing = decreasing,
     na.last = na.last,
     blank.last = blank.last,
     numeric.type = numeric.type,
     roman.case = roman.case,
-    scientific = scientific
+    scientific = scientific,
+    hyphen.separator = hyphen.separator
   )
   x[ord]
 }
@@ -136,7 +142,8 @@ mixedorder <- function(x,
                        blank.last = FALSE,
                        numeric.type = c("decimal", "roman"),
                        roman.case = c("upper", "lower", "both"),
-                       scientific = TRUE) {
+                       scientific = TRUE,
+                       hyphen.separator = FALSE) {
   # - Split each each character string into an vector of strings and
   #   numbers
   # - Separately rank numbers and strings
@@ -157,12 +164,15 @@ mixedorder <- function(x,
 
   delim <- "\\$\\@\\$"
 
+  nums <- "[0123456789]"
+  pm <- if (hyphen.separator) "[+]" else "[+-]"
+    
   if (numeric.type == "decimal") {
     if (scientific) {
-      regex <- "((?:(?i)(?:[-+]?)(?:(?=[.]?[0123456789])(?:[0123456789]*)(?:(?:[.])(?:[0123456789]{0,}))?)(?:(?:[eE])(?:(?:[-+]?)(?:[0123456789]+))|)))"
+      regex <- sprintf("((?:(?i)(?:%s?)(?:(?=[.]?%s)(?:%s*)(?:(?:[.])(?:%s{0,}))?)(?:(?:[eE])(?:(?:[-+]?)(?:%s+))|)))", pm, nums, nums, nums, nums)
     } # uses PERL syntax
     else {
-      regex <- "((?:(?i)(?:[-+]?)(?:(?=[.]?[0123456789])(?:[0123456789]*)(?:(?:[.])(?:[0123456789]{0,}))?)))"
+      regex <- sprintf("((?:(?i)(?:%s?)(?:(?=[.]?%s)(?:%s*)(?:(?:[.])(?:%s{0,}))?)))", pm, nums, nums, nums)
     } # uses PERL syntax
 
     numeric <- function(x) as.numeric(x)
