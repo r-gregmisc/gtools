@@ -1,6 +1,7 @@
-gtools  3.9.6
---------------------------
+gtools  3.9.6 - development
+---------------------------
 
+- improve `ASCIIfy()` so it handles a wider range of Unicode characters.
 - add `hyphen.separator` argument to `mixedorder`/`mixedsort`
 
 gtools  3.9.5 - 2023-11-20
