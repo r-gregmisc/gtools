@@ -12,6 +12,8 @@
 #' random deviate per row.
 #' @param alpha Vector or (for \code{ddirichlet}) matrix containing shape
 #' parameters.
+#' @param log logical; if \code{TRUE}, probabilities/densities are given as
+#' logarithms.
 #' @return \code{ddirichlet} returns a vector containing the Dirichlet density
 #' for the corresponding rows of \code{x}.
 #'
@@ -34,12 +36,12 @@ NULL
 
 #' @describeIn dirichlet  Dirichlet distribution function.
 #' @export
-ddirichlet <- function(x, alpha) {
+ddirichlet <- function(x, alpha, log = FALSE) {
   dirichlet1 <- function(x, alpha) {
     logD <- sum(lgamma(alpha)) - lgamma(sum(alpha))
     s <- (alpha - 1) * log(x)
     s <- ifelse(alpha == 1 & x == 0, -Inf, s)
-    exp(sum(s) - logD)
+    sum(s) - logD
   }
 
   # make sure x is a matrix
@@ -65,9 +67,14 @@ ddirichlet <- function(x, alpha) {
   }
 
   # Enforce 0 <= x[i,j] <= 1, sum(x[i,]) = 1
-  pd[apply(x, 1, function(z) any(z < 0 | z > 1))] <- 0
-  pd[apply(x, 1, function(z) all.equal(sum(z), 1) != TRUE)] <- 0
-  pd
+  pd[apply(x, 1, function(z) any(z < 0 | z > 1))] <- -Inf
+  pd[apply(x, 1, function(z) all.equal(sum(z), 1) != TRUE)] <- -Inf
+
+  if (log) {
+    pd
+  } else {
+    exp(pd)
+  }
 }
 
 #' @describeIn dirichlet Generate dirichlet random deviates.

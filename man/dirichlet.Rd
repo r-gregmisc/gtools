@@ -6,7 +6,7 @@
 \alias{ddirichlet}
 \title{Functions for the Dirichlet Distribution}
 \usage{
-ddirichlet(x, alpha)
+ddirichlet(x, alpha, log = FALSE)
 
 rdirichlet(n, alpha)
 }
@@ -16,6 +16,9 @@ random deviate per row.}
 
 \item{alpha}{Vector or (for \code{ddirichlet}) matrix containing shape
 parameters.}
+
+\item{log}{logical; if \code{TRUE}, probabilities/densities are given as
+logarithms.}
 
 \item{n}{Number of random vectors to generate.}
 }
